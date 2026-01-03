@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------------
+   Base browser resets
+-------------------------------- */
+
+body {
+  margin: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* -------------------------------
+   Theme Variables (ShadCN)
+-------------------------------- */
+
+@layer base {
+  :root {
+    --background: 40 20% 98%;
+    --foreground: 0 0% 12%;
+    --card: 40 20% 98%;
+    --card-foreground: 0 0% 12%;
+    --popover: 40 20% 98%;
+    --popover-foreground: 0 0% 12%;
+    --primary: 40 40% 57%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 38 25% 92%;
+    --secondary-foreground: 0 0% 12%;
+    --muted: 38 25% 92%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 40 40% 57%;
+    --accent-foreground: 0 0% 12%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 38 25% 87%;
+    --input: 38 25% 87%;
+    --ring: 40 40% 57%;
+    --radius: 0.5rem;
+  }
+}
+
+/* -------------------------------
+   Global base styles (SAFE)
+-------------------------------- */
+
+@layer base {
+  /* Apply border color safely (exclude scrollbars) */
+  html *:not(::-webkit-scrollbar):not(::-webkit-scrollbar-thumb):not(::-webkit-scrollbar-track) {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* -------------------------------
+   Debug wrapper support
+-------------------------------- */
+
+@layer base {
+  [data-debug-wrapper="true"] {
+    display: contents !important;
+  }
+
+  [data-debug-wrapper="true"] > * {
+    margin: inherit;
+    padding: inherit;
+    gap: inherit;
+    border-width: inherit;
+    border-style: inherit;
+    border-color: inherit;
+  }
+}
+
+/* ===============================
+   CUSTOM SCROLLBAR (FINAL FIX)
+   Matches Navbar Color
+================================ */
+
+/* Chrome, Edge, Safari */
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7F2; /* navbar color */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #CBB26A; /* gold tone */
+  border-radius: 12px;
+  border: 3px solid #FAF7F2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #B89E52;
+}
+
+/* Firefox */
+html {
+    scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: #CBB26A #FAF7F2;
+}
+/* =====================================
+   LUXURY UI ENHANCEMENTS (GLOBAL)
+   Event Ustaad Theme
+===================================== */
+
+/* ---- Glassmorphism ---- */
+.glass {
+  background: rgba(250, 247, 242, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* ---- Soft elevation (luxury shadow) ---- */
+.soft-shadow {
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.04),
+    0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+/* ---- Luxury button hover ---- */
+.btn-luxury {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-luxury:hover {
+  transform: translateY(-1px);
+}
+
+/* ---- Fade-in animation (scroll reveal) ---- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Typography refinement ---- */
+.heading-luxury {
+  letter-spacing: -0.015em;
+}
+
+.text-soft {
+  color: #6A6A6A;
+  line-height: 1.7;
+}
+
+/* ---- Section spacing ---- */
+.section-spacing {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+/* ---- Whisper background ---- */
+.bg-whisper {
+  background: linear-gradient(
+    180deg,
+    #FAF7F2 0%,
+    #FFFFFF 100%
+  );
+}
+
+/* ---- Image polish ---- */
+.image-soft {
+  border-radius: 12px;
+  filter: saturate(1.05) contrast(1.02);
+}
