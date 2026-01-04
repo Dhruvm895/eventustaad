@@ -6,22 +6,22 @@ const HeroCarousel = () => {
 
   const slides = [
     {
-      image: '/home1.jpeg',
+      image: '/home1.webp',
       title: 'Grand Celebrations',
       subtitle: 'Creating Unforgettable Moments'
     },
     {
-      image: '/home2.jpeg',
+      image: '/home2.webp',
       title: 'Royal Weddings',
       subtitle: 'Where Dreams Come Alive'
     },
     {
-      image: '/home3.jpeg',
+      image: '/home3.webp',
       title: 'Luxury Events',
       subtitle: 'Elegance Redefined'
     },
     {
-      image: '/home4.jpeg',
+      image: '/home4.webp',
       title: 'Perfect Moments',
       subtitle: 'Crafted With Love'
     }

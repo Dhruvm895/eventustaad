@@ -13,7 +13,7 @@ const About = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/15964930/pexels-photo-15964930.jpeg)',
+            backgroundImage: 'url(/about.png)',
             backgroundPosition: 'center 40%',
             filter: 'brightness(0.65)'
           }}

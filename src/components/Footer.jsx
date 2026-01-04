@@ -38,8 +38,8 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               {[
                 ['About Us', '/about'],
-                ['Wedding Services', '/services/weddings'],
-                ['Corporate Events', '/services/corporate'],
+                ['Wedding Services', '/services'],
+                ['Corporate Events', '/events#corporate'],
                 ['Our Work', '/our-work']
               ].map(([label, path]) => (
                 <li key={label}>

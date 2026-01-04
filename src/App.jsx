@@ -11,12 +11,17 @@ import Events from "./pages/Events";
 import OurWork from "./pages/OurWork";
 import Contact from "./pages/Contact";
 import { Toaster } from "./components/ui/sonner";
+import ScrollToTop from './components/ScrollToTop';
+import ServiceGallery from './pages/ServiceGallery';
 
 function App() {
   return (
     <div className="App">
+         
       <BrowserRouter>
+      <ScrollToTop />
         <Header />
+         
         <Routes>
           <Route path="/" element={<NewHome />} />
           <Route path="/about" element={<About />} />
@@ -24,6 +29,7 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/our-work" element={<OurWork />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services/:serviceSlug" element={<ServiceGallery />} />
         </Routes>
         <Footer />
         <WhatsAppButton />

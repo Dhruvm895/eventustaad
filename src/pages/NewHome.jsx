@@ -78,79 +78,120 @@ const NewHome = () => {
         </div>
       </section>
 
-      {/* Services */}
-      <section className="py-24 bg-[#EFE9DF]">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-light text-[#1F1F1F]" style={{ fontFamily: 'Cormorant, serif' }}>
-              Our Services
-            </h2>
-            <p className="text-lg text-[#1F1F1F]/70 mt-4">
-              Comprehensive event solutions tailored to perfection
-            </p>
-          </div>
+     {/* Services */}
+<section className="py-24 bg-[#EFE9DF]">
+  <div className="container mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2
+        className="text-5xl font-light text-[#1F1F1F]"
+        style={{ fontFamily: 'Cormorant, serif' }}
+      >
+        Our Services
+      </h2>
+      <p className="text-lg text-[#1F1F1F]/70 mt-4">
+        Comprehensive event solutions tailored to perfection
+      </p>
+    </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { title: 'Venue Search', img: 'https://images.pexels.com/photos/169211/pexels-photo-169211.jpeg' },
-              { title: 'Event Design', img: 'https://images.pexels.com/photos/1616113/pexels-photo-1616113.jpeg' },
-              { title: 'Hospitality', img: 'https://images.pexels.com/photos/730055/pexels-photo-730055.jpeg' },
-              { title: 'Artist Management', img: 'https://images.pexels.com/photos/2788494/pexels-photo-2788494.jpeg' },
-              { title: 'Corporate Gifting', img: 'https://images.pexels.com/photos/15841148/pexels-photo-15841148.jpeg' },
-              { title: 'Complete Solutions', img: 'https://images.pexels.com/photos/33726144/pexels-photo-33726144.jpeg' }
-            ].map((item, i) => (
-              <Card key={i} className="overflow-hidden hover:shadow-xl transition">
-                <div className="relative h-64">
-                  <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1F1F1F]/80 to-transparent" />
-                  <h3 className="absolute bottom-6 left-6 text-2xl text-white font-light">
-                    {item.title}
-                  </h3>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+    <div className="grid md:grid-cols-3 gap-8">
+      {[
+        { title: 'Venue Search', slug: 'venue-search', img: '/venue.webp' },
+        { title: 'Event Design', slug: 'event-design', img: '/decor.webp' },
+        { title: 'Hospitality', slug: 'hospitality', img: '/hosp.webp' },
+        { title: 'Artist Management', slug: 'artist-management', img: '/artist.webp' },
+        { title: 'Corporate Gifting', slug: 'corporate-gifting', img: '/gift.webp' },
+        { title: 'Complete Solutions', slug: 'complete-solutions', img: '/complete.jpg' }
+      ].map((item, i) => (
+        <Link key={i} to={`/services/${item.slug}`}>
+          <Card className="overflow-hidden hover:shadow-xl transition cursor-pointer">
+            <div className="relative h-64">
+              <img
+                src={item.img}
+                alt={item.title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1F1F1F]/80 to-transparent" />
+              <h3 className="absolute bottom-6 left-6 text-2xl text-white font-light">
+                {item.title}
+              </h3>
+            </div>
+          </Card>
+        </Link>
+      ))}
+    </div>
+  </div>
+</section>
 
       <LargeImageSections />
       <EventsCreatedSection />
       <RotatingClientLogos />
 
-      {/* Testimonials */}
-      <section className="py-24 bg-[#EFE9DF]">
-        <div className="container mx-auto px-6">
-          <h2 className="text-center text-5xl font-light text-[#1F1F1F] mb-16">
-            Happy Customers
-          </h2>
+     {/* Testimonials */}
+<section className="py-24 bg-[#EFE9DF]">
+  <div className="container mx-auto px-6">
+    <h2
+      className="text-center text-5xl font-light text-[#1F1F1F] mb-16"
+      style={{ fontFamily: 'Cormorant, serif' }}
+    >
+      Happy Customers
+    </h2>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {[
-              {
-                name: 'Priya & Arjun',
-                place: 'Royal Wedding, Udaipur',
-                img: 'https://images.pexels.com/photos/15841148/pexels-photo-15841148.jpeg',
-                text: 'Event Ustaad made our dream wedding come true.'
-              },
-              {
-                name: 'Meera & Vikram',
-                place: 'Destination Wedding, Jaipur',
-                img: 'https://images.pexels.com/photos/15582310/pexels-photo-15582310.jpeg',
-                text: 'Their creativity transformed our wedding into a fairytale.'
-              }
-            ].map((t, i) => (
-              <Card key={i} className="shadow-xl">
-                <img src={t.img} alt={t.name} className="h-64 w-full object-cover" />
-                <CardContent className="p-8">
-                  <p className="italic text-[#6A6A6A] mb-6">"{t.text}"</p>
-                  <div className="font-medium text-[#1F1F1F]">{t.name}</div>
-                  <div className="text-[#C6A75E]">{t.place}</div>
-                </CardContent>
-              </Card>
-            ))}
+    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+      
+      {[
+        {
+          name: 'Priya & Arjun',
+          place: 'Royal Wedding, Udaipur',
+          text: 'Event Ustaad made our dream wedding come true. Every detail was flawless.',
+          img: 'https://images.pexels.com/photos/15841148/pexels-photo-15841148.jpeg'
+        },
+        {
+          name: 'Meera & Vikram',
+          place: 'Destination Wedding, Jaipur',
+          text: 'Their creativity and execution turned our celebration into a fairytale.',
+          img: 'https://images.pexels.com/photos/15582310/pexels-photo-15582310.jpeg'
+        },
+        {
+          name: 'Rohan Malhotra',
+          place: 'Corporate Event, Mumbai',
+          text: 'Extremely professional team. Seamless execution and beautiful setup.',
+          img: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg'
+        },
+        {
+          name: 'Neha Sharma',
+          place: 'Social Event, Delhi',
+          text: 'Loved the attention to detail and warm coordination throughout.',
+          img: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg'
+        }
+      ].map((t, i) => (
+        <Card
+          key={i}
+          className="group overflow-hidden bg-white border border-[#E5DED3] hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
+        >
+          <div className="aspect-square relative">
+            <img
+              src={t.img}
+              alt={t.name}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition" />
           </div>
-        </div>
-      </section>
+
+          <CardContent className="p-6 text-center">
+            <p className="text-sm text-[#6A6A6A] italic mb-4">
+              “{t.text}”
+            </p>
+            <div className="font-medium text-[#1F1F1F]">{t.name}</div>
+            <div className="text-[#C6A75E] text-sm">{t.place}</div>
+          </CardContent>
+        </Card>
+      ))}
+
+    </div>
+  </div>
+</section>
+
+
 
       {/* CTA */}
       <section className="py-24 bg-[#C6A75E] text-center">

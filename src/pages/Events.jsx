@@ -25,7 +25,7 @@ const Events = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/35420251/pexels-photo-35420251.jpeg)',
+            backgroundImage: "url(/event.webp)",
             filter: 'brightness(0.6)'
           }}
         />
@@ -54,12 +54,12 @@ const Events = () => {
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {[
-              'https://images.pexels.com/photos/11985359/pexels-photo-11985359.jpeg',
-              'https://images.pexels.com/photos/12194048/pexels-photo-12194048.jpeg',
-              'https://images.pexels.com/photos/35420251/pexels-photo-35420251.jpeg',
-              'https://images.pexels.com/photos/15966640/pexels-photo-15966640.jpeg',
-              'https://images.pexels.com/photos/29034583/pexels-photo-29034583.jpeg',
-              'https://images.pexels.com/photos/35234733/pexels-photo-35234733.jpeg'
+              '/wedding1.webp',
+              '/wedding2.webp',
+              '/wedding3.webp',
+              '/wedding4.webp',
+              '/wedding5.webp',
+              '/wedding6.webp'
             ].map((img, index) => (
               <div key={index} className="image-zoom-container rounded-lg overflow-hidden shadow-lg">
                 <img 
@@ -97,9 +97,9 @@ const Events = () => {
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {[
-              'https://images.pexels.com/photos/35399260/pexels-photo-35399260.jpeg',
-              'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg',
-              'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg',
+              '/corporate1.webp',
+              '/corporate2.webp',
+              '/corporate3.webp',
               'https://images.pexels.com/photos/3719037/pexels-photo-3719037.jpeg'
             ].map((img, index) => (
               <div key={index} className="image-zoom-container rounded-lg overflow-hidden shadow-lg">
@@ -138,9 +138,9 @@ const Events = () => {
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {[
-              'https://images.pexels.com/photos/1616113/pexels-photo-1616113.jpeg',
-              'https://images.pexels.com/photos/730055/pexels-photo-730055.jpeg',
-              'https://images.pexels.com/photos/2788494/pexels-photo-2788494.jpeg'
+              '/social1.webp',
+              '/social2.webp',
+              '/social3.webp'
             ].map((img, index) => (
               <div key={index} className="image-zoom-container rounded-lg overflow-hidden shadow-lg">
                 <img 
