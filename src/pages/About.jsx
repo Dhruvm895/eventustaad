@@ -3,28 +3,30 @@ import { Link } from 'react-router-dom';
 import { MapPin, Users, Award, Heart, ArrowRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const About = () => {
   return (
     <div className="min-h-screen pt-20 bg-[#FAF7F2]">
 
       {/* Hero Section */}
-      <section className="relative h-[45vh] md:h-[55vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[36vh] md:h-[55vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(/about.png)',
+            backgroundImage: 'url(/about1.jpeg)',
             backgroundPosition: 'center 40%',
             filter: 'brightness(0.65)'
           }}
         />
         <div className="absolute inset-0 bg-black/40" />
 
-        <div className="relative z-10 text-center px-6">
-          <h1 className="text-5xl md:text-6xl font-light text-white mb-4">
+        <div className="relative z-10 text-center px-4 sm:px-6">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-light text-white mb-2 sm:mb-4">
             Our Story
           </h1>
-          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base md:text-xl text-white/90 max-w-3xl mx-auto">
             From hostel roommates to business partners, creating magic since 2018
           </p>
         </div>
@@ -52,15 +54,18 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://images.pexels.com/photos/15841148/pexels-photo-15841148.jpeg"
-              className="rounded-lg shadow-lg object-cover h-64"
+            <LazyLoadImage
+              src="about.jpeg"
               alt="Celebration"
+              effect="blur"
+              className="rounded-lg shadow-lg object-cover h-64 w-full"
             />
-            <img
-              src="https://images.pexels.com/photos/33552016/pexels-photo-33552016.jpeg"
-              className="rounded-lg shadow-lg object-cover h-64 mt-8"
+
+            <LazyLoadImage
+              src="about.jpeg"
               alt="Couple"
+              effect="blur"
+              className="rounded-lg shadow-lg object-cover h-64 mt-8 w-full"
             />
           </div>
         </div>

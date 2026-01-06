@@ -1,127 +1,138 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
     {
-      image: '/home1.webp',
+      image: '/home1.jpeg',
       title: 'Grand Celebrations',
       subtitle: 'Creating Unforgettable Moments'
     },
     {
-      image: '/home2.webp',
+      image: '/home2.jpg',
       title: 'Royal Weddings',
       subtitle: 'Where Dreams Come Alive'
     },
     {
-      image: '/home3.webp',
+      image: '/home3.jpeg',
       title: 'Luxury Events',
       subtitle: 'Elegance Redefined'
     },
     {
-      image: '/home4.webp',
+      image: '/home4.jpeg',
       title: 'Perfect Moments',
       subtitle: 'Crafted With Love'
     }
   ];
+
+  // ✅ CORRECT PLACE
+  const slide = slides[currentSlide];
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, [slides.length]);
+  }, []);
 
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
-  };
-
-  const goToPrevious = () => {
+  const goToPrevious = () =>
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
 
-  const goToNext = () => {
+  const goToNext = () =>
     setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
-      {/* Slides */}
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
-            index === currentSlide
-              ? 'opacity-100 scale-100'
-              : 'opacity-0 scale-105'
-          }`}
-        >
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${slide.image})` }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
+    <div className="relative h-[70vh] md:h-screen w-full overflow-hidden">
 
-          {/* Content */}
-          <div className="absolute inset-0 flex items-center justify-center text-center px-4">
-            <div className="max-w-4xl">
-              <h1
-                className={`text-6xl md:text-8xl font-light text-white mb-6 transition-all duration-1000 delay-300 ${
-                  index === currentSlide
-                    ? 'translate-y-0 opacity-100'
-                    : 'translate-y-10 opacity-0'
-                }`}
+      {/* ACTIVE SLIDE */}
+      <div
+        key={currentSlide}
+        className="absolute inset-0 transition-all duration-1000 ease-in-out"
+      >
+        {/* Background */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${slide.image})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
+
+        {/* Content */}
+        <div className="absolute inset-0 flex items-start justify-start">
+          <div className="mt-36 md:mt-48 ml-10 md:ml-24 max-w-xl text-left animate-fade-in">
+
+            <h1
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+                font-light text-white mb-2 animate-slide-up"
+              style={{ fontFamily: 'TheSeasons, serif' }}
+            >
+              {slide.title}
+            </h1>
+
+            <p className="text-sm sm:text-base md:text-lg text-white/90 mb-6 animate-slide-up delay-200">
+              {slide.subtitle}
+            </p>
+
+            <Link to="/contact">
+              <button
+                className="
+                  px-5 py-2.5
+                  bg-[#C6A75E]
+                  text-white
+                  text-xs md:text-sm
+                  font-medium
+                  rounded-md
+                  shadow-md
+                  hover:bg-[#A88849]
+                  hover:shadow-lg
+                  transition-all duration-300
+                  animate-slide-up delay-400
+                "
               >
-                {slide.title}
-              </h1>
-              <p
-                className={`text-2xl md:text-3xl text-white/90 font-light transition-all duration-1000 delay-500 ${
-                  index === currentSlide
-                    ? 'translate-y-0 opacity-100'
-                    : 'translate-y-10 opacity-0'
-                }`}
-              >
-                {slide.subtitle}
-              </p>
-            </div>
+                Plan Your Event
+              </button>
+            </Link>
+
           </div>
         </div>
-      ))}
+      </div>
 
       {/* Navigation Arrows */}
       <button
         onClick={goToPrevious}
-        className="absolute left-8 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/10 backdrop-blur-md hover:bg-white/20 transition-all duration-300"
-        aria-label="Previous slide"
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20
+          p-2 md:p-3 rounded-full bg-white/10 backdrop-blur-md
+          hover:bg-white/20 transition"
       >
-        <ChevronLeft className="text-white" size={32} />
+        <ChevronLeft className="text-white" size={24} />
       </button>
 
       <button
         onClick={goToNext}
-        className="absolute right-8 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/10 backdrop-blur-md hover:bg-white/20 transition-all duration-300"
-        aria-label="Next slide"
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20
+          p-2 md:p-3 rounded-full bg-white/10 backdrop-blur-md
+          hover:bg-white/20 transition"
       >
-        <ChevronRight className="text-white" size={32} />
+        <ChevronRight className="text-white" size={24} />
       </button>
 
-      {/* Dots Indicator */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+      {/* Dots */}
+      <div className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 z-20 flex gap-3">
         {slides.map((_, index) => (
           <button
             key={index}
-            onClick={() => goToSlide(index)}
+            onClick={() => setCurrentSlide(index)}
             className={`transition-all duration-500 rounded-full ${
               index === currentSlide
                 ? 'w-12 h-3 bg-white'
                 : 'w-3 h-3 bg-white/50 hover:bg-white/70'
             }`}
-            aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
+
     </div>
   );
 };

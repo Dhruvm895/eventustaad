@@ -3,74 +3,79 @@
 export const portfolioItems = [
   {
     id: 1,
-    title: "Royal Wedding",
-    location: "Bikaner",
+    name: "Astha & Amit",
     category: "wedding",
-    description: "A majestic royal wedding celebrating tradition and grandeur in the heart of Rajasthan.",
-    image: "https://images.pexels.com/photos/11985359/pexels-photo-11985359.jpeg",
+    image: "amitastha.jpeg",
     featured: true
   },
   {
     id: 2,
-    title: "Personalized & Quirky Wedding",
-    location: "Jaipur",
+    name: "Anahita & Sahil",
     category: "wedding",
-    description: "A unique celebration blending modern aesthetics with traditional charm.",
-    image: "https://images.pexels.com/photos/12194048/pexels-photo-12194048.jpeg",
+    image: "anahitasahil.jpeg",
     featured: true
   },
   {
     id: 3,
-    title: "Fairytale Wedding",
-    location: "Indore",
+    name: "Mansi & Zach",
     category: "wedding",
-    description: "An enchanting celebration with dreamy décor and magical moments.",
-    image: "https://images.pexels.com/photos/35420251/pexels-photo-35420251.jpeg",
+    image: "mansizach.jpeg",
     featured: true
   },
   {
     id: 4,
-    title: "Cross-Border Wedding",
-    location: "Lucknow",
+ 
+    name: "Laura & Aditya",
     category: "wedding",
-    description: "A beautiful union of cultures with elegant touches and warm hospitality.",
-    image: "https://images.pexels.com/photos/35349353/pexels-photo-35349353.png",
+    image: "lauraaditya.jpeg",
     featured: false
   },
   {
     id: 5,
-    title: "Plastic-Free Tropical Wedding",
-    location: "Puri",
+
+    name: "Bhumika & Krishank",
     category: "wedding",
-    description: "An eco-conscious celebration by the coast with sustainable elegance.",
-    image: "https://images.pexels.com/photos/15966640/pexels-photo-15966640.jpeg",
+    image: "bhumikakrishank.jpeg",
     featured: false
   },
   {
     id: 6,
-    title: "Big Fat Wedding",
-    location: "Mumbai",
+
+    name: "Ayushi & Amey",
     category: "wedding",
-    description: "A grand celebration with opulent décor and star-studded festivities.",
-    image: "https://images.pexels.com/photos/29034583/pexels-photo-29034583.jpeg",
+    image: "ayushiamey.jpeg",
     featured: true
   },
   {
     id: 7,
     title: "Corporate Conference",
-    location: "Mumbai",
+    
     category: "corporate",
-    description: "A large-scale conference with seamless logistics and professional setup.",
-    image: "https://images.pexels.com/photos/35399260/pexels-photo-35399260.jpeg",
+   
+    image: "cor1.jpeg",
     featured: false
   },
   {
     id: 8,
     title: "Product Launch Event",
-    location: "Bangalore",
+   
     category: "corporate",
-    description: "A dynamic product unveiling with impactful branding and engaging experiences.",
-    image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
+    image: "cor2.jpeg",
+    featured: false
+  },
+   {
+    id: 9,
+    title: "Launch Event",
+   
+    category: "corporate",
+    image: "cor3.jpeg",
+    featured: false
+  },
+   {
+    id: 10,
+    title: "Event",
+    category: "corporate",
+    image: "cor4.jpeg",
     featured: false
   }
 ];

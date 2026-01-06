@@ -29,7 +29,7 @@ export default defineConfig([
   {
     files: ['**/*.css'],
     rules: {
-      'no-unknown-at-rules': 'off',
+      'css/no-unknown-at-rules': 'off',
     },
   },
 ])

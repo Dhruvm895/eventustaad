@@ -11,83 +11,106 @@ const OurWork = () => {
     { id: 'social', label: 'Social' }
   ];
 
-  // Map existing categories
   const getCategoryType = (item) => {
     if (item.category === 'wedding') return 'weddings';
     if (item.category === 'corporate') return 'corporate';
     return 'social';
   };
 
-  const filteredItems = activeCategory === 'all'
-    ? portfolioItems
-    : portfolioItems.filter(item => getCategoryType(item) === activeCategory);
+  const filteredItems =
+    activeCategory === 'all'
+      ? portfolioItems
+      : portfolioItems.filter(item => getCategoryType(item) === activeCategory);
 
   return (
-    <div className="min-h-screen pt-20">
-      {/* Hero Section */}
-      <section className="relative h-[40vh] flex items-center justify-center overflow-hidden bg-[#FAF7F2]">
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-6xl md:text-7xl font-light text-[#1F1F1F] mb-6" style={{ fontFamily: 'Cormorant, serif' }}>
+    <div className="min-h-screen pt-20 bg-[#FAF7F2]">
+
+      {/* HERO */}
+      <section className="h-[40vh] flex items-center justify-center">
+        <div className="text-center">
+          <h1
+            className="text-6xl md:text-7xl font-light text-[#1F1F1F] mb-6"
+            style={{ fontFamily: 'Cormorant, serif' }}
+          >
             Our Work
           </h1>
-          <div className="w-24 h-[1px] bg-[#C6A75E] mx-auto mt-6" />
+          <div className="w-24 h-[1px] bg-[#C6A75E] mx-auto" />
         </div>
       </section>
 
-      {/* Category Navigation */}
-     <section className="relative bg-[#FAF7F2] border-b border-[#EFE9DF] py-6">
-
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center items-center gap-8 flex-wrap">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`relative text-lg font-light transition-all duration-300 pb-2 ${
-                  activeCategory === category.id
-                    ? 'text-[#C6A75E]'
-                    : 'text-[#1F1F1F]/60 hover:text-[#1F1F1F]'
-                }`}
-              >
-                {category.label}
-                {activeCategory === category.id && (
-                  <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#C6A75E]" />
-                )}
-              </button>
-            ))}
-          </div>
+      {/* CATEGORY FILTER */}
+      <section className="border-b border-[#EFE9DF] py-6">
+        <div className="flex justify-center gap-10 flex-wrap">
+          {categories.map(category => (
+            <button
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
+              className={`relative text-lg font-light pb-2 transition ${
+                activeCategory === category.id
+                  ? 'text-[#C6A75E]'
+                  : 'text-[#1F1F1F]/60 hover:text-[#1F1F1F]'
+              }`}
+            >
+              {category.label}
+              {activeCategory === category.id && (
+                <span className="absolute left-0 right-0 bottom-0 h-[2px] bg-[#C6A75E]" />
+              )}
+            </button>
+          ))}
         </div>
       </section>
 
-      {/* Masonry Gallery */}
-      <section className="py-16 bg-[#FAF7F2]">
+      {/* IMPROPER MASONRY GRID */}
+  <section className="bg-[#C6A75E] min-h-[60vh] flex items-center">
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-            {filteredItems.map((item, index) => (
-              <div
-                key={item.id}
-                className="break-inside-avoid group"
-                style={{ animation: `fadeInUp 0.6s ease-out ${index * 0.05}s both` }}
-              >
-                <div className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                      <h3 className="text-2xl font-light mb-2" style={{ fontFamily: 'Cormorant, serif' }}>
-                        {item.title}
-                      </h3>
-                      <p className="text-sm text-white/80">{item.location}</p>
-                      <p className="text-sm text-white/70 mt-2">{item.description}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
+
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-8">
+  {filteredItems.map((item) => (
+    <div
+      key={item.id}
+      className="break-inside-avoid mb-6"
+    >
+      <div className="relative overflow-hidden rounded-2xl shadow-lg group bg-white">
+
+        <img
+          src={item.image}
+          alt={item.title}
+          loading="lazy"
+          className="
+            w-full
+            h-auto
+            max-h-[520px]   /* ✅ THIS IS IMPORTANT */
+            object-cover
+            transition-transform duration-700
+            group-hover:scale-[1.04]
+          "
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
+          <div className="p-6 text-white">
+            <h3
+              className="text-2xl font-light"
+              style={{ fontFamily: 'Cormorant, serif' }}
+            >
+              {item.name || item.title}
+            </h3>
+
+            {item.description && (
+              <p className="text-sm text-white/80 mt-1">
+                {item.description}
+              </p>
+            )}
           </div>
+        </div>
+
+      </div>
+    </div>
+  ))}
+</div>
+
+
         </div>
       </section>
     </div>

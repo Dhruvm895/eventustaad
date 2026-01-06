@@ -81,4 +81,11 @@ export default {
   	}
   },
   plugins: [require("tailwindcss-animate")],
+ 
+  extend: {
+  fontFamily: {
+    seasons: ['TheSeasons', 'serif'],
+  },
+},
+
 };

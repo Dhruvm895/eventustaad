@@ -1,3 +1,4 @@
+/* Tailwind CSS Directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,10 +9,7 @@
 
 body {
   margin: 0;
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -19,6 +17,21 @@ body {
 code {
   font-family:
     source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* -------------------------------
+   THE SEASONS — HEADINGS ONLY
+-------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'TheSeasons', serif;
+  font-weight: 400;
+  letter-spacing: -0.03em;
 }
 
 /* -------------------------------
@@ -55,7 +68,6 @@ code {
 -------------------------------- */
 
 @layer base {
-  /* Apply border color safely (exclude scrollbars) */
   html *:not(::-webkit-scrollbar):not(::-webkit-scrollbar-thumb):not(::-webkit-scrollbar-track) {
     @apply border-border;
   }
@@ -85,22 +97,19 @@ code {
 }
 
 /* ===============================
-   CUSTOM SCROLLBAR (FINAL FIX)
-   Matches Navbar Color
+   CUSTOM SCROLLBAR
 ================================ */
 
-/* Chrome, Edge, Safari */
-/* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
   width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #FAF7F2; /* navbar color */
+  background: #FAF7F2;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #CBB26A; /* gold tone */
+  background-color: #CBB26A;
   border-radius: 12px;
   border: 3px solid #FAF7F2;
 }
@@ -109,18 +118,16 @@ code {
   background-color: #B89E52;
 }
 
-/* Firefox */
 html {
-    scrollbar-gutter: stable;
+  scrollbar-gutter: stable;
   scrollbar-width: thin;
   scrollbar-color: #CBB26A #FAF7F2;
 }
+
 /* =====================================
-   LUXURY UI ENHANCEMENTS (GLOBAL)
-   Event Ustaad Theme
+   LUXURY UI ENHANCEMENTS
 ===================================== */
 
-/* ---- Glassmorphism ---- */
 .glass {
   background: rgba(250, 247, 242, 0.78);
   backdrop-filter: blur(14px);
@@ -128,14 +135,12 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-/* ---- Soft elevation (luxury shadow) ---- */
 .soft-shadow {
   box-shadow:
     0 10px 25px rgba(0, 0, 0, 0.04),
     0 4px 10px rgba(0, 0, 0, 0.02);
 }
 
-/* ---- Luxury button hover ---- */
 .btn-luxury {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -144,7 +149,6 @@ html {
   transform: translateY(-1px);
 }
 
-/* ---- Fade-in animation (scroll reveal) ---- */
 .fade-in {
   opacity: 0;
   transform: translateY(16px);
@@ -156,7 +160,6 @@ html {
   transform: translateY(0);
 }
 
-/* ---- Typography refinement ---- */
 .heading-luxury {
   letter-spacing: -0.015em;
 }
@@ -166,13 +169,11 @@ html {
   line-height: 1.7;
 }
 
-/* ---- Section spacing ---- */
 .section-spacing {
   padding-top: 7rem;
   padding-bottom: 7rem;
 }
 
-/* ---- Whisper background ---- */
 .bg-whisper {
   background: linear-gradient(
     180deg,
@@ -181,8 +182,139 @@ html {
   );
 }
 
-/* ---- Image polish ---- */
 .image-soft {
   border-radius: 12px;
   filter: saturate(1.05) contrast(1.02);
+}
+
+/* -------------------------------
+   Animations
+-------------------------------- */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.45s ease-out forwards;
+}
+
+/* -------------------------------
+   The Seasons Font
+-------------------------------- */
+
+@font-face {
+  font-family: 'TheSeasons';
+  src: url('./assets/fonts/fonnts.com-The-Seasons-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TheSeasons';
+  src: url('./assets/fonts/fonnts.com-The-Seasons.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ===============================
+   CLIENT LOGO SCROLL (FINAL)
+================================ */
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 25s linear infinite;
+  will-change: transform;
+}
+
+@layer components {
+  .site-container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @screen sm {
+    .site-container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @screen md {
+    .site-container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .section-spacing {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @screen md {
+    .section-spacing {
+      padding-top: 7rem;
+      padding-bottom: 7rem;
+    }
+  }
+}
+.marquee-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 80px;
+  animation: marquee 25s linear infinite;
+  will-change: transform;
+}
+
+.marquee-item {
+  flex: 0 0 auto;
+  width: 340px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marquee-item img {
+  max-height: 120px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.marquee-item img:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

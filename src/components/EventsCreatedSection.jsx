@@ -31,10 +31,9 @@ const AnimatedNumber = ({ target, duration = 2000, suffix = '' }) => {
 
 const EventsCreatedSection = () => {
   const stats = [
-    { number: 65, suffix: '+', label: 'Weddings' },
-    { number: 30, suffix: '+', label: 'Corporate Events' },
+    { number: 175, suffix: '+', label: 'Events' },
     { number: 10, suffix: '+', label: 'Combined Years Experience' },
-    { number: 60, suffix: '+', label: 'Destinations' }
+    { number: 63, suffix: '+', label: 'Destinations' }
   ];
 
   return (
@@ -42,8 +41,8 @@ const EventsCreatedSection = () => {
 
       {/* Soft background glow */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-72 h-72 bg-white rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-0 w-72 h-72 bg-white rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="hidden sm:block absolute top-0 left-0 w-56 h-56 bg-white rounded-full blur-3xl animate-pulse" />
+        <div className="hidden sm:block absolute bottom-0 right-0 w-56 h-56 bg-white rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -58,23 +57,22 @@ const EventsCreatedSection = () => {
           </h2>
           <div className="w-20 h-[1px] bg-white/40 mx-auto mt-4" />
         </div>
+<div className="grid grid-cols-1 sm:grid-cols-3 gap-12 max-w-5xl mx-auto mt-16">
+  {stats.map((stat, index) => (
+    <div
+      key={index}
+      className="flex flex-col items-center justify-center"
+    >
+      <div className="text-5xl md:text-6xl font-light text-white mb-2">
+        <AnimatedNumber target={stat.number} suffix={stat.suffix} />
+      </div>
+      <div className="text-base text-white/85 font-light">
+        {stat.label}
+      </div>
+    </div>
+  ))}
+</div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="transition-transform duration-500 hover:scale-105"
-            >
-              <div className="text-4xl md:text-5xl font-light text-white mb-1">
-                <AnimatedNumber target={stat.number} suffix={stat.suffix} />
-              </div>
-              <div className="text-sm md:text-base text-white/85 font-light leading-tight">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
 
       </div>
     </section>

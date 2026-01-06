@@ -25,7 +25,7 @@ const ServiceGallery = () => {
 
   return (
     <div className="min-h-screen pt-28 bg-[#FAF7F2]">
-      <div className="container mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
 
         <h1
           className="text-5xl md:text-6xl font-light text-[#1F1F1F] mb-14 text-center"
@@ -34,17 +34,18 @@ const ServiceGallery = () => {
           {titles[serviceSlug]}
         </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Masonry layout (same as Our Work) */}
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
           {images.map((img, index) => (
             <div
               key={index}
-              className="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition"
+              className="break-inside-avoid rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition"
             >
               <img
                 src={img}
                 alt=""
                 loading="lazy"
-                className="w-full h-72 object-cover hover:scale-105 transition-transform duration-700"
+                className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
           ))}

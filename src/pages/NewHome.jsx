@@ -43,20 +43,21 @@ const NewHome = () => {
       <HeroCarousel />
 
       {/* Event Types */}
-      <section className="py-24 bg-[#FAF7F2]">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8">
+      <section className="py-16 sm:py-20 bg-[#FAF7F2]">
+        <div className="site-container">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {eventTypes.map((event, index) => {
               const Icon = event.icon;
               return (
                 <Link key={index} to={event.path} className="group">
                   <Card className="overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                    <div className="relative h-80">
-                      <img
-                        src={event.image}
-                        alt={event.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
+                      <div className="relative h-56 sm:h-72 md:h-80">
+                        <img
+                          src={event.image}
+                          alt={event.title}
+                          loading="lazy"
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
                       <div className={`absolute inset-0 bg-gradient-to-t ${event.gradient} opacity-60`} />
                       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-8">
                         <div className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mb-6">
@@ -80,34 +81,35 @@ const NewHome = () => {
 
      {/* Services */}
 <section className="py-24 bg-[#EFE9DF]">
-  <div className="container mx-auto px-6">
-    <div className="text-center mb-16">
+  <div className="site-container">
+    <div className="text-center mb-12">
       <h2
-        className="text-5xl font-light text-[#1F1F1F]"
+        className="text-3xl sm:text-4xl md:text-5xl font-light text-[#1F1F1F]"
         style={{ fontFamily: 'Cormorant, serif' }}
       >
         Our Services
       </h2>
-      <p className="text-lg text-[#1F1F1F]/70 mt-4">
+      <p className="text-base sm:text-lg text-[#1F1F1F]/70 mt-4">
         Comprehensive event solutions tailored to perfection
       </p>
     </div>
 
-    <div className="grid md:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       {[
         { title: 'Venue Search', slug: 'venue-search', img: '/venue.webp' },
         { title: 'Event Design', slug: 'event-design', img: '/decor.webp' },
         { title: 'Hospitality', slug: 'hospitality', img: '/hosp.webp' },
         { title: 'Artist Management', slug: 'artist-management', img: '/artist.webp' },
         { title: 'Corporate Gifting', slug: 'corporate-gifting', img: '/gift.webp' },
-        { title: 'Complete Solutions', slug: 'complete-solutions', img: '/complete.jpg' }
+        { title: 'Complete Solutions', slug: 'complete-solutions', img: '/complete.jpeg' }
       ].map((item, i) => (
         <Link key={i} to={`/services/${item.slug}`}>
-          <Card className="overflow-hidden hover:shadow-xl transition cursor-pointer">
-            <div className="relative h-64">
+            <Card className="overflow-hidden hover:shadow-xl transition cursor-pointer">
+            <div className="relative h-48 sm:h-56 md:h-64">
               <img
                 src={item.img}
                 alt={item.title}
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1F1F1F]/80 to-transparent" />
@@ -128,15 +130,15 @@ const NewHome = () => {
 
      {/* Testimonials */}
 <section className="py-24 bg-[#EFE9DF]">
-  <div className="container mx-auto px-6">
+  <div className="site-container">
     <h2
-      className="text-center text-5xl font-light text-[#1F1F1F] mb-16"
+      className="text-center text-3xl sm:text-4xl md:text-5xl font-light text-[#1F1F1F] mb-12"
       style={{ fontFamily: 'Cormorant, serif' }}
     >
       Happy Customers
     </h2>
 
-    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
       
       {[
         {
@@ -168,10 +170,11 @@ const NewHome = () => {
           key={i}
           className="group overflow-hidden bg-white border border-[#E5DED3] hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
         >
-          <div className="aspect-square relative">
+            <div className="aspect-square relative">
             <img
               src={t.img}
               alt={t.name}
+              loading="lazy"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition" />
