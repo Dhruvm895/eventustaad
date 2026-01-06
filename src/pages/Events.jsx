@@ -3,6 +3,8 @@ import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import WeddingTipsBoard from '../components/WeddingTipsBoard';
+
 
 const Events = () => {
   const location = useLocation();
@@ -81,7 +83,7 @@ const Events = () => {
           </div>
         </div>
       </section>
-
+<WeddingTipsBoard />
       {/* Corporate Events Section */}
       <section id="corporate" className="py-24 bg-[#EFE9DF] scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
