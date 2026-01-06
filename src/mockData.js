@@ -83,53 +83,106 @@ export const portfolioItems = [
 export const testimonials = [
   {
     id: 1,
-    name: "Priya & Arjun",
-    event: "Destination Wedding, Udaipur",
+    name: "Dharmendra Ranka",
+    event: "Wedding Event",
     rating: 5,
-    text: "Event Ustaad made our dream wedding come true. Every detail was perfect, from the venue to the décor. Their team handled everything seamlessly, allowing us to enjoy every moment.",
-    image: "https://images.pexels.com/photos/15841148/pexels-photo-15841148.jpeg"
+    summary: "Flawless execution with complete peace of mind",
+    detail:
+      "The entire wedding was planned meticulously and executed professionally within budget. The team was always available and extremely cooperative.",
+    image: "/testimonials/client-1.jpg"
   },
   {
     id: 2,
-    name: "Meera & Vikram",
-    event: "Royal Wedding, Jaipur",
+    name: "Biyani Family",
+    event: "Wedding Planning",
     rating: 5,
-    text: "Working with Anmol and Shrishti was an absolute pleasure. Their creativity and attention to detail transformed our wedding into a fairytale. Highly recommend!",
-    image: "https://images.pexels.com/photos/15582310/pexels-photo-15582310.jpeg"
+    summary: "Stress-free wedding managed perfectly end-to-end",
+    detail:
+      "From décor to timelines, every function ran smoothly and on time. Event Ustaad truly added value and delivered beyond expectations.",
+    image: "/testimonials/client-2.jpg"
   },
   {
     id: 3,
-    name: "Sanjay Mehta, CEO - Alkem Laboratories",
-    event: "Annual Corporate Meet",
+    name: "Prachi Mantri",
+    event: "Wedding Management",
     rating: 5,
-    text: "Event Ustaad delivered exceptional service for our annual corporate event. Professional, organized, and creative - exactly what we needed.",
-    image: null
+    summary: "Handled complex challenges with grace and resilience",
+    detail:
+      "Managing a 30+ member team across borders in days was impressive. Their patience, kindness, and attention to detail stood out.",
+    image: "/testimonials/client-3.jpg"
   },
   {
     id: 4,
-    name: "Anjali & Rahul",
-    event: "Beach Wedding, Goa",
-    rating: 5,
-    text: "The team at Event Ustaad went above and beyond. From finding the perfect beachside venue to coordinating with vendors, everything was flawless.",
-    image: "https://images.pexels.com/photos/33552016/pexels-photo-33552016.jpeg"
+    name: "Abhijit Kabra",
+    event: "Wedding Event",
+    rating: 4.5,
+    summary: "Every detail executed like a family celebration",
+    detail:
+      "From décor to guest experience, everything was seamless. The team treated the event like their own and delivered a classy experience.",
+    image: "/testimonials/client-4.jpg"
   },
   {
     id: 5,
-    name: "Rajesh Kumar, HR Director - Asian Paints",
-    event: "Team Building Event",
+    name: "Krishank Malik",
+    event: "Eco-Friendly Wedding",
     rating: 5,
-    text: "Fantastic experience working with Event Ustaad. They understood our requirements perfectly and executed a memorable team-building event.",
-    image: null
+    summary: "Bold ideas executed with technical perfection",
+    detail:
+      "From CRM to guest coordination, everything was tech-driven and smooth. A rare team that executes ambitious ideas flawlessly.",
+    image: "/testimonials/client-5.jpg"
   },
   {
     id: 6,
-    name: "Kavya & Aditya",
-    event: "Palace Wedding, Jaisalmer",
+    name: "Sandeep Agarwal",
+    event: "Corporate Event (400+ Guests)",
     rating: 5,
-    text: "Our wedding was everything we imagined and more. Event Ustaad's expertise and professionalism made the entire planning process stress-free.",
-    image: "https://images.pexels.com/photos/15964930/pexels-photo-15964930.jpeg"
+    summary: "Creative, reliable, and highly professional team",
+    detail:
+      "They managed planning to execution seamlessly. Lighting, branding, engagement activities — everything was top notch.",
+    image: "/testimonials/client-6.jpg"
+  },
+  {
+    id: 7,
+    name: "Vachan Shetty",
+    event: "Corporate Conference",
+    rating: 5,
+    summary: "Go-to team for seamless corporate events",
+    detail:
+      "They played a key anchoring role and ensured a smooth conference experience from start to finish.",
+    image: "/testimonials/client-7.jpg"
+  },
+  {
+    id: 8,
+    name: "Destination Wedding Client",
+    event: "Lonavala Wedding",
+    rating: 5,
+    summary: "Professional planning with a personal touch",
+    detail:
+      "Guests appreciated the flow, coordination, and overall execution. Everything felt thoughtfully managed.",
+    image: "/testimonials/client-8.jpg"
+  },
+  {
+    id: 9,
+    name: "Luxury Wedding Client",
+    event: "High-End Wedding",
+    rating: 5,
+    summary: "Attention to detail that truly stands out",
+    detail:
+      "From concepts to execution, everything was handled with precision. The experience felt premium and effortless.",
+    image: "/testimonials/client-9.jpg"
+  },
+  {
+    id: 10,
+    name: "Corporate Leadership Team",
+    event: "Annual Business Meet",
+    rating: 5,
+    summary: "Trusted partners for high-stakes events",
+    detail:
+      "Their confidence, planning, and execution standards made the event a complete success.",
+    image: "/testimonials/client-10.jpg"
   }
 ];
+
 
 export const packages = [
   {

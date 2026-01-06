@@ -130,7 +130,8 @@ const NewHome = () => {
 
      {/* Testimonials */}
 <section className="py-24 bg-[#EFE9DF]">
-  <div className="site-container">
+  <div className="site-container relative">
+
     <h2
       className="text-center text-3xl sm:text-4xl md:text-5xl font-light text-[#1F1F1F] mb-12"
       style={{ fontFamily: 'Cormorant, serif' }}
@@ -138,61 +139,152 @@ const NewHome = () => {
       Happy Customers
     </h2>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-      
+    {/* Left Button */}
+    <button
+      onClick={() =>
+        document.getElementById("testimonial-scroll").scrollBy({
+          left: -360,
+          behavior: "smooth",
+        })
+      }
+      className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-[#E5DED3] rounded-full w-10 h-10 items-center justify-center shadow"
+    >
+      ‹
+    </button>
+
+    {/* Right Button */}
+    <button
+      onClick={() =>
+        document.getElementById("testimonial-scroll").scrollBy({
+          left: 360,
+          behavior: "smooth",
+        })
+      }
+      className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-[#E5DED3] rounded-full w-10 h-10 items-center justify-center shadow"
+    >
+      ›
+    </button>
+
+    {/* Scroll Container */}
+    <div
+      id="testimonial-scroll"
+      className="flex gap-8 overflow-x-auto scroll-smooth pb-6 px-1"
+    >
+
       {[
         {
-          name: 'Priya & Arjun',
-          place: 'Royal Wedding, Udaipur',
-          text: 'Event Ustaad made our dream wedding come true. Every detail was flawless.',
-          img: 'https://images.pexels.com/photos/15841148/pexels-photo-15841148.jpeg'
+          name: "Dharmendra Ranka",
+          place: "Wedding Event",
+          summary: "Flawless execution with complete peace of mind",
+          detail:
+            "The entire wedding was planned meticulously and executed professionally within budget. The team was always available and extremely cooperative."
         },
         {
-          name: 'Meera & Vikram',
-          place: 'Destination Wedding, Jaipur',
-          text: 'Their creativity and execution turned our celebration into a fairytale.',
-          img: 'https://images.pexels.com/photos/15582310/pexels-photo-15582310.jpeg'
+          name: "Biyani Family",
+          place: "Wedding Planning",
+          summary: "Stress-free wedding managed perfectly end-to-end",
+          detail:
+            "From décor to timelines, every function ran smoothly and on time. Event Ustaad truly added value and delivered beyond expectations."
         },
         {
-          name: 'Rohan Malhotra',
-          place: 'Corporate Event, Mumbai',
-          text: 'Extremely professional team. Seamless execution and beautiful setup.',
-          img: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg'
+          name: "Prachi Mantri",
+          place: "Wedding Management",
+          summary: "Handled complex challenges with grace and resilience",
+          detail:
+            "Managing a 30+ member team across borders in days was impressive. Their patience, kindness, and attention to detail stood out."
         },
         {
-          name: 'Neha Sharma',
-          place: 'Social Event, Delhi',
-          text: 'Loved the attention to detail and warm coordination throughout.',
-          img: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg'
+          name: "Abhijit Kabra",
+          place: "Wedding Event",
+          summary: "Every detail executed like a family celebration",
+          detail:
+            "From décor to guest experience, everything was seamless. The team treated the event like their own and delivered a classy experience."
+        },
+        {
+          name: "Krishank Malik",
+          place: "Eco-Friendly Wedding",
+          summary: "Bold ideas executed with technical perfection",
+          detail:
+            "From CRM to guest coordination, everything was tech-driven and smooth. A rare team that executes ambitious ideas flawlessly."
+        },
+        {
+          name: "Sandeep Agarwal",
+          place: "Corporate Event (400+ Guests)",
+          summary: "Creative, reliable, and highly professional team",
+          detail:
+            "They managed planning to execution seamlessly. Lighting, branding, engagement activities — everything was top notch."
+        },
+        {
+          name: "Vachan Shetty",
+          place: "Corporate Conference",
+          summary: "Go-to team for seamless corporate events",
+          detail:
+            "They played a key anchoring role and ensured a smooth conference experience from start to finish."
+        },
+        {
+          name: "Destination Wedding Client",
+          place: "Lonavala Wedding",
+          summary: "Professional planning with a personal touch",
+          detail:
+            "Guests appreciated the flow, coordination, and overall execution. Everything felt thoughtfully managed."
+        },
+        {
+          name: "Luxury Wedding Client",
+          place: "High-End Wedding",
+          summary: "Attention to detail that truly stands out",
+          detail:
+            "From concepts to execution, everything was handled with precision. The experience felt premium and effortless."
+        },
+        {
+          name: "Corporate Leadership Team",
+          place: "Annual Business Meet",
+          summary: "Trusted partners for high-stakes events",
+          detail:
+            "Their confidence, planning, and execution standards made the event a complete success."
         }
       ].map((t, i) => (
-        <Card
+        <div
           key={i}
-          className="group overflow-hidden bg-white border border-[#E5DED3] hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
+          className="group relative min-w-[340px] max-w-[340px] h-[270px]
+                     bg-white border border-[#E5DED3] rounded-xl
+                     px-6 py-8 text-center
+                     hover:shadow-xl transition-all duration-500"
         >
-            <div className="aspect-square relative">
-            <img
-              src={t.img}
-              alt={t.name}
-              loading="lazy"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition" />
+
+          {/* ⭐ Rating Placeholder */}
+          <div className="flex justify-center gap-1 mb-4">
+            {[...Array(5)].map((_, idx) => (
+              <span key={idx} className="text-[#C6A75E] text-sm">★</span>
+            ))}
           </div>
 
-          <CardContent className="p-6 text-center">
-            <p className="text-sm text-[#6A6A6A] italic mb-4">
-              “{t.text}”
-            </p>
+          {/* Summary */}
+          <p className="text-sm text-[#6A6A6A] italic leading-relaxed
+                        group-hover:opacity-0 transition-opacity duration-300">
+            “{t.summary}”
+          </p>
+
+          {/* Hover Detail */}
+          <p className="absolute left-6 right-6 top-20
+                        text-sm text-[#6A6A6A] leading-relaxed
+                        opacity-0 group-hover:opacity-100
+                        transition-opacity duration-300">
+            “{t.detail}”
+          </p>
+
+          {/* Footer */}
+          <div className="absolute bottom-6 left-0 right-0">
             <div className="font-medium text-[#1F1F1F]">{t.name}</div>
             <div className="text-[#C6A75E] text-sm">{t.place}</div>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       ))}
 
     </div>
   </div>
 </section>
+
+
 
 
 

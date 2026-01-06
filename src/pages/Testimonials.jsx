@@ -50,9 +50,9 @@ const Testimonials = () => {
                     ))}
                   </div>
 
-                  {/* Text */}
+                  {/* Summary Text (UPDATED) */}
                   <p className="text-[#6A6A6A] mb-6 leading-relaxed italic">
-                    “{testimonial.text}”
+                    “{testimonial.summary}”
                   </p>
 
                   {/* Client Info */}
