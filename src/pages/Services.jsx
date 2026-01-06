@@ -66,7 +66,29 @@ const Services = () => {
         'Curated premium gifting solutions that leave a lasting impression.',
       features: ['Personalized Gifts', 'Premium Gifting', 'Luxury Boxes', 'Customised Products'],
       image: '/gift.webp'
-    }
+    },
+
+    {
+      id: 'f&b',
+      slug: 'food and beverages',
+      icon: Gift,
+      title: 'Food and Beverages',
+      description:
+        'Thoughtfully curated culinary experiences that complement the soul of your celebration.',
+      features: ['Global & Regional Cuisine Curation',
+    'Premium Caterer Sourcing',
+    'Live Counters & Interactive Stations',
+    'Bespoke Bar & Beverage Experiences',
+    'Artisanal Presentation & Styling'],
+      image: '/f&b.png'
+    },
+
+
+
+    
+
+    
+
   ];
 
   return (

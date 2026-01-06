@@ -42,6 +42,33 @@ const NewHome = () => {
       {/* Hero Carousel */}
       <HeroCarousel />
 
+    {/* Brand Motto */}
+<section className="bg-[#F7F3EC] py-12">
+  <div className="site-container text-center max-w-3xl mx-auto">
+
+    <span
+      className="block text-sm sm:text-base font-semibold tracking-[0.4em] text-[#C6A75E] mb-10 uppercase"
+
+    >
+      About Event Ustaad
+    </span>
+
+    <p
+      className="text-2xl sm:text-3xl md:text-4xl font-light text-[#1F1F1F] leading-snug"
+      style={{ fontFamily: 'Cormorant, serif' }}
+    >
+      "We design, plan, and manage unforgettable events"
+      <br />
+      <span className="text-[#6A6A6A] text-xl sm:text-2xl md:text-3xl">
+        From intimate celebrations to large-scale productions, executed seamlessly.
+      </span>
+    </p>
+
+  </div>
+</section>
+
+
+
       {/* Event Types */}
       <section className="py-16 sm:py-20 bg-[#FAF7F2]">
         <div className="site-container">

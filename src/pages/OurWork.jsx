@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { portfolioItems } from '../mockData';
+import { Link } from 'react-router-dom';
 
 const OurWork = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -21,6 +22,10 @@ const OurWork = () => {
     activeCategory === 'all'
       ? portfolioItems
       : portfolioItems.filter(item => getCategoryType(item) === activeCategory);
+
+  // 🔑 slug generator (no data changes needed)
+  const generateSlug = (name) =>
+    name?.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
   return (
     <div className="min-h-screen pt-20 bg-[#FAF7F2]">
@@ -60,57 +65,59 @@ const OurWork = () => {
         </div>
       </section>
 
-      {/* IMPROPER MASONRY GRID */}
-  <section className="bg-[#C6A75E] min-h-[60vh] flex items-center">
-
+      {/* MASONRY GRID */}
+      <section className="bg-[#C6A75E] min-h-[60vh] flex items-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-8">
-  {filteredItems.map((item) => (
-    <div
-      key={item.id}
-      className="break-inside-avoid mb-6"
-    >
-      <div className="relative overflow-hidden rounded-2xl shadow-lg group bg-white">
 
-        <img
-          src={item.image}
-          alt={item.title}
-          loading="lazy"
-          className="
-            w-full
-            h-auto
-            max-h-[520px]   /* ✅ THIS IS IMPORTANT */
-            object-cover
-            transition-transform duration-700
-            group-hover:scale-[1.04]
-          "
-        />
+            {filteredItems.map((item) => {
+              const slug = generateSlug(item.name || item.title);
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
-          <div className="p-6 text-white">
-            <h3
-              className="text-2xl font-light"
-              style={{ fontFamily: 'Cormorant, serif' }}
-            >
-              {item.name || item.title}
-            </h3>
+              return (
+                <div key={item.id} className="break-inside-avoid mb-6">
+                  <Link to={`/our-work/${slug}`}>
 
-            {item.description && (
-              <p className="text-sm text-white/80 mt-1">
-                {item.description}
-              </p>
-            )}
+                    <div className="relative overflow-hidden rounded-2xl shadow-lg group bg-white">
+
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        loading="lazy"
+                        className="
+                          w-full
+                          h-auto
+                          max-h-[520px]
+                          object-cover
+                          transition-transform duration-700
+                          group-hover:scale-[1.04]
+                        "
+                      />
+
+                      {/* Overlay */}
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
+                        <div className="p-6 text-white">
+                          <h3
+                            className="text-2xl font-light"
+                            style={{ fontFamily: 'Cormorant, serif' }}
+                          >
+                            {item.name || item.title}
+                          </h3>
+
+                          {item.description && (
+                            <p className="text-sm text-white/80 mt-1">
+                              {item.description}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+
+                    </div>
+                  </Link>
+                </div>
+              );
+            })}
+
           </div>
-        </div>
-
-      </div>
-    </div>
-  ))}
-</div>
-
-
         </div>
       </section>
     </div>
