@@ -1,13 +1,16 @@
 const postcards = [
-  { img: '/postcard1.jpg', rotate: '-2.5deg', delay: '0ms' },
-  { img: '/postcard2.jpg', rotate: '1.8deg', delay: '120ms' },
-  { img: '/postcard3.jpg', rotate: '-1.2deg', delay: '240ms' },
-  { img: '/postcard4.jpg', rotate: '2.2deg', delay: '360ms' },
-  { img: '/postcard5.jpg', rotate: '-1.8deg', delay: '480ms' },
-  { img: '/postcard6.jpg', rotate: '1.2deg', delay: '600ms' },
-  { img: '/postcard7.jpg', rotate: '-2deg', delay: '720ms' },
-  { img: '/postcard8.jpg', rotate: '1.6deg', delay: '840ms' },
+  { img: '/postcard1.jpeg', rotate: '-2.5deg', delay: '0ms' },
+  { img: '/postcard2.jpeg', rotate: '1.8deg', delay: '120ms' },
+  { img: '/postcard3.jpeg', rotate: '-1.2deg', delay: '240ms' },
+  { img: '/postcard4.jpeg', rotate: '2.2deg', delay: '360ms' },
+  { img: '/postcard5.jpeg', rotate: '-1.8deg', delay: '480ms' },
+  { img: '/postcard6.jpeg', rotate: '1.2deg', delay: '600ms' },
+  { img: '/postcard7.jpeg', rotate: '-2deg', delay: '720ms' },
+  { img: '/postcard8.jpeg', rotate: '1.6deg', delay: '840ms' },
+  { img: '/postcard9.jpeg', rotate: '-1.4deg', delay: '960ms' },
+  { img: '/postcard10.jpeg', rotate: '2deg', delay: '1080ms' },
 ]
+
 
 const WeddingTipsBoard = () => {
   return (
