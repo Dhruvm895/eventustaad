@@ -23,7 +23,6 @@ const OurWork = () => {
       ? portfolioItems
       : portfolioItems.filter(item => getCategoryType(item) === activeCategory);
 
-  // 🔑 slug generator (no data changes needed)
   const generateSlug = (name) =>
     name?.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
@@ -77,8 +76,8 @@ const OurWork = () => {
                 <div key={item.id} className="break-inside-avoid mb-6">
 
                   {/* 🔀 CONDITIONAL LINK LOGIC */}
-                  {item.category === 'corporate' && item.videoUrl ? (
-                    /* ===== CORPORATE → YOUTUBE ===== */
+                  {(item.category === 'corporate' || item.category === 'social') && item.videoUrl ? (
+                    /* ===== CORPORATE + SOCIAL → YOUTUBE ===== */
                     <a
                       href={item.videoUrl}
                       target="_blank"
@@ -101,7 +100,7 @@ const OurWork = () => {
                           "
                         />
 
-                        {/* Overlay */}
+                        {/* Play Icon */}
                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                           <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
                             <svg

@@ -18,71 +18,89 @@ const Services = () => {
 
   const services = [
     {
-      id: 'venue',
-      slug: 'venue-search',
-      icon: MapPin,
-      title: 'Our Venue Search',
-      description:
-        'Finding the perfect venue is the cornerstone of a successful event.',
-      features: ['For unwinding experiences', 'For the class', 'For the luxury vibe', 'For the fun'],
-      image: '/venue.webp'
-    },
-    {
-      id: 'design',
-      slug: 'event-design',
-      icon: Lightbulb,
-      title: 'Event Concepts – Designing & Production',
-      description:
-        'Transforming visions into immersive, story-driven experiences.',
-      features: ['Thoughtful Interactive Ideas', 'Creative Elements', 'Larger Than Life Events'],
-      image: '/decor.webp'
-    },
-    {
-      id: 'hospitality',
-      slug: 'hospitality',
-      icon: Hotel,
-      title: 'Hospitality & Logistics',
-      description:
-        'Seamless logistics and exceptional hospitality for flawless execution.',
-      features: ['Help Desk', 'Warm Welcome', 'Personalised Welcome Notes', 'Welcome Photobooth'],
-      image: '/hosp.webp'
-    },
-    {
-      id: 'artists',
-      slug: 'artist-management',
-      icon: Music,
-      title: 'Artist Management',
-      description:
-        'Connecting you with premium talent to elevate your event.',
-      features: ['Live Band', 'Stand-up Comedian', 'Mentalist', 'Premium Bar Solutions'],
-      image: '/artist.webp'
-    },
-    {
-      id: 'gifting',
-      slug: 'corporate-gifting',
-      icon: Gift,
-      title: 'Corporate Gifting',
-      description:
-        'Curated premium gifting solutions that leave a lasting impression.',
-      features: ['Personalized Gifts', 'Premium Gifting', 'Luxury Boxes', 'Customised Products'],
-      image: '/gift.webp'
-    },
-
-    {
-      id: 'f&b',
-      slug: 'food and beverages',
-      icon: Gift,
-      title: 'Food and Beverages',
-      description:
-        'Thoughtfully curated culinary experiences that complement the soul of your celebration.',
-      features: ['Global & Regional Cuisine Curation',
-    'Premium Caterer Sourcing',
-    'Live Counters & Interactive Stations',
-    'Bespoke Bar & Beverage Experiences',
-    'Artisanal Presentation & Styling'],
-      image: '/f&b.png'
-    },
-
+  id: 'venue',
+  slug: 'venue-search',
+  icon: MapPin,
+  title: 'Exquisite Destination & Venue Curation',
+  description:
+    'Personalized curation of breathtaking destinations and iconic venues that perfectly reflect your vision.',
+  features: [
+    'Personalized destination & venue recommendations',
+    'Site visits, availability checks & negotiations',
+    'Venues aligned with your event vision & style'
+  ],
+  image: '/venue.webp'
+},
+{
+  id: 'design',
+  slug: 'event-design',
+  icon: Lightbulb,
+  title: 'Luxury Décor & Design',
+  description:
+    'Bespoke décor concepts crafted to transform spaces into immersive, visually stunning experiences.',
+  features: [
+    'Custom themes & décor concepts',
+    'Floral design, lighting & furniture styling',
+    'Immersive and visually striking transformations'
+  ],
+  image: '/decor.webp'
+},
+{
+  id: 'artists',
+  slug: 'artist-management',
+  icon: Music,
+  title: 'Bespoke Vendor & Entertainment Management',
+  description:
+    'Handpicked vendors and premium entertainment curated to elevate every moment of your event.',
+  features: [
+    'Curated vendors for photography, styling & production',
+    'Artist & performer coordination',
+    'End-to-end vendor scheduling & management'
+  ],
+  image: '/artist.webp'
+},
+{
+  id: 'ceremony',
+  slug: 'ceremony-planning',
+  icon: Lightbulb,
+  title: 'Ceremony & Ritual Expertise',
+  description:
+    'Thoughtful guidance and seamless planning for traditional, cultural, or custom ceremonies.',
+  features: [
+    'Traditional & cultural ritual guidance',
+    'Step-by-step ceremony planning',
+    'Officiant coordination & flawless timing'
+  ],
+  image: '/decor.webp'
+},
+{
+  id: 'hospitality',
+  slug: 'hospitality',
+  icon: Hotel,
+  title: 'Seamless Logistics & Guest Experience',
+  description:
+    'End-to-end guest management designed to deliver comfort, care, and flawless execution.',
+  features: [
+    'Guest arrivals, transport & accommodation management',
+    'On-site coordination & logistics oversight',
+    'Personalized guest care & experience management'
+  ],
+  image: '/hosp.webp'
+},
+{
+  id: 'f&b',
+  slug: 'food-and-beverages',
+  icon: Gift,
+  title: 'Curated Culinary & Beverage Experiences',
+  description:
+    'Thoughtfully crafted dining and beverage journeys that delight guests and elevate celebrations.',
+  features: [
+    'Personalized menu planning & tastings',
+    'Dietary planning, portion & plate management',
+    'Beverage curation, inventory & service coordination'
+  ],
+  image: '/f&b.png'
+}
 
 
     

@@ -1,56 +1,56 @@
 // Mock data for Event Ustaad
 
 export const portfolioItems = [
-  {
+   {
     id: 1,
     name: "Astha & Amit",
     category: "wedding",
     image: "amitastha.jpeg",
     featured: true
   },
-  {
-  id: 2,
-  name: "Anahita & Sahil",
-  category: "wedding",
-  description: "A timeless wedding celebrating elegance and love",
-  image: "anahitasahil.jpeg", // thumbnail for Our Work page
-  images: [
-    "/weddings/anahita-sahil/AnahitaSahil_EUposts.zip_-_1.webp",
-    "/weddings/anahita-sahil/AnahitaSahil_EUposts.zip_-_4.webp",
-    "/weddings/anahita-sahil/AnahitaSahil_EUposts.zip_-_6.webp",
-    "/weddings/anahita-sahil/AnahitaSahil_EUposts.zip_-_7.webp",
-    "/weddings/anahita-sahil/AnahitaSahil_EUposts.zip_-_12.webp",
-    "/weddings/anahita-sahil/AnahitaSahil_EUposts.zip_-_13.webp",
-    "/weddings/anahita-sahil/AnahitaSahil_EUposts.zip_-_17.webp",
-    "/weddings/anahita-sahil/AnahitaSahil_EUposts.zip_-_25.webp",
-    "/weddings/anahita-sahil/AnahitaSahil_EUposts.zip_-_27.webp",
-    "/weddings/anahita-sahil/AnahitaSahil_EUposts2_-_38.webp"
-  ],
-  featured: true
-},
 
   {
-  id: 3,
-  name: "Mansi & Zach",
-  category: "wedding",
-  description: "A beautiful cross-cultural wedding celebration",
-  image: "mansizach.jpeg", // thumbnail used on Our Work page
-  images: [
-    "/weddings/mansi-zach/mz1.webp",
-    "/weddings/mansi-zach/mz2.webp",
-    "/weddings/mansi-zach/mz3.webp",
-    "/weddings/mansi-zach/mz4.webp",
-    "/weddings/mansi-zach/mz5.webp",
-    "/weddings/mansi-zach/mz6.webp",
-    "/weddings/mansi-zach/mz7.webp",
-    "/weddings/mansi-zach/mz8.webp"
-  ],
-  featured: true
-},
+    id: 2,
+    name: "Anahita & Sahil",
+    category: "wedding",
+    description: "A timeless wedding celebrating elegance and love",
+    image: "anahitasahil.jpeg",
+    images: [
+      "/weddings/anahita-sahil/AnahitaSahil_EUposts.zip_-_1.webp",
+      "/weddings/anahita-sahil/AnahitaSahil_EUposts.zip_-_4.webp",
+      "/weddings/anahita-sahil/AnahitaSahil_EUposts.zip_-_6.webp",
+      "/weddings/anahita-sahil/AnahitaSahil_EUposts.zip_-_7.webp",
+      "/weddings/anahita-sahil/AnahitaSahil_EUposts.zip_-_12.webp",
+      "/weddings/anahita-sahil/AnahitaSahil_EUposts.zip_-_13.webp",
+      "/weddings/anahita-sahil/AnahitaSahil_EUposts.zip_-_17.webp",
+      "/weddings/anahita-sahil/AnahitaSahil_EUposts.zip_-_25.webp",
+      "/weddings/anahita-sahil/AnahitaSahil_EUposts.zip_-_27.webp",
+      "/weddings/anahita-sahil/AnahitaSahil_EUposts2_-_38.webp"
+    ],
+    featured: true
+  },
+
+  {
+    id: 3,
+    name: "Mansi & Zach",
+    category: "wedding",
+    description: "A beautiful cross-cultural wedding celebration",
+    image: "mansizach.jpeg",
+    images: [
+      "/weddings/mansi-zach/mz1.webp",
+      "/weddings/mansi-zach/mz2.webp",
+      "/weddings/mansi-zach/mz3.webp",
+      "/weddings/mansi-zach/mz4.webp",
+      "/weddings/mansi-zach/mz5.webp",
+      "/weddings/mansi-zach/mz6.webp",
+      "/weddings/mansi-zach/mz7.webp",
+      "/weddings/mansi-zach/mz8.webp"
+    ],
+    featured: true
+  },
 
   {
     id: 4,
- 
     name: "Laura & Aditya",
     category: "wedding",
     image: "lauraaditya.jpeg",
@@ -58,106 +58,100 @@ export const portfolioItems = [
   },
 
   {
-  id: 6,
-  name: "Aayushi & Amey",
-  category: "wedding",
-  description: "An intimate wedding celebration",
-  image: "ayushiamey.jpeg",
-  images: [
-    "/weddings/ayushi-amey/aa1.webp",
-    "/weddings/ayushi-amey/aa2.webp",
-    "/weddings/ayushi-amey/aa3.webp",
-    "/weddings/ayushi-amey/aa4.webp",
-    "/weddings/ayushi-amey/aa5.webp",
-    "/weddings/ayushi-amey/aa6.webp",
-    "/weddings/ayushi-amey/aa7.webp",
-    "/weddings/ayushi-amey/aa8.webp",
-    "/weddings/ayushi-amey/aa9.webp",
-    "/weddings/ayushi-amey/aam.webp"
-    
-  ],
-  featured: false
-},
-
+    id: 6,
+    name: "Aayushi & Amey",
+    category: "wedding",
+    description: "An intimate wedding celebration",
+    image: "ayushiamey.jpeg",
+    images: [
+      "/weddings/ayushi-amey/aa1.webp",
+      "/weddings/ayushi-amey/aa2.webp",
+      "/weddings/ayushi-amey/aa3.webp",
+      "/weddings/ayushi-amey/aa4.webp",
+      "/weddings/ayushi-amey/aa5.webp",
+      "/weddings/ayushi-amey/aa6.webp",
+      "/weddings/ayushi-amey/aa7.webp",
+      "/weddings/ayushi-amey/aa8.webp",
+      "/weddings/ayushi-amey/aa9.webp",
+      "/weddings/ayushi-amey/aam.webp"
+    ],
+    featured: false
+  },
 
   {
-  id: 7,
-  name: "Bhumika & Krishank",
-  category: "wedding",
-  description: "A joyful wedding celebration filled with warmth and tradition",
-  image: "/weddings/bhumika/Copy of SHIV2200.webp", // thumbnail on Our Work page
-  images: [
-    "/weddings/bhumika/9.webp",
-    "/weddings/bhumika/10.webp",
-    "/weddings/bhumika/17.webp",
-  
-    "/weddings/bhumika/Copy of IMG_0092.webp",
-    "/weddings/bhumika/Copy of SHIV1089.webp",
-    "/weddings/bhumika/Copy of SHIV1477.webp",
-    
-    "/weddings/bhumika/Copy of SZPO9309.webp",
-    "/weddings/bhumika/Copy of SZPO9346.webp"
-  ],
-  featured: false
-},
-
-
+    id: 7,
+    name: "Bhumika & Krishank",
+    category: "wedding",
+    description: "A joyful wedding celebration filled with warmth and tradition",
+    image: "/weddings/bhumika/Copy of SHIV2200.webp",
+    images: [
+      "/weddings/bhumika/9.webp",
+      "/weddings/bhumika/10.webp",
+      "/weddings/bhumika/17.webp",
+      "/weddings/bhumika/Copy of IMG_0092.webp",
+      "/weddings/bhumika/Copy of SHIV1089.webp",
+      "/weddings/bhumika/Copy of SHIV1477.webp",
+      "/weddings/bhumika/Copy of SZPO9309.webp",
+      "/weddings/bhumika/Copy of SZPO9346.webp"
+    ],
+    featured: false
+  },
 
   {
-  id: 8,
-  name: "Jason & Sakshi",
-  category: "wedding",
-  description: "A vibrant celebration blending cultures, emotions, and joy",
-  image: "/weddings/sakshi/jason x Sakshi_Sneek peek_014.webp", // thumbnail on Our Work page
-  images: [
-    "/weddings/sakshi/FP Shortlisted photos.webp",
-    "/weddings/sakshi/haldi pic right slider 1 js.webp",
-    
-    "/weddings/sakshi/jason x Sakshi_Sneek peek_017.webp",
-    "/weddings/sakshi/jason x Sakshi_Sneek peek_019.webp",
-    "/weddings/sakshi/jason x Sakshi_Sneek peek_022.webp",
-    "/weddings/sakshi/jason x Sakshi_Sneek peek_030.webp",
-    "/weddings/sakshi/jason x Sakshi_Sneek peek_031.webp",
-    "/weddings/sakshi/sangeet right slider 1 js.webp",
-    "/weddings/sakshi/wedding right slider1 js.webp"
-  ],
-  featured: false
-},
+    id: 8,
+    name: "Jason & Sakshi",
+    category: "wedding",
+    description: "A vibrant celebration blending cultures, emotions, and joy",
+    image: "/weddings/sakshi/jason x Sakshi_Sneek peek_014.webp",
+    images: [
+      "/weddings/sakshi/FP Shortlisted photos.webp",
+      "/weddings/sakshi/haldi pic right slider 1 js.webp",
+      "/weddings/sakshi/jason x Sakshi_Sneek peek_017.webp",
+      "/weddings/sakshi/jason x Sakshi_Sneek peek_019.webp",
+      "/weddings/sakshi/jason x Sakshi_Sneek peek_022.webp",
+      "/weddings/sakshi/jason x Sakshi_Sneek peek_030.webp",
+      "/weddings/sakshi/jason x Sakshi_Sneek peek_031.webp",
+      "/weddings/sakshi/sangeet right slider 1 js.webp",
+      "/weddings/sakshi/wedding right slider1 js.webp"
+    ],
+    featured: false
+  },
 
+  /* ===================== */
+  /* ==== CORPORATE ===== */
+  /* ===================== */
 
+  {
+    id: 9,
+    title: "Corporate Conference",
+    category: "corporate",
+    image: "cor1.jpeg",
+    videoUrl: "https://youtu.be/g44_41cRypY?si=Ncu-vEYekDW2Q6nN",
+    featured: false
+  },
 
- {
-  id: 9,
-  title: "Corporate Conference",
-  category: "corporate",
-  image: "cor1.jpeg",
-  videoUrl: "https://youtu.be/g44_41cRypY?si=Ncu-vEYekDW2Q6nN",
-  featured: false
-},
   {
     id: 10,
     title: "Product Launch Event",
-   
     category: "corporate",
     image: "asianp.png",
     videoUrl: "https://youtu.be/g44_41cRypY?si=Ncu-vEYekDW2Q6nN",
     featured: false
   },
-   {
+
+  /* ===================== */
+  /* ===== SOCIAL ======= */
+  /* ===================== */
+
+  {
     id: 11,
-    title: "Launch Event",
-   
-    category: "corporate",
-    image: "cor3.jpeg",
-    featured: false
-  },
-   {
-    id: 12,
-    title: "Event",
-    category: "corporate",
-    image: "cor4.jpeg",
+    title: "25th Anniversary",
+    category: "social",
+    image: "25ann.png",
+    videoUrl: "https://youtu.be/KM8o4Xw78H0?si=kFK14cdBSmazIsYn",
     featured: false
   }
+   
 ];
 
 export const testimonials = [

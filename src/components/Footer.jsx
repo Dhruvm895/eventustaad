@@ -21,7 +21,7 @@ const Footer = () => {
             />
 
             <p className="text-[#4A4A4A] text-sm leading-relaxed max-w-xs">
-              Creating extraordinary experiences since 2018. Specializing in luxury weddings and corporate events across India.
+              Event Ustaad is a luxury wedding and event planning studio, crafting grand celebrations, immersive experiences, and flawlessly executed events across India. With over 10 years of expertise, we have successfully curated 175+ extraordinary events, traveling across the country to bring each celebration to life with unmatched elegance, precision, and creativity.
             </p>
 
             <div className="flex gap-4">
@@ -83,11 +83,13 @@ const Footer = () => {
           <div>
             <h3 className="text-[#1F1F1F] font-semibold mb-5">Services</h3>
             <ul className="space-y-3 text-sm text-[#6A6A6A]">
-              <li>Destination Weddings</li>
-              <li>Corporate Events</li>
-              <li>Décor Management</li>
-              <li>Hospitality & Logistics</li>
-              <li>Artist Management</li>
+              <li>Exquisite Destination & Venue Curation </li>
+              <li>Elite Entertainment & Artist Management</li>
+              <li>Bespoke Vendor Coordination</li>
+              <li>Seamless Logistics, Hospitality & Guest Experience</li>
+              <li>Luxury Décor & Design</li>
+              <li>Curated Food & Beverage Experiences</li>
+              <li>Gifting Solutions </li>
             </ul>
           </div>
 
