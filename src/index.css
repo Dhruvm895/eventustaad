@@ -564,3 +564,25 @@ body.modal-open a[aria-label="Chat on WhatsApp"] {
     transform 900ms cubic-bezier(0.22, 1, 0.36, 1),
     opacity 500ms ease;
 }
+
+/* Auto-scroll testimonials */
+.testimonial-auto-scroll {
+  scroll-behavior: smooth;
+}
+
+.testimonial-auto-scroll {
+  animation: testimonialMove 35s linear infinite;
+}
+
+.testimonial-auto-scroll:hover {
+  animation-play-state: paused;
+}
+
+@keyframes testimonialMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

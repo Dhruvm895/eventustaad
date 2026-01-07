@@ -30,7 +30,7 @@ const Header = () => {
               <img
         src="https://customer-assets.emergentagent.com/job_eventelegance-3/artifacts/ltcg4g2q_loggogo.svg"
         alt="Event Ustaad"
-        className="h-22 md:h-36 w-auto"
+        className="h-26 md:h-40 w-44"
       />
 
       </Link>

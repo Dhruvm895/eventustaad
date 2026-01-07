@@ -6,37 +6,46 @@ const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
-    {
-      image: '/home1.jpeg',
-      title: 'Grand Celebrations',
-      subtitle: 'Creating Unforgettable Moments'
-    },
-    {
-      image: '/home2.jpg',
-      title: 'Royal Weddings',
-      subtitle: 'Where Dreams Come Alive'
-    },
-    {
-      image: '/home3.jpeg',
-      title: 'Luxury Events',
-      subtitle: 'Elegance Redefined'
-    },
-    {
-      image: '/home4.jpeg',
-      title: 'Perfect Moments',
-      subtitle: 'Crafted With Love'
-    }
-  ];
+  {
+    type: 'video',
+    src: '/homevideo.mp4',
+    
+    title: 'This is where events stop being stressful',
+    subtitle: 'From the first call to the final moment, we are with you throughout.'
+  },
+  {
+    type: 'image',
+    image: '/home2.jpg',
+    title: 'This is where events stop being stressful',
+    subtitle: 'From the first call to the final moment, we are with you throughout.'
+  },
+  {
+    type: 'image',
+    image: '/home3.jpeg',
+    title: 'This is where events stop being stressful',
+    subtitle: 'From the first call to the final moment, we are with you throughout.'
+  },
+  {
+    type: 'image',
+    image: '/home4.jpeg',
+    title: 'This is where events stop being stressful',
+    subtitle: 'From the first call to the final moment, we are with you throughout.'
+  }
+];
+
 
   // ✅ CORRECT PLACE
   const slide = slides[currentSlide];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+ useEffect(() => {
+  if (slides[currentSlide].type === 'video') return;
+
+  const timer = setInterval(() => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  }, 5000);
+
+  return () => clearInterval(timer);
+}, [currentSlide]);
 
   const goToPrevious = () =>
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
@@ -52,12 +61,28 @@ const HeroCarousel = () => {
         key={currentSlide}
         className="absolute inset-0 transition-all duration-1000 ease-in-out"
       >
-        {/* Background */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${slide.image})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
+       {/* Background */}
+{slide.type === 'video' ? (
+  <video
+    className="absolute inset-0 w-full h-full object-cover"
+    autoPlay
+    muted
+    playsInline
+    preload="auto"
+    poster={slide.poster}
+    onEnded={() =>
+      setCurrentSlide((prev) => (prev + 1) % slides.length)
+    }
+  >
+    <source src={slide.src} type="video/mp4" />
+  </video>
+) : (
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: `url(${slide.image})` }}
+  />
+)}
+
 
         {/* Content */}
         <div className="absolute inset-0 flex items-start justify-start">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Heart, Briefcase, PartyPopper } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -9,32 +9,127 @@ import RotatingClientLogos from '../components/RotatingClientLogos';
 import EventsCreatedSection from '../components/EventsCreatedSection';
 
 const NewHome = () => {
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+
+  const testimonialData = [
+    {
+      name: "Dharmendra Ranka",
+      place: "Wedding Event",
+      summary: "Flawless execution with complete peace of mind",
+      detail:
+        "The entire wedding was planned meticulously and executed professionally within budget. The team was always available and extremely cooperative.",
+      image: "/wedding1.webp",
+    },
+    {
+      name: "Biyani Family",
+      place: "Wedding Planning",
+      summary: "Stress-free wedding managed perfectly end-to-end",
+      detail:
+        "From décor to timelines, every function ran smoothly and on time. Event Ustaad truly added value and delivered beyond expectations.",
+      image: "/wedding2.webp",
+    },
+    {
+      name: "Prachi Mantri",
+      place: "Wedding Management",
+      summary: "Handled complex challenges with grace and resilience",
+      detail:
+        "Managing a 30+ member team across borders in days was impressive. Their patience, kindness, and attention to detail stood out.",
+      image: "/wedding3.webp",
+    },
+    {
+      name: "Abhijit Kabra",
+      place: "Wedding Event",
+      summary: "Every detail executed like a family celebration",
+      detail:
+        "From décor to guest experience, everything was seamless. The team treated the event like their own and delivered a classy experience.",
+      image: "/wedding4.webp",
+    },
+    {
+      name: "Krishank Malik",
+      place: "Eco-Friendly Wedding",
+      summary: "Bold ideas executed with technical perfection",
+      detail:
+        "From CRM to guest coordination, everything was tech-driven and smooth. A rare team that executes ambitious ideas flawlessly.",
+      image: "/wedding4.webp",
+    },
+    {
+      name: "Sandeep Agarwal",
+      place: "Corporate Event (400+ Guests)",
+      summary: "Creative, reliable, and highly professional team",
+      detail:
+        "They managed planning to execution seamlessly. Lighting, branding, engagement activities — everything was top notch.",
+      image: "/wedding5.webp",
+    },
+    {
+      name: "Vachan Shetty",
+      place: "Corporate Conference",
+      summary: "Go-to team for seamless corporate events",
+      detail:
+        "They played a key anchoring role and ensured a smooth conference experience from start to finish.",
+      image: "/wedding.webp",
+    },
+    {
+      name: "Destination Wedding Client",
+      place: "Lonavala Wedding",
+      summary: "Professional planning with a personal touch",
+      detail:
+        "Guests appreciated the flow, coordination, and overall execution. Everything felt thoughtfully managed.",
+      image: "/testimonials/client-8.jpg",
+    },
+    {
+      name: "Luxury Wedding Client",
+      place: "High-End Wedding",
+      summary: "Attention to detail that truly stands out",
+      detail:
+        "From concepts to execution, everything was handled with precision. The experience felt premium and effortless.",
+      image: "/testimonials/client-9.jpg",
+    },
+    {
+      name: "Corporate Leadership Team",
+      place: "Annual Business Meet",
+      summary: "Trusted partners for high-stakes events",
+      detail:
+        "Their confidence, planning, and execution standards made the event a complete success.",
+      image: "/testimonials/client-10.jpg",
+    },
+  ];
+
   const eventTypes = [
     {
-      title: 'Weddings',
-      description: 'Grand celebrations where dreams come alive',
+      title: 'Luxury Weddings',
+      description: 'Bespoke, big-fat Indian weddings designed with scale, soul, and timeless elegance.',
       icon: Heart,
-      image: 'https://images.pexels.com/photos/11985359/pexels-photo-11985359.jpeg',
+      image: '/homewedding.jpeg',
       path: '/events#weddings',
       gradient: 'from-[#C6A75E] to-[#A88849]'
     },
     {
-      title: 'Corporate Events',
-      description: 'Professional gatherings that inspire excellence',
+      title: 'Corporate Experiences',
+      description: 'High-impact conferences, launches, offsites, and brand experiences executed with precision.',
       icon: Briefcase,
-      image: 'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg',
+      image: '/homecorporate.jpeg',
       path: '/events#corporate',
       gradient: 'from-[#C6A75E] to-[#A88849]'
     },
     {
-      title: 'Social Events',
-      description: 'Memorable moments crafted with perfection',
+      title: 'Social Celebrations',
+      description: 'Curated private events crafted with style and attention to detail.',
       icon: PartyPopper,
-      image: 'https://images.pexels.com/photos/1616113/pexels-photo-1616113.jpeg',
+      image: '/homesocial.webp',
       path: '/events#social',
       gradient: 'from-[#C6A75E] to-[#A88849]'
     }
   ];
+  useEffect(() => {
+  const interval = setInterval(() => {
+    setActiveTestimonial(prev =>
+      (prev + 1) % testimonialData.length
+    );
+  }, 5000);
+
+  return () => clearInterval(interval);
+}, [testimonialData.length]);
+
 
   return (
     <div className="min-h-screen">
@@ -47,20 +142,21 @@ const NewHome = () => {
   <div className="site-container text-center max-w-3xl mx-auto">
 
     <span
-      className="block text-sm sm:text-base font-semibold tracking-[0.4em] text-[#C6A75E] mb-10 uppercase"
+      className="block text-lg sm:text-2xl font-bold tracking-[0.6em] text-[#C6A75E] mb-10 uppercase"
 
     >
-      About Event Ustaad
+      We are USTAAD!
     </span>
 
     <p
-      className="text-2xl sm:text-3xl md:text-4xl font-light text-[#1F1F1F] leading-snug"
+      className="text-1xl sm:text-1xl md:text-2xl font-light text-[#1F1F1F] leading-snug"
       style={{ fontFamily: 'Cormorant, serif' }}
     >
-      "We design, plan, and manage unforgettable events"
+      
+       Masters of celebrations, crafting every moment with care, precision, and unforgettable elegance.
       <br />
       <span className="text-[#6A6A6A] text-xl sm:text-2xl md:text-3xl">
-        From intimate celebrations to large-scale productions, executed seamlessly.
+       
       </span>
     </p>
 
@@ -157,162 +253,112 @@ const NewHome = () => {
 
      {/* Testimonials */}
 <section className="py-24 bg-[#EFE9DF]">
-  <div className="site-container relative">
-
+  <div className="site-container">
     <h2
-      className="text-center text-3xl sm:text-4xl md:text-5xl font-light text-[#1F1F1F] mb-12"
+      className="text-center text-3xl sm:text-4xl md:text-5xl font-light text-[#1F1F1F] mb-16"
       style={{ fontFamily: 'Cormorant, serif' }}
     >
       Happy Customers
     </h2>
 
-    {/* Left Button */}
-    <button
-      onClick={() =>
-        document.getElementById("testimonial-scroll").scrollBy({
-          left: -360,
-          behavior: "smooth",
-        })
-      }
-      className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-[#E5DED3] rounded-full w-10 h-10 items-center justify-center shadow"
-    >
-      ‹
-    </button>
+    {/* Cards */}
+    <div className="flex justify-center gap-8 items-stretch">
+      {[ -1, 0, 1 ].map((offset) => {
+        const index =
+          (activeTestimonial + offset + testimonialData.length) %
+          testimonialData.length;
 
-    {/* Right Button */}
-    <button
-      onClick={() =>
-        document.getElementById("testimonial-scroll").scrollBy({
-          left: 360,
-          behavior: "smooth",
-        })
-      }
-      className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-[#E5DED3] rounded-full w-10 h-10 items-center justify-center shadow"
-    >
-      ›
-    </button>
+        const isCenter = offset === 0;
 
-    {/* Scroll Container */}
-    <div
-      id="testimonial-scroll"
-      className="flex gap-8 overflow-x-auto scroll-smooth pb-6 px-1"
-    >
+        return (
+          <div
+            key={index}
+            className={`
+              group
+              w-full max-w-sm
+              bg-white border border-[#E5DED3] rounded-xl
+              overflow-hidden
+              transition-all duration-500
+              ${isCenter ? 'shadow-2xl scale-100' : 'shadow-md scale-95 opacity-80'}
+            `}
+          >
+            {/* Image */}
+            <div className="relative h-48 w-full overflow-hidden">
+              <img
+                src={testimonialData[index].image}
+                alt={testimonialData[index].name}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
 
-      {[
-        {
-          name: "Dharmendra Ranka",
-          place: "Wedding Event",
-          summary: "Flawless execution with complete peace of mind",
-          detail:
-            "The entire wedding was planned meticulously and executed professionally within budget. The team was always available and extremely cooperative."
-        },
-        {
-          name: "Biyani Family",
-          place: "Wedding Planning",
-          summary: "Stress-free wedding managed perfectly end-to-end",
-          detail:
-            "From décor to timelines, every function ran smoothly and on time. Event Ustaad truly added value and delivered beyond expectations."
-        },
-        {
-          name: "Prachi Mantri",
-          place: "Wedding Management",
-          summary: "Handled complex challenges with grace and resilience",
-          detail:
-            "Managing a 30+ member team across borders in days was impressive. Their patience, kindness, and attention to detail stood out."
-        },
-        {
-          name: "Abhijit Kabra",
-          place: "Wedding Event",
-          summary: "Every detail executed like a family celebration",
-          detail:
-            "From décor to guest experience, everything was seamless. The team treated the event like their own and delivered a classy experience."
-        },
-        {
-          name: "Krishank Malik",
-          place: "Eco-Friendly Wedding",
-          summary: "Bold ideas executed with technical perfection",
-          detail:
-            "From CRM to guest coordination, everything was tech-driven and smooth. A rare team that executes ambitious ideas flawlessly."
-        },
-        {
-          name: "Sandeep Agarwal",
-          place: "Corporate Event (400+ Guests)",
-          summary: "Creative, reliable, and highly professional team",
-          detail:
-            "They managed planning to execution seamlessly. Lighting, branding, engagement activities — everything was top notch."
-        },
-        {
-          name: "Vachan Shetty",
-          place: "Corporate Conference",
-          summary: "Go-to team for seamless corporate events",
-          detail:
-            "They played a key anchoring role and ensured a smooth conference experience from start to finish."
-        },
-        {
-          name: "Destination Wedding Client",
-          place: "Lonavala Wedding",
-          summary: "Professional planning with a personal touch",
-          detail:
-            "Guests appreciated the flow, coordination, and overall execution. Everything felt thoughtfully managed."
-        },
-        {
-          name: "Luxury Wedding Client",
-          place: "High-End Wedding",
-          summary: "Attention to detail that truly stands out",
-          detail:
-            "From concepts to execution, everything was handled with precision. The experience felt premium and effortless."
-        },
-        {
-          name: "Corporate Leadership Team",
-          place: "Annual Business Meet",
-          summary: "Trusted partners for high-stakes events",
-          detail:
-            "Their confidence, planning, and execution standards made the event a complete success."
-        }
-      ].map((t, i) => (
-        <div
-          key={i}
-          className="group relative min-w-[340px] max-w-[340px] h-[270px]
-                     bg-white border border-[#E5DED3] rounded-xl
-                     px-6 py-8 text-center
-                     hover:shadow-xl transition-all duration-500"
-        >
+            {/* Content */}
+<div className="p-6 text-center flex flex-col h-[260px]">
 
-          {/* ⭐ Rating Placeholder */}
-          <div className="flex justify-center gap-1 mb-4">
-            {[...Array(5)].map((_, idx) => (
-              <span key={idx} className="text-[#C6A75E] text-sm">★</span>
-            ))}
+  {/* Stars */}
+  <div className="flex justify-center gap-1 mb-4 shrink-0">
+    {[...Array(5)].map((_, i) => (
+      <span key={i} className="text-[#C6A75E] text-sm">★</span>
+    ))}
+  </div>
+
+  {/* Text Wrapper (FIXED HEIGHT) */}
+  <div className="relative flex-1 flex items-center justify-center px-2">
+
+    {/* Summary */}
+    <p className="
+      text-sm text-[#6A6A6A] italic leading-relaxed
+      transition-opacity duration-300
+      group-hover:opacity-0
+    ">
+      “{testimonialData[index].summary}”
+    </p>
+
+    {/* Detail */}
+    <p className="
+      absolute inset-0
+      text-sm text-[#6A6A6A] leading-relaxed
+      opacity-0 group-hover:opacity-100
+      transition-opacity duration-300
+      flex items-center justify-center px-2
+    ">
+      “{testimonialData[index].detail}”
+    </p>
+
+  </div>
+
+  {/* Name */}
+  <div className="mt-6 shrink-0">
+    <div className="font-medium text-[#1F1F1F]">
+      {testimonialData[index].name}
+    </div>
+    <div className="text-[#C6A75E] text-sm">
+      {testimonialData[index].place}
+    </div>
+  </div>
+
+</div>
+
           </div>
+        );
+      })}
+    </div>
 
-          {/* Summary */}
-          <p className="text-sm text-[#6A6A6A] italic leading-relaxed
-                        group-hover:opacity-0 transition-opacity duration-300">
-            “{t.summary}”
-          </p>
-
-          {/* Hover Detail */}
-          <p className="absolute left-6 right-6 top-20
-                        text-sm text-[#6A6A6A] leading-relaxed
-                        opacity-0 group-hover:opacity-100
-                        transition-opacity duration-300">
-            “{t.detail}”
-          </p>
-
-          {/* Footer */}
-          <div className="absolute bottom-6 left-0 right-0">
-            <div className="font-medium text-[#1F1F1F]">{t.name}</div>
-            <div className="text-[#C6A75E] text-sm">{t.place}</div>
-          </div>
-        </div>
+    {/* Dots */}
+    <div className="flex justify-center gap-2 mt-10">
+      {testimonialData.map((_, idx) => (
+        <button
+          key={idx}
+          onClick={() => setActiveTestimonial(idx)}
+          className={`h-2.5 rounded-full transition-all duration-300 ${
+            idx === activeTestimonial
+              ? 'w-8 bg-[#C6A75E]'
+              : 'w-2.5 bg-[#D4C5B0]'
+          }`}
+        />
       ))}
-
     </div>
   </div>
 </section>
-
-
-
 
 
       {/* CTA */}
