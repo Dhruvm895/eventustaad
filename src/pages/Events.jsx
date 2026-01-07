@@ -5,6 +5,7 @@ import { Button } from '../components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import WeddingTipsBoard from '../components/WeddingTipsBoard';
 import WeddingMustHavesTrail from '../components/WeddingMustHavesTrail';
+import VenueTipsBook from '../components/VenueTipsBook';
 
 
 const Events = () => {
@@ -84,8 +85,40 @@ const Events = () => {
           </div>
         </div>
       </section>
-<WeddingTipsBoard />
-<WeddingMustHavesTrail />
+<section className="bg-[#FAF7F2] pt-20 pb-24 border-t border-[#E5DED3]">
+  <div className="max-w-7xl mx-auto px-6">
+
+    {/* MAIN HEADING */}
+    <h2 className="text-4xl md:text-5xl mb-12 text-center"
+
+      style={{ fontFamily: 'TheSeasons, serif' }}
+    >
+      Tips & Tricks
+    </h2>
+
+    {/* EQUAL GRID */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-stretch">
+
+      {/* COLUMN 1 */}
+      <div className="flex justify-center">
+        <VenueTipsBook/>
+      </div>
+          {/* COLUMN 3 */}
+      <div className="flex justify-center">
+        <WeddingTipsBoard />
+      </div>
+
+      {/* COLUMN 2 */}
+      <div className="flex justify-center">
+        <WeddingMustHavesTrail />
+      </div>
+
+  
+
+    </div>
+  </div>
+</section>
+
 
       {/* Corporate Events Section */}
       <section id="corporate" className="py-24 bg-[#EFE9DF] scroll-mt-20">

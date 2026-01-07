@@ -215,7 +215,7 @@ html {
 
 @font-face {
   font-family: 'TheSeasons';
-  src: url('./assets/fonts/fonnts.com-The-Seasons-Light.otf') format('opentype');
+  src: url('./assets/fonts/fonnts.com-253513/fonts/fonnts.com-Quiverleaf_CF_Demi_Bold.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
 }
@@ -406,4 +406,161 @@ html {
 .trail-left {
   right: 300px;
   transform: rotate(6deg) scaleX(-1);
+}
+/* =========================================
+   RESPONSIVE SAFETY (MOBILE / TABLET / LAPTOP)
+   DO NOT TOUCH ABOVE STYLES
+========================================= */
+
+/* ---------- GLOBAL IMAGE SAFETY ---------- */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- POLAROID & POSTCARD RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .polaroid {
+    width: 280px;
+  }
+
+  .polaroid img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .polaroid {
+    width: 260px;
+    padding: 12px 12px 30px;
+  }
+
+  .polaroid img {
+    height: 260px;
+  }
+
+  .postcard {
+    transform: rotate(0deg) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .polaroid {
+    width: 220px;
+    padding: 10px 10px 26px;
+  }
+
+  .polaroid img {
+    height: 220px;
+  }
+
+  .tape {
+    width: 90px;
+    height: 24px;
+  }
+
+  .tape-top-right {
+    top: -10px;
+    right: -18px;
+  }
+
+  .tape-bottom-left {
+    bottom: -10px;
+    left: -18px;
+  }
+}
+
+/* ---------- SECTION SPACING ADJUSTMENT ---------- */
+@media (max-width: 768px) {
+  .section-spacing {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+}
+
+/* ---------- TRAIL / JOURNEY RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  svg {
+    width: 480px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  svg {
+    width: 360px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  svg {
+    width: 280px !important;
+  }
+}
+
+/* ---------- JOURNEY CARD ALIGNMENT SAFETY ---------- */
+@media (max-width: 768px) {
+  .journey-card {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* ---------- MODAL SAFETY ---------- */
+@media (max-width: 640px) {
+  .fixed.inset-0 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+/* ---------- SCROLL BEHAVIOR ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+
+body.modal-open a[aria-label="Chat on WhatsApp"] {
+  display: none !important;
+}
+
+/* ================================
+   iOS / ANDROID APP SWITCHER STACK
+================================ */
+
+.ios-card {
+  position: absolute;
+  width: 320px;
+  height: 460px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #FAF7F2;
+  border: 1px solid #E5DED3;
+
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.35),
+    0 10px 20px rgba(0, 0, 0, 0.25);
+
+  transition:
+    transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 400ms ease;
+}
+
+.ios-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .ios-card {
+    width: 300px;
+    height: 400px;
+  }
+}
+.ios-card {
+  transition:
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 500ms ease;
 }

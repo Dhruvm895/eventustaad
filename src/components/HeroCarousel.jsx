@@ -64,7 +64,7 @@ const HeroCarousel = () => {
           <div className="mt-36 md:mt-48 ml-10 md:ml-24 max-w-xl text-left animate-fade-in">
 
             <h1
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+              className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl
                 font-light text-white mb-2 animate-slide-up"
               style={{ fontFamily: 'TheSeasons, serif' }}
             >
