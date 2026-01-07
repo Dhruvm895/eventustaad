@@ -39,7 +39,7 @@ const OurWork = () => {
           >
             Our Work
           </h1>
-          <div className="w-24 h-[1px] bg-[#C6A75E] mx-auto" />
+          <div className="w-24 h-[1px] bg-[#f7f6f2] mx-auto" />
         </div>
       </section>
 
@@ -58,7 +58,7 @@ const OurWork = () => {
             >
               {category.label}
               {activeCategory === category.id && (
-                <span className="absolute left-0 right-0 bottom-0 h-[2px] bg-[#C6A75E]" />
+                <span className="absolute left-0 right-0 bottom-0 h-[2px] bg-[#f7f6f2]" />
               )}
             </button>
           ))}
@@ -66,7 +66,7 @@ const OurWork = () => {
       </section>
 
       {/* MASONRY GRID */}
-      <section className="bg-[#C6A75E] min-h-[60vh] flex items-center">
+      <section className="bg-[#f7f6f2] min-h-[60vh] flex items-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-8">
 
@@ -75,44 +75,89 @@ const OurWork = () => {
 
               return (
                 <div key={item.id} className="break-inside-avoid mb-6">
-                  <Link to={`/our-work/${slug}`}>
 
-                    <div className="relative overflow-hidden rounded-2xl shadow-lg group bg-white">
+                  {/* 🔀 CONDITIONAL LINK LOGIC */}
+                  {item.category === 'corporate' && item.videoUrl ? (
+                    /* ===== CORPORATE → YOUTUBE ===== */
+                    <a
+                      href={item.videoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      <div className="relative overflow-hidden rounded-2xl shadow-lg group bg-white">
 
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        loading="lazy"
-                        className="
-                          w-full
-                          h-auto
-                          max-h-[520px]
-                          object-cover
-                          transition-transform duration-700
-                          group-hover:scale-[1.04]
-                        "
-                      />
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          loading="lazy"
+                          className="
+                            w-full
+                            h-auto
+                            max-h-[520px]
+                            object-cover
+                            transition-transform duration-700
+                            group-hover:scale-[1.04]
+                          "
+                        />
 
-                      {/* Overlay */}
-                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
-                        <div className="p-6 text-white">
-                          <h3
-                            className="text-2xl font-light"
-                            style={{ fontFamily: 'Cormorant, serif' }}
-                          >
-                            {item.name || item.title}
-                          </h3>
-
-                          {item.description && (
-                            <p className="text-sm text-white/80 mt-1">
-                              {item.description}
-                            </p>
-                          )}
+                        {/* Overlay */}
+                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                          <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 16 16"
+                              fill="currentColor"
+                              className="w-7 h-7 text-black ml-1"
+                            >
+                              <path d="M6 4.5v7l6-3.5-6-3.5z" />
+                            </svg>
+                          </div>
                         </div>
-                      </div>
 
-                    </div>
-                  </Link>
+                      </div>
+                    </a>
+                  ) : (
+                    /* ===== WEDDINGS / OTHERS → DETAIL PAGE ===== */
+                    <Link to={`/our-work/${slug}`}>
+                      <div className="relative overflow-hidden rounded-2xl shadow-lg group bg-white">
+
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          loading="lazy"
+                          className="
+                            w-full
+                            h-auto
+                            max-h-[520px]
+                            object-cover
+                            transition-transform duration-700
+                            group-hover:scale-[1.04]
+                          "
+                        />
+
+                        {/* Overlay */}
+                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
+                          <div className="p-6 text-white">
+                            <h3
+                              className="text-2xl font-light"
+                              style={{ fontFamily: 'Cormorant, serif' }}
+                            >
+                              {item.name || item.title}
+                            </h3>
+
+                            {item.description && (
+                              <p className="text-sm text-white/80 mt-1">
+                                {item.description}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+
+                      </div>
+                    </Link>
+                  )}
+
                 </div>
               );
             })}

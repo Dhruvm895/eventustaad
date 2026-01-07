@@ -40,25 +40,30 @@ const WeddingDetail = () => {
         )}
       </section>
 
-      {/* IMAGE GALLERY (ENJAY STYLE) */}
-      <section className="pb-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Wedding Gallery */}
+<section className="bg-[#FAF7F2] py-20">
+  <div className="site-container">
 
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-8">
-
-            {(wedding.images || [wedding.image]).map((img, i) => (
-              <div key={i} className="break-inside-avoid mb-6">
-                <img
-                  src={img}
-                  alt=""
-                  loading="lazy"
-                  className="
-                    w-full
-                    h-auto
-                    rounded-2xl
-                    object-cover
-                  "
-                />
+    <div className="
+      columns-1
+      sm:columns-2
+      lg:columns-3
+      gap-6
+    ">
+      {wedding.images.map((img, index) => (
+        <div key={index} className="mb-6 break-inside-avoid">
+          <img
+            src={img}
+            alt={`${wedding.name} ${index + 1}`}
+            loading="lazy"
+            className="
+              w-full
+              rounded-2xl
+              object-cover
+              transition-transform duration-500
+              hover:scale-[1.02]
+            "
+          />
               </div>
             ))}
 
