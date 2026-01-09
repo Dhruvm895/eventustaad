@@ -157,12 +157,12 @@ export const portfolioItems = [
 export const testimonials = [
   {
     id: 1,
-    name: "Dharmendra Ranka",
+    name: "Abhijit Kabra",
     event: "Wedding Event",
-    rating: 5,
+    rating: 4.5,
     summary: "Flawless execution with complete peace of mind",
     detail:
-      "The entire wedding was planned meticulously and executed professionally within budget. The team was always available and extremely cooperative.",
+      "“Everything was seamless—from décor to guest experience. The team treated our event like their own and delivered a truly classy celebration.",
     image: "/testimonials/client-1.jpg"
   },
   {
@@ -454,11 +454,7 @@ export const clients = [
     logo: "Lodha",
     image: "https://www.lodhagroup.in/assets/images/lodha-logo.png"
   },
-  { 
-    name: "Godrej Tyson Foods", 
-    logo: "Godrej Tyson",
-    image: "https://www.godrejtyson.com/images/logo.png"
-  },
+
   { 
     name: "Cipla", 
     logo: "Cipla",

@@ -21,7 +21,7 @@ const NewHome = () => {
       
     },
     {
-      name: "Biyani Family",
+      name: "Biyani Family(Biyani Packaging Pvt Ltd.)",
       place: "Wedding Planning",
       summary: "Stress-free wedding managed perfectly end-to-end",
       detail:
@@ -53,7 +53,7 @@ const NewHome = () => {
    
     },
     {
-      name: "Sandeep Agarwal",
+      name: "Sandeep Agarwal(Asian Paints)",
       place: "Corporate Event (400+ Guests)",
       summary: "Creative, reliable, and highly professional team",
       detail:
@@ -61,37 +61,14 @@ const NewHome = () => {
      
     },
     {
-      name: "Vachan Shetty",
+      name: "Vachan Shetty(Godrej Tyson)",
       place: "Corporate Conference",
       summary: "Go-to team for seamless corporate events",
       detail:
         "They played a key anchoring role and ensured a smooth conference experience from start to finish.",
      
     },
-    {
-      name: "Destination Wedding Client",
-      place: "Lonavala Wedding",
-      summary: "Professional planning with a personal touch",
-      detail:
-        "Guests appreciated the flow, coordination, and overall execution. Everything felt thoughtfully managed.",
-     
-    },
-    {
-      name: "Luxury Wedding Client",
-      place: "High-End Wedding",
-      summary: "Attention to detail that truly stands out",
-      detail:
-        "From concepts to execution, everything was handled with precision. The experience felt premium and effortless.",
-     
-    },
-    {
-      name: "Corporate Leadership Team",
-      place: "Annual Business Meet",
-      summary: "Trusted partners for high-stakes events",
-      detail:
-        "Their confidence, planning, and execution standards made the event a complete success.",
-     
-    },
+    
   ];
 
   const eventTypes = [
