@@ -33,10 +33,10 @@ const Contact = () => {
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 text-center px-4 sm:px-6">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-light text-white mb-2 sm:mb-4">
-            Plan Your Event
+          Let’s Begin Your Celebration
           </h1>
           <p className="text-sm sm:text-base md:text-xl text-white/90">
-            Start planning your extraordinary experience today
+            Tell us your story, and we’ll take it from there.
           </p>
         </div>
       </section>

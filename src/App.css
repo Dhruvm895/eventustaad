@@ -248,3 +248,74 @@ button::before, .button::before {
 button:hover::before, .button:hover::before {
   opacity: 1;
 }
+/* ===============================
+   MOBILE HARD OVERRIDES (FINAL)
+   =============================== */
+@media (max-width: 640px) {
+
+  /* 1. Kill horizontal overflow completely */
+  html, body {
+    width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  /* 2. Fix ALL stretched buttons */
+  button,
+  a button,
+  .button {
+    width: auto !important;
+    max-width: 90% !important;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex !important;
+  }
+
+  /* 3. Fix CTA sections breaking width */
+  section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* 4. Fix cards stretching vertically */
+  .card,
+  [class*="Card"],
+  [class*="rounded-xl"] {
+    height: auto !important;
+    min-height: unset !important;
+  }
+
+  /* 5. Fix images overflowing */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+  }
+
+  /* 6. Fix flex items collapsing (icons + text) */
+  .flex > * {
+    min-width: 0;
+  }
+
+  /* 7. Footer logo size */
+  footer img {
+    max-height: 56px !important;
+    width: auto !important;
+  }
+
+  /* 8. Testimonials – prevent tall stretched cards */
+  [class*="testimonial"] {
+    height: auto !important;
+  }
+
+  /* 9. Contact form overflow */
+  input, textarea, select {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* 10. Hero arrows blocking content */
+  button[aria-label="previous"],
+  button[aria-label="next"] {
+    top: 65% !important;
+  }
+}

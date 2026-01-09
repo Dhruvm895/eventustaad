@@ -42,13 +42,37 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-light text-[#1F1F1F]">
               From Hostel Roommates<br />to Business Partners
             </h2>
-            <p className="text-[#6A6A6A] leading-relaxed">
-              We’re Anmol & Shrishti — two friends, two dreamers, and now business partners. From late-night hostel room conversations to building a company together, our journey has always been about passion, trust, and creating magic out of ordinary moments. With a background in finance and engineering, we combine practicality and creativity, making sure nothing is left to chance while keeping every celebration full of soul.
-Event Ustaad isn’t just a company for us — it’s a space where we bring our energy, our heart, and our curiosity to every wedding and event we touch. Our team is our extended family, and together, we love getting into the details, thinking ahead, and making sure your day feels effortless, personal, and unforgettable.
-We’ve had the privilege of planning 176+ weddings and corporate events across 70+ destinations in India, but numbers don’t tell the story — what matters most to us is the connection, the smiles, and the feeling that every event is as unique as the people we celebrate.
-At Event Ustaad, we don’t just plan events — we walk with you, guide you, and celebrate with you, making every step of the journey feel personal, joyful, and unmistakably yours.
+          <p className="text-[#6A6A6A] leading-relaxed">
+  We’re Anmol & Shrishti— two friends, two dreamers, and now business partners.
+  From late-night hostel room conversations to building a company together, our journey has always been about
+   passion, trust, and creating magic out of ordinary moments.
+  With a background in finance and engineering, we combine
+ practicality and creativity, making sure nothing is left to chance
+  while keeping every celebration full of soul.
+</p>
 
-            </p>
+<p className="text-[#6A6A6A] leading-relaxed mt-6">
+  Event Ustaad isn’t just a company for us — it’s a space where we bring our energy, our heart, and our curiosity to
+  every wedding and event we touch.
+  Our team is our extended family, and together, we love
+  getting into the details, thinking ahead, and making sure your day feels effortless, personal, and unforgettable.
+</p>
+
+<p className="text-[#6A6A6A] leading-relaxed mt-6">
+  We’ve had the privilege of planning
+   176+ weddings and corporate events across 70+ destinations in India,
+  but numbers don’t tell the story — what matters most to us is
+  the connection, the smiles, and the feeling that every event is as unique as the people we celebrate.
+</p>
+
+<p className="text-[#6A6A6A] leading-relaxed mt-6">
+  At Event Ustaad, we don’t just plan events —
+  we walk with you, guide you, and celebrate with you,
+  making every step of the journey feel
+   personal, joyful, and unmistakably yours.
+</p>
+
+        
           </div>
 
           <div className="grid grid-cols-2 gap-4">
@@ -82,11 +106,11 @@ At Event Ustaad, we don’t just plan events — we walk with you, guide you, an
             label: 'Wedding Couples'
           },{
             icon: MapPin,
-            value: '50+',
+            value: '63+',
             label: 'Destinations'
           },{
             icon: Users,
-            value: '100+',
+            value: '175+',
             label: 'Events Executed'
           }].map((item, i) => (
             <Card key={i} className="border border-[#E5DED3] hover:shadow-lg transition">
@@ -105,10 +129,12 @@ At Event Ustaad, we don’t just plan events — we walk with you, guide you, an
       {/* CTA */}
       <section className="py-24 bg-[#C6A75E] text-center">
         <h2 className="text-4xl md:text-5xl font-light text-white mb-6">
-          Let’s Begin Your Celebration
+        
+Your Celebration Deserves Nothing Ordinary
+
         </h2>
         <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-          Tell us your story, and we’ll take it from there.
+          Whether you’re planning a once-in-a-lifetime wedding or a large-scale corporate event, we’re here to create an experience worth remembering.
         </p>
         <Link to="/contact">
           <Button className="bg-white text-[#1F1F1F] hover:bg-[#FAF7F2] px-8 py-6 text-lg rounded-md shadow-md">

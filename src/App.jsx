@@ -17,6 +17,8 @@ import WeddingDetail from "./pages/WeddingDetail";
 
 function App() {
   return (
+    <div className="min-h-screen w-full overflow-x-hidden">
+
     <div className="App">
          
       <BrowserRouter>
@@ -37,6 +39,7 @@ function App() {
         <WhatsAppButton />
         <Toaster />
       </BrowserRouter>
+    </div>
     </div>
   );
 }

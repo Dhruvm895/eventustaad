@@ -30,13 +30,13 @@ const Header = () => {
               <img
         src="https://customer-assets.emergentagent.com/job_eventelegance-3/artifacts/ltcg4g2q_loggogo.svg"
         alt="Event Ustaad"
-        className="h-26 md:h-40 w-44"
+        className="h-26 md:h-38 w-44"
       />
 
       </Link>
 
           {/* CENTER — NAV LINKS */}
-       <nav className="hidden lg:flex flex-1 justify-end gap-10 text-base font-medium pr-10">
+       <nav className="hidden lg:flex flex-1 justify-end gap-10 text-base font-medium pr-8">
 
             {navLinks.map((link) => (
               <Link
@@ -92,11 +92,7 @@ const Header = () => {
                 <span>Call Us</span>
               </a>
 
-              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                <Button className="w-full bg-[#C6A75E] hover:bg-[#A88849] text-white">
-                  Plan Your Event
-                </Button>
-              </Link>
+  
             </div>
           </nav>
         )}

@@ -22,12 +22,10 @@ const Services = () => {
   slug: 'venue-search',
   icon: MapPin,
   title: 'Exquisite Destination & Venue Curation',
-  description:
-    'Personalized curation of breathtaking destinations and iconic venues that perfectly reflect your vision.',
   features: [
-    'Personalized destination & venue recommendations',
-    'Site visits, availability checks & negotiations',
-    'Venues aligned with your event vision & style'
+    'Personalized recommendations for breathtaking destinations and iconic venues.',
+'Assistance with site visits, availability checks, and negotiations.',
+'Creating a setting that perfectly reflects your vision and event style.' 
   ],
   image: '/venue.webp'
 },
@@ -36,12 +34,10 @@ const Services = () => {
   slug: 'event-design',
   icon: Lightbulb,
   title: 'Luxury Décor & Design',
-  description:
-    'Bespoke décor concepts crafted to transform spaces into immersive, visually stunning experiences.',
   features: [
-    'Custom themes & décor concepts',
-    'Floral design, lighting & furniture styling',
-    'Immersive and visually striking transformations'
+    '	Bespoke theme and décor concepts tailored to your taste and event style.',
+    'Selection and arrangement of floral designs, lighting, furniture, and décor elements.',
+    'Transforming spaces into visually stunning, immersive experiences.'
   ],
   image: '/decor.webp'
 },
@@ -50,12 +46,10 @@ const Services = () => {
   slug: 'artist-management',
   icon: Music,
   title: 'Bespoke Vendor & Entertainment Management',
-  description:
-    'Handpicked vendors and premium entertainment curated to elevate every moment of your event.',
   features: [
-    'Curated vendors for photography, styling & production',
-    'Artist & performer coordination',
-    'End-to-end vendor scheduling & management'
+    'Handpicked vendors for photography, styling, music, and performances.',
+    'Coordination and scheduling of artists, performers, and entertainment segments.',
+    'Ensuring every service runs seamlessly, leaving you stress-free.'
   ],
   image: '/artist.webp'
 },
@@ -64,12 +58,10 @@ const Services = () => {
   slug: 'ceremony-planning',
   icon: Lightbulb,
   title: 'Ceremony & Ritual Expertise',
-  description:
-    'Thoughtful guidance and seamless planning for traditional, cultural, or custom ceremonies.',
   features: [
-    'Traditional & cultural ritual guidance',
-    'Step-by-step ceremony planning',
-    'Officiant coordination & flawless timing'
+    'Guidance for all traditional, cultural, or custom rituals.',
+    'Step-by-step planning to ensure ceremonies flow smoothly and elegantly.',
+    'Handling officiants, timing, and ceremonial essentials for a flawless experience.'
   ],
   image: '/decor.webp'
 },
@@ -78,12 +70,10 @@ const Services = () => {
   slug: 'hospitality',
   icon: Hotel,
   title: 'Seamless Logistics & Guest Experience',
-  description:
-    'End-to-end guest management designed to deliver comfort, care, and flawless execution.',
   features: [
-    'Guest arrivals, transport & accommodation management',
-    'On-site coordination & logistics oversight',
-    'Personalized guest care & experience management'
+    'Complete management of guest arrivals, transportation, and accommodations.',
+    'On-site coordination to ensure every aspect runs perfectly.',
+    'Personalized care to make each guest feel valued and comfortable.'
   ],
   image: '/hosp.webp'
 },
@@ -92,12 +82,10 @@ const Services = () => {
   slug: 'food-and-beverages',
   icon: Gift,
   title: 'Curated Culinary & Beverage Experiences',
-  description:
-    'Thoughtfully crafted dining and beverage journeys that delight guests and elevate celebrations.',
   features: [
-    'Personalized menu planning & tastings',
-    'Dietary planning, portion & plate management',
-    'Beverage curation, inventory & service coordination'
+    'Personalized menu planning and tasting sessions to ensure every dish delights your guests.',
+    'Management of catering details including portion sizes, plate counts, and dietary requirements.',
+    'Coordination of beverages, including alcohol selection, inventory, and service, for a seamless dining experience.'
   ],
   image: '/f&b.png'
 }
@@ -132,7 +120,7 @@ const Services = () => {
 
         <div className="relative z-10 text-center">
           <h1 className="text-6xl md:text-7xl font-light text-white mb-6" style={{ fontFamily: 'Cormorant, serif' }}>
-            Our Services
+         Our Signature Services
           </h1>
           <div className="w-24 h-[1px] bg-[#C6A75E] mx-auto" />
         </div>

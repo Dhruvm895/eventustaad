@@ -7,20 +7,18 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 const Footer = () => {
   return (
     <footer className="bg-[#FAF7F2] border-t border-[#E5DED3]">
-      <div className="site-container py-12 lg:py-16">
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14">
+      <div className="py-12 lg:py-16 max-w-7xl mx-auto pl-2 pr-4 lg:pl-0 lg:pr-0">
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1.2fr_0.8fr] gap-10 items-start">
 
           {/* Brand */}
-          <div className="space-y-5">
-            <LazyLoadImage
-              src="https://customer-assets.emergentagent.com/job_eventelegance-3/artifacts/ltcg4g2q_loggogo.svg"
-              alt="Event Ustaad"
-              effect="blur"
-              className="h-22 md:h-36 w-auto"
-            />
+        <div className="flex flex-col gap-2"> <LazyLoadImage 
+        src="https://customer-assets.emergentagent.com/job_eventelegance-3/artifacts/ltcg4g2q_loggogo.svg"
+         alt="Event Ustaad" 
+         effect="blur" 
+        className="h-22 md:h-36 w-auto block" />
 
-            <p className="text-[#4A4A4A] text-sm leading-relaxed max-w-xs">
+           <p className="text-[#4A4A4A] text-sm leading-relaxed max-w-xs mt-2">
+
               Event Ustaad is a luxury wedding and event planning studio, crafting grand celebrations, immersive experiences, and flawlessly executed events across India. With over 10 years of expertise, we have successfully curated 175+ extraordinary events, traveling across the country to bring each celebration to life with unmatched elegance, precision, and creativity.
             </p>
 
@@ -59,13 +57,14 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-[#1F1F1F] font-semibold mb-5">Quick Links</h3>
+            <div className="h-10 md:h-14" />
+  <h3 className="text-[#1F1F1F] font-semibold mb-5">Quick Links</h3>
             <ul className="space-y-3 text-sm">
               {[
                 ['About Us', '/about'],
-                ['Wedding Services', '/services'],
-                ['Corporate Events', '/events#corporate'],
-                ['Our Work', '/our-work'],
+                ['Our Work ', '/OurWork'],
+                ['Events', '/events'],
+                ['Services', '/Services'],
               ].map(([label, path]) => (
                 <li key={label}>
                   <Link
@@ -81,7 +80,10 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-[#1F1F1F] font-semibold mb-5">Services</h3>
+          
+  <div className="h-10 md:h-14" />
+  <h3 className="text-[#1F1F1F] font-semibold mb-5">
+Services</h3>
             <ul className="space-y-3 text-sm text-[#6A6A6A]">
               <li>Exquisite Destination & Venue Curation </li>
               <li>Elite Entertainment & Artist Management</li>
@@ -95,7 +97,10 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="text-[#1F1F1F] font-semibold mb-5">Get In Touch</h3>
+          
+  <div className="h-10 md:h-14" />
+  <h3 className="text-[#1F1F1F] font-semibold mb-5">
+Get In Touch</h3>
             <ul className="space-y-3 text-sm">
               <li>
                 <a

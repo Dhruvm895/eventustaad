@@ -48,11 +48,11 @@ const Events = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-light text-[#1F1F1F] mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
-              Weddings
+              Luxury Weddings
             </h2>
             <div className="w-24 h-[1px] bg-[#C6A75E] mx-auto mt-6" />
             <p className="text-xl text-[#1F1F1F]/70 mt-8 max-w-3xl mx-auto">
-              Grand celebrations where dreams come alive. From royal palace ceremonies to intimate destination weddings, we craft unforgettable experiences.
+            Bespoke, big-fat Indian weddings designed with scale, soul, and timeless elegance.
             </p>
           </div>
 
@@ -125,11 +125,11 @@ const Events = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-light text-[#1F1F1F] mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
-              Corporate Events
+              Corporate Experiences
             </h2>
             <div className="w-24 h-[1px] bg-[#C6A75E] mx-auto mt-6" />
             <p className="text-xl text-[#1F1F1F]/70 mt-8 max-w-3xl mx-auto">
-              Professional gatherings that inspire excellence. From conferences to product launches, we deliver seamless corporate experiences.
+              High-impact conferences, launches, offsites, and brand experiences executed with precision.
             </p>
           </div>
 
@@ -166,11 +166,11 @@ const Events = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-light text-[#1F1F1F] mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
-              Social Events
+              Social Celebrations
             </h2>
             <div className="w-24 h-[1px] bg-[#C6A75E] mx-auto mt-6" />
             <p className="text-xl text-[#1F1F1F]/70 mt-8 max-w-3xl mx-auto">
-              Memorable celebrations crafted with perfection. From milestone birthdays to elegant soirées, we create moments that matter.
+             Curated private events crafted with style and attention to detail.
             </p>
           </div>
 
