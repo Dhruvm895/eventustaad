@@ -9,7 +9,8 @@ const ClientLogos = () => {
     { name: "Fintoo", logo: "/fintoo.svg" },
     { name: "Future Generali", logo: "/futuregenerali.svg" },
     { name: "Lodha", logo: "/lodhalogo.svg" },
-    { name: "Godrej Tyson", logo: "/godrejlogo.svg" },
+    { name: "Godrej ", logo: "/godrejlogo.svg" },
+    { name: "Tyson", logo: "/tysonlogo.svg" },
     { name: "Cipla", logo: "/cipla.svg" },
     { name: "Schbang", logo: "/schbang.svg" },
     { name: "SISL", logo: "/sisl.svg" }
@@ -31,40 +32,42 @@ const ClientLogos = () => {
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10" />
 
         {/* MOVING ROW */}
-        <div className="flex w-max animate-scroll items-center gap-12 px-6">
+        <div className="flex w-max animate-scroll items-center gap-6 px-6">
 
           {/* FIRST SET */}
           {clients.map((client, index) => (
             <div
               key={`logo-1-${index}`}
-                className="flex-shrink-0 flex items-center justify-center
-                           grayscale hover:grayscale-0
-                           transition-all duration-500
-                           hover:scale-110 min-w-[140px] h-20 sm:min-w-[180px] sm:h-24"
+              className="flex-shrink-0 flex items-center justify-center
+                         grayscale hover:grayscale-0
+                         transition-all duration-500
+                         hover:scale-110
+                         min-w-[160px] h-24 sm:min-w-[200px] sm:h-28"
             >
               <img
                 src={client.logo}
                 alt={client.name}
                 loading="lazy"
-                className="max-h-16 sm:max-h-20 w-auto object-contain opacity-70 hover:opacity-100 transition"
+                className="max-h-20 sm:max-h-24 w-auto object-contain opacity-70 hover:opacity-100 transition"
               />
             </div>
           ))}
 
-          {/* DUPLICATE SET (REQUIRED FOR LOOP) */}
+          {/* DUPLICATE SET */}
           {clients.map((client, index) => (
             <div
               key={`logo-2-${index}`}
-                className="flex-shrink-0 flex items-center justify-center
-                           grayscale hover:grayscale-0
-                           transition-all duration-500
-                           hover:scale-110 min-w-[140px] h-20 sm:min-w-[180px] sm:h-24"
+              className="flex-shrink-0 flex items-center justify-center
+                         grayscale hover:grayscale-0
+                         transition-all duration-500
+                         hover:scale-110
+                         min-w-[160px] h-24 sm:min-w-[200px] sm:h-28"
             >
               <img
                 src={client.logo}
                 alt={client.name}
                 loading="lazy"
-                className="max-h-16 sm:max-h-20 w-auto object-contain opacity-70 hover:opacity-100 transition"
+                className="max-h-20 sm:max-h-24 w-auto object-contain opacity-70 hover:opacity-100 transition"
               />
             </div>
           ))}
