@@ -16,14 +16,12 @@
    Typography
    ================================ */
 
-/* Headings – Luxury Serif */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'TheSeasons', serif;
   font-weight: 400;
   letter-spacing: -0.02em;
 }
 
-/* Body – Clean Sans */
 body {
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
@@ -31,13 +29,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
 /* ================================
-   Animations (Elegant, Subtle)
+   Animations
    ================================ */
 
 @keyframes fadeInUp {
@@ -52,41 +49,22 @@ html {
 }
 
 @keyframes floatSoft {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-14px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
 }
 
 @keyframes shimmerGold {
-  0% {
-    background-position: -1200px 0;
-  }
-  100% {
-    background-position: 1200px 0;
-  }
+  0% { background-position: -1200px 0; }
+  100% { background-position: 1200px 0; }
 }
 
 @keyframes pulseGold {
-  0%, 100% {
-    box-shadow: 0 0 18px rgba(198, 167, 94, 0.35);
-  }
-  50% {
-    box-shadow: 0 0 34px rgba(198, 167, 94, 0.65);
-  }
+  0%, 100% { box-shadow: 0 0 18px rgba(198, 167, 94, 0.35); }
+  50% { box-shadow: 0 0 34px rgba(198, 167, 94, 0.65); }
 }
 
-/* Animation utility classes */
-.animate-fade-up {
-  animation: fadeInUp 0.7s ease-out forwards;
-}
-
-.animate-float {
-  animation: floatSoft 4s ease-in-out infinite;
-}
-
+.animate-fade-up { animation: fadeInUp 0.7s ease-out forwards; }
+.animate-float { animation: floatSoft 4s ease-in-out infinite; }
 .animate-shimmer {
   animation: shimmerGold 2.5s linear infinite;
   background: linear-gradient(
@@ -97,18 +75,12 @@ html {
   );
   background-size: 1200px 100%;
 }
+.animate-pulse-gold { animation: pulseGold 2.2s ease-in-out infinite; }
 
-.animate-pulse-gold {
-  animation: pulseGold 2.2s ease-in-out infinite;
-}
-
-/* Pause animation on hover */
-.pause-animation:hover {
-  animation-play-state: paused;
-}
+.pause-animation:hover { animation-play-state: paused; }
 
 /* ================================
-   Hover & Motion Effects
+   Hover Effects
    ================================ */
 
 .hover-lift {
@@ -121,7 +93,7 @@ html {
 }
 
 /* ================================
-   Glass / Premium Cards
+   Glass Cards
    ================================ */
 
 .glass-effect {
@@ -153,9 +125,7 @@ html {
   z-index: 1;
 }
 
-.image-zoom-container:hover::before {
-  opacity: 1;
-}
+.image-zoom-container:hover::before { opacity: 1; }
 
 .image-zoom-container img {
   transition: transform 0.8s ease;
@@ -166,36 +136,21 @@ html {
 }
 
 /* ================================
-   Scrollbar (Luxury Neutral)
+   Scrollbar
    ================================ */
 
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #faf7f2;
-}
-
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #faf7f2; }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    to bottom,
-    #c6a75e,
-    #a88849
-  );
+  background: linear-gradient(to bottom, #c6a75e, #a88849);
   border-radius: 6px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(
-    to bottom,
-    #b8964f,
-    #8f7238
-  );
+  background: linear-gradient(to bottom, #b8964f, #8f7238);
 }
 
 /* ================================
-   Loading Skeleton
+   Skeleton
    ================================ */
 
 .skeleton {
@@ -210,12 +165,8 @@ html {
 }
 
 @keyframes loading {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
 /* ================================
@@ -248,74 +199,74 @@ button::before, .button::before {
 button:hover::before, .button:hover::before {
   opacity: 1;
 }
+
 /* ===============================
-   MOBILE HARD OVERRIDES (FINAL)
+   MOBILE HARD OVERRIDES (SAFE)
    =============================== */
 @media (max-width: 640px) {
 
-  /* 1. Kill horizontal overflow completely */
+  /* Prevent horizontal scroll */
   html, body {
-    width: 100%;
+    max-width: 100%;
     overflow-x: hidden !important;
   }
 
-  /* 2. Fix ALL stretched buttons */
+  /* Buttons: stop full-width stretching */
   button,
-  a button,
   .button {
+    max-width: 100%;
     width: auto !important;
-    max-width: 90% !important;
-    margin-left: auto;
-    margin-right: auto;
-    display: inline-flex !important;
+    display: inline-flex;
+    justify-content: center;
   }
 
-  /* 3. Fix CTA sections breaking width */
+  /* Sections: safe horizontal padding */
   section {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
-  /* 4. Fix cards stretching vertically */
+  /* Cards: prevent tall stretching */
   .card,
   [class*="Card"],
-  [class*="rounded-xl"] {
+  [class*="rounded"] {
     height: auto !important;
     min-height: unset !important;
   }
 
-  /* 5. Fix images overflowing */
+  /* Images */
   img {
-    max-width: 100% !important;
-    height: auto !important;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
   }
 
-  /* 6. Fix flex items collapsing (icons + text) */
+  /* Flex children safety */
   .flex > * {
     min-width: 0;
   }
 
-  /* 7. Footer logo size */
+  /* Footer logo scaling */
   footer img {
-    max-height: 56px !important;
-    width: auto !important;
+    max-height: 56px;
+    width: auto;
   }
 
-  /* 8. Testimonials – prevent tall stretched cards */
+  /* Testimonials */
   [class*="testimonial"] {
-    height: auto !important;
+    height: auto;
+    max-height: unset;
   }
 
-  /* 9. Contact form overflow */
+  /* Forms */
   input, textarea, select {
-    width: 100% !important;
-    max-width: 100% !important;
+    width: 100%;
+    max-width: 100%;
   }
 
-  /* 10. Hero arrows blocking content */
+  /* Hero arrows (if present) */
   button[aria-label="previous"],
   button[aria-label="next"] {
-    top: 65% !important;
+    top: 60%;
   }
 }

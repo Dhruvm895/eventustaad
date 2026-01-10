@@ -12,14 +12,21 @@ const LargeImageSections = () => {
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
           style={{
-            backgroundImage:
-              'url(/our.webp)',
+            backgroundImage: 'url(/our.webp)',
           }}
         />
         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-500" />
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center text-center px-4">
           <h2
-            className="text-6xl md:text-7xl font-light text-white tracking-wide"
+            className="
+              text-3xl
+              sm:text-4xl
+              md:text-7xl
+              font-light
+              text-white
+              tracking-wide
+              leading-tight
+            "
             style={{ fontFamily: 'Cormorant, serif' }}
           >
             OUR WORK
@@ -35,14 +42,21 @@ const LargeImageSections = () => {
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
           style={{
-            backgroundImage:
-              'url(/service.webp)',
+            backgroundImage: 'url(/service.webp)',
           }}
         />
         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-500" />
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center text-center px-4">
           <h2
-            className="text-6xl md:text-7xl font-light text-white tracking-wide"
+            className="
+              text-3xl
+              sm:text-4xl
+              md:text-7xl
+              font-light
+              text-white
+              tracking-wide
+              leading-tight
+            "
             style={{ fontFamily: 'Cormorant, serif' }}
           >
             OUR SERVICES

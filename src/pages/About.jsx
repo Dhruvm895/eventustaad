@@ -137,11 +137,25 @@ Your Celebration Deserves Nothing Ordinary
           Whether you’re planning a once-in-a-lifetime wedding or a large-scale corporate event, we’re here to create an experience worth remembering.
         </p>
         <Link to="/contact">
-          <Button className="bg-white text-[#1F1F1F] hover:bg-[#FAF7F2] px-8 py-6 text-lg rounded-md shadow-md">
-            Get In Touch
-            <ArrowRight className="ml-2" size={20} />
-          </Button>
-        </Link>
+  <Button
+    className="
+      bg-white text-[#1F1F1F] hover:bg-[#FAF7F2]
+      px-5 py-3
+      sm:px-8 sm:py-6
+      text-sm sm:text-lg
+      rounded-md
+      shadow-md
+      inline-flex items-center justify-center
+      gap-2
+      whitespace-nowrap
+      max-w-full
+    "
+  >
+    <span>Get In Touch</span>
+    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+  </Button>
+</Link>
+
       </section>
 
     </div>

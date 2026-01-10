@@ -18,10 +18,10 @@ const Contact = () => {
   const [showThankYou, setShowThankYou] = useState(false);
 
   return (
-    <div className="min-h-screen pt-20 bg-[#FAF7F2]">
+    <div className="min-h-screen pt-16 sm:pt-20 bg-[#FAF7F2]">
 
       {/* HERO */}
-      <section className="relative h-[32vh] md:h-[45vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[26vh] sm:h-[32vh] md:h-[45vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -31,27 +31,28 @@ const Contact = () => {
           }}
         />
         <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 text-center px-4 sm:px-6">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-light text-white mb-2 sm:mb-4">
-          Let’s Begin Your Celebration
+
+        <div className="relative z-10 text-center px-4">
+          <h1 className="text-2xl sm:text-3xl md:text-6xl font-light text-white mb-2">
+            Let’s Begin Your Celebration
           </h1>
-          <p className="text-sm sm:text-base md:text-xl text-white/90">
+          <p className="text-xs sm:text-sm md:text-xl text-white/90">
             Tell us your story, and we’ll take it from there.
           </p>
         </div>
       </section>
 
       {/* CONTENT */}
-      <section className="py-16 lg:py-24">
+      <section className="py-10 sm:py-16 lg:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid gap-8 lg:grid-cols-2">
 
           {/* INFO */}
-          <div className="space-y-10">
+          <div className="space-y-6 sm:space-y-10">
             <div>
-              <h2 className="text-4xl font-light text-[#1F1F1F] mb-4">
+              <h2 className="text-2xl sm:text-4xl font-light text-[#1F1F1F] mb-2 sm:mb-4">
                 Get In Touch
               </h2>
-              <p className="text-[#6A6A6A]">
+              <p className="text-sm text-[#6A6A6A]">
                 Whether you're planning a dream wedding or a corporate event,
                 our team is here to bring your vision to life.
               </p>
@@ -75,49 +76,43 @@ const Contact = () => {
               }
             ].map((item, i) => (
               <Card key={i} className="border border-[#E5DED3]">
-                <CardContent className="p-6 flex gap-4">
-                  <div className="w-12 h-12 bg-[#FAF7F2] border border-[#E5DED3] rounded-full flex items-center justify-center">
-                    <item.icon className="text-[#C6A75E]" size={20} />
+                <CardContent className="p-4 sm:p-6 flex gap-3 sm:gap-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#FAF7F2] border border-[#E5DED3] rounded-full flex items-center justify-center shrink-0">
+                    <item.icon className="text-[#C6A75E]" size={18} />
                   </div>
 
                   <div>
-                    <h3 className="font-medium text-[#1F1F1F] mb-1">
+                    <h3 className="font-medium text-sm sm:text-base text-[#1F1F1F] mb-1">
                       {item.title}
                     </h3>
 
                     {item.lines.map((line, idx) => {
-                      // EMAIL → Gmail
                       if (item.title === 'Email Us') {
                         return (
                           <a
                             key={idx}
-                            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${line}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="block text-[#6A6A6A] text-sm hover:text-[#C6A75E] transition"
+                            href={`mailto:${line}`}
+                            className="block text-xs sm:text-sm text-[#6A6A6A]"
                           >
                             {line}
                           </a>
                         );
                       }
 
-                      // PHONE → Dialer
                       if (item.title === 'Call Us') {
-                        const phone = line.replace(/\s+/g, '');
                         return (
                           <a
                             key={idx}
-                            href={`tel:${phone}`}
-                            className="block text-[#6A6A6A] text-sm hover:text-[#C6A75E] transition"
+                            href={`tel:${line.replace(/\s+/g, '')}`}
+                            className="block text-xs sm:text-sm text-[#6A6A6A]"
                           >
                             {line}
                           </a>
                         );
                       }
 
-                      // DEFAULT TEXT
                       return (
-                        <p key={idx} className="text-[#6A6A6A] text-sm">
+                        <p key={idx} className="text-xs sm:text-sm text-[#6A6A6A]">
                           {line}
                         </p>
                       );
@@ -130,51 +125,48 @@ const Contact = () => {
 
           {/* FORM */}
           <Card className="border border-[#E5DED3] shadow-sm">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-light text-[#1F1F1F] mb-6">
+            <CardContent className="p-5 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-light text-[#1F1F1F] mb-4 sm:mb-6">
                 Send Us a Message
               </h3>
 
               <form
                 action="https://formsubmit.co/mistrydhruv04@gmail.com"
                 method="POST"
-                target="hidden_iframe"
+                className="space-y-4 sm:space-y-5"
                 onSubmit={() => {
                   setShowThankYou(true);
                   setTimeout(() => setShowThankYou(false), 2500);
                 }}
-                className="space-y-5"
               >
                 <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_subject" value="New Event Enquiry - Event Ustaad" />
-                <input type="hidden" name="_autoresponse" value="Thank you for contacting Event Ustaad. Our team will get back to you shortly." />
                 <input type="hidden" name="eventType" value={eventType} />
 
                 <div>
-                  <Label>Name</Label>
-                  <Input name="name" required />
+                  <Label className="text-xs sm:text-sm">Name</Label>
+                  <Input className="h-9 sm:h-11" name="name" required />
                 </div>
 
                 <div>
-                  <Label>Email</Label>
-                  <Input type="email" name="email" required />
+                  <Label className="text-xs sm:text-sm">Email</Label>
+                  <Input className="h-9 sm:h-11" type="email" name="email" required />
                 </div>
 
                 <div>
-                  <Label>Phone</Label>
-                  <Input name="phone" required />
+                  <Label className="text-xs sm:text-sm">Phone</Label>
+                  <Input className="h-9 sm:h-11" name="phone" required />
                 </div>
 
                 <div>
-                  <Label>Event Location</Label>
-                  <Input name="eventLocation" />
+                  <Label className="text-xs sm:text-sm">Event Location</Label>
+                  <Input className="h-9 sm:h-11" name="eventLocation" />
                 </div>
 
                 <div>
-                  <Label>Event Type</Label>
+                  <Label className="text-xs sm:text-sm">Event Type</Label>
                   <Select onValueChange={setEventType}>
-                    <SelectTrigger>
+                    <SelectTrigger className="h-9 sm:h-11">
                       <SelectValue placeholder="Select event type" />
                     </SelectTrigger>
                     <SelectContent>
@@ -187,42 +179,23 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <Label>Message</Label>
-                  <Textarea name="message" rows={5} />
+                  <Label className="text-xs sm:text-sm">Message</Label>
+                  <Textarea className="min-h-[90px] sm:min-h-[120px]" name="message" />
                 </div>
 
                 <Button
                   type="submit"
-                  className="w-full bg-[#C6A75E] hover:bg-[#A88849] text-white py-5"
+                  className="w-full bg-[#C6A75E] hover:bg-[#A88849] text-white py-3 sm:py-5 text-sm sm:text-base"
                 >
                   Send Message
-                  <Send className="ml-2" size={18} />
+                  <Send className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
                 </Button>
               </form>
-
-              <iframe name="hidden_iframe" style={{ display: 'none' }} title="hidden_iframe" />
             </CardContent>
           </Card>
 
         </div>
       </section>
-
-      {/* THANK YOU OVERLAY */}
-      {showThankYou && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div className="absolute inset-0 bg-[#C6A75E]/30 backdrop-blur-sm animate-fade-in" />
-          <div className="relative bg-white rounded-lg shadow-xl px-10 py-8 text-center animate-scale-in">
-            <h2 className="text-3xl font-light text-[#1F1F1F] mb-3">
-              Thank You ✨
-            </h2>
-            <p className="text-[#6A6A6A]">
-              Your message has been sent successfully.<br />
-              Our team will contact you shortly.
-            </p>
-          </div>
-        </div>
-      )}
-
     </div>
   );
 };
