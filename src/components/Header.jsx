@@ -83,14 +83,7 @@ const Header = () => {
               </Link>
             ))}
 
-            <div className="pt-4 space-y-2">
-              <a
-                href="tel:+919833310150"
-                className="flex items-center justify-center gap-2 px-4 py-3 text-[#C6A75E] bg-[#C6A75E]/10 rounded-lg"
-              >
-                <Phone size={18} />
-                <span>Call Us</span>
-              </a>
+           <div className="pt-4">
 
   
             </div>

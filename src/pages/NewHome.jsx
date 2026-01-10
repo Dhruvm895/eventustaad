@@ -251,19 +251,19 @@ Our Signature Services
       <EventsCreatedSection />
       <RotatingClientLogos />
 
-   {/* Testimonials */}
-<section className="py-24 bg-[#EFE9DF] relative">
+  {/* Testimonials */}
+<section className="py-16 sm:py-24 bg-[#EFE9DF] relative">
   <div className="site-container relative">
 
     <h2
-      className="text-center text-3xl sm:text-4xl md:text-5xl font-light text-[#1F1F1F] mb-16"
+      className="text-center text-3xl sm:text-4xl md:text-5xl font-light text-[#1F1F1F] mb-12 sm:mb-16"
       style={{ fontFamily: 'Cormorant, serif' }}
     >
-    What Our Clients Say  
+      What Our Clients Say
     </h2>
 
     {/* Wrapper */}
-    <div className="relative flex justify-center items-stretch gap-6">
+    <div className="relative flex justify-center items-stretch gap-4 sm:gap-6 px-2 sm:px-0">
 
       {/* PREVIOUS */}
       <button
@@ -273,13 +273,13 @@ Our Signature Services
               (prev - 1 + testimonialData.length) % testimonialData.length
           )
         }
-        className="absolute left-[-72px]  top-1/2 -translate-y-1/2 z-20
-                   w-14 h-14 rounded-full
+        className="absolute left-[-56px] sm:left-[-72px] top-1/2 -translate-y-1/2 z-20
+                   w-12 h-12 sm:w-14 sm:h-14 rounded-full
                    bg-white/40 backdrop-blur-md
                    flex items-center justify-center
                    hover:bg-white/60 transition"
       >
-        <span className="text-[#C6A75E] text-2xl">‹</span>
+        <span className="text-[#C6A75E] text-xl sm:text-2xl">‹</span>
       </button>
 
       {/* CARDS */}
@@ -294,16 +294,21 @@ Our Signature Services
           <div
             key={index}
             className={`
-              w-full max-w-sm bg-white
+              w-full max-w-[280px] sm:max-w-sm
+              bg-white
               border border-[#E5DED3] rounded-2xl
-              px-8 py-10 text-center
+              px-5 sm:px-8
+              py-6 sm:py-10
+              text-center
               transition-all duration-500
+              flex flex-col
               ${isCenter
                 ? 'shadow-2xl scale-100 opacity-100'
                 : 'shadow-md scale-95 opacity-70'}
             `}
           >
 
+<<<<<<< HEAD
            {(() => {
   const rating = testimonialData[index].rating;
   const fullStars = Math.floor(rating);
@@ -327,18 +332,39 @@ Our Signature Services
   );
 })()}
 
+=======
+            {/* Stars */}
+            <div className="flex justify-center gap-1 mb-4 sm:mb-6">
+              {[...Array(5)].map((_, i) => (
+                <span
+                  key={i}
+                  className="text-[#C6A75E] text-xs sm:text-sm"
+                >
+                  ★
+                </span>
+              ))}
+            </div>
+>>>>>>> 88e4b1649a5e830d915f26141cd48313717f00e1
 
-            {/* ELABORATION ONLY */}
-            <p className="text-[#6A6A6A] italic text-sm sm:text-base leading-relaxed mb-8">
+            {/* Testimonial Text */}
+            <p
+              className="
+                text-[#6A6A6A] italic
+                text-xs sm:text-base
+                leading-relaxed
+                mb-6
+                line-clamp-6 sm:line-clamp-none
+              "
+            >
               “{testimonialData[index].detail}”
             </p>
 
             {/* Name */}
-            <div>
-              <div className="font-medium text-[#1F1F1F]">
+            <div className="mt-auto">
+              <div className="font-medium text-sm sm:text-base text-[#1F1F1F]">
                 {testimonialData[index].name}
               </div>
-              <div className="text-[#C6A75E] text-sm">
+              <div className="text-[#C6A75E] text-xs sm:text-sm">
                 {testimonialData[index].place}
               </div>
             </div>
@@ -354,13 +380,13 @@ Our Signature Services
             (prev) => (prev + 1) % testimonialData.length
           )
         }
-        className="absolute right-[-72px]  top-1/2 -translate-y-1/2 z-20
-                   w-14 h-14 rounded-full
+        className="absolute right-[-56px] sm:right-[-72px] top-1/2 -translate-y-1/2 z-20
+                   w-12 h-12 sm:w-14 sm:h-14 rounded-full
                    bg-white/40 backdrop-blur-md
                    flex items-center justify-center
                    hover:bg-white/60 transition"
       >
-        <span className="text-[#C6A75E] text-2xl">›</span>
+        <span className="text-[#C6A75E] text-xl sm:text-2xl">›</span>
       </button>
 
     </div>
@@ -368,19 +394,38 @@ Our Signature Services
 </section>
 
 
-      {/* CTA */}
-      <section className="py-24 bg-[#C6A75E] text-center">
-        <h2 className="text-5xl font-light text-white mb-6" style={{ fontFamily: 'Cormorant, serif' }}>
-          Let’s Create Magic Together
-        </h2>
-        <p className="text-xl text-white/90 mb-8">Ready to plan your dream event?</p>
-        <Link to="/contact">
-          <Button className="bg-white text-[#1F1F1F] px-10 py-6 text-xl hover:bg-[#FAF7F2]">
-            Contact Us
-            <ArrowRight className="ml-2" />
-          </Button>
-        </Link>
-      </section>
+     {/* CTA */}
+<section className="py-16 sm:py-24 bg-[#C6A75E] text-center px-4">
+  <h2
+    className="text-3xl sm:text-5xl font-light text-white mb-4 sm:mb-6"
+    style={{ fontFamily: 'Cormorant, serif' }}
+  >
+    Let’s Create Magic Together
+  </h2>
+
+  <p className="text-base sm:text-xl text-white/90 mb-6 sm:mb-8">
+    Ready to plan your dream event?
+  </p>
+
+  <Link to="/contact" className="inline-flex justify-center w-full sm:w-auto">
+    <Button
+      className="
+        bg-white text-[#1F1F1F]
+        px-6 sm:px-10
+        py-4 sm:py-6
+        text-base sm:text-xl
+        rounded-xl
+        flex items-center justify-center gap-2
+        w-full sm:w-auto
+        max-w-sm
+        hover:bg-[#FAF7F2]
+      "
+    >
+      Contact Us
+      <ArrowRight className="w-5 h-5" />
+    </Button>
+  </Link>
+</section>
 
     </div>
   );

@@ -100,48 +100,71 @@ const HeroCarousel = () => {
               {slide.subtitle}
             </p>
 
-            <Link to="/contact">
-              <button
-                className="
-                  px-5 py-2.5
-                  bg-[#C6A75E]
-                  text-white
-                  text-xs md:text-sm
-                  font-medium
-                  rounded-md
-                  shadow-md
-                  hover:bg-[#A88849]
-                  hover:shadow-lg
-                  transition-all duration-300
-                  animate-slide-up delay-400
-                "
-              >
-                Plan Your Event
-              </button>
-            </Link>
+           <Link to="/contact">
+  <button
+    className="
+      !px-3 !py-1.5
+      sm:!px-5 sm:!py-2.5
+      bg-[#C6A75E]
+      text-white
+      !text-xs sm:!text-sm
+      font-medium
+      rounded-md
+      shadow-md
+      hover:bg-[#A88849]
+      hover:shadow-lg
+      transition-all duration-300
+      animate-slide-up delay-400
+    "
+  >
+    Plan Your Event
+  </button>
+</Link>
 
-          </div>
-        </div>
-      </div>
 
-      {/* Navigation Arrows */}
-      <button
-        onClick={goToPrevious}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20
-          p-2 md:p-3 rounded-full bg-white/10 backdrop-blur-md
-          hover:bg-white/20 transition"
-      >
-        <ChevronLeft className="text-white" size={24} />
-      </button>
 
-      <button
-        onClick={goToNext}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20
-          p-2 md:p-3 rounded-full bg-white/10 backdrop-blur-md
-          hover:bg-white/20 transition"
-      >
-        <ChevronRight className="text-white" size={24} />
-      </button>
+</div>
+</div>
+</div>
+
+{/* Navigation Arrows */}
+<button
+  onClick={goToPrevious}
+  className="
+    absolute
+    left-2 md:left-8
+    top-[68%] md:top-1/2
+    -translate-y-1/2
+    z-20
+    !p-1.5 md:p-3
+    rounded-full
+    bg-white/10 backdrop-blur-md
+    hover:bg-white/20
+    transition
+  "
+>
+  <ChevronLeft className="text-white !w-5 !h-5 md:w-6 md:h-6" />
+</button>
+
+<button
+  onClick={goToNext}
+  className="
+    absolute
+    right-2 md:right-8
+    top-[68%] md:top-1/2
+    -translate-y-1/2
+    z-20
+    !p-1.5 md:p-3
+    rounded-full
+    bg-white/10 backdrop-blur-md
+    hover:bg-white/20
+    transition
+  "
+>
+  <ChevronRight className="text-white !w-5 !h-5 md:w-6 md:h-6" />
+</button>
+
+
 
       {/* Dots */}
       <div className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 z-20 flex gap-3">

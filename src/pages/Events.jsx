@@ -76,13 +76,25 @@ const Events = () => {
           </div>
 
           <div className="text-center">
-            <Link to="/contact">
-              <Button className="bg-[#C6A75E] hover:bg-[#A88849] text-white px-8 py-4 text-lg">
-                Plan Your Wedding
-                <ArrowRight className="ml-2" size={20} />
-              </Button>
-            </Link>
-          </div>
+  <Link to="/contact">
+    <Button
+      className="
+        bg-[#C6A75E] hover:bg-[#A88849]
+        text-white
+        px-4 py-2
+        sm:px-8 sm:py-4
+        text-sm sm:text-lg
+        rounded-lg
+        inline-flex items-center justify-center gap-2
+        whitespace-nowrap
+      "
+    >
+      <span>Plan Your Wedding</span>
+      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+    </Button>
+  </Link>
+</div>
+
         </div>
       </section>
 <section className="bg-[#FAF7F2] pt-20 pb-24 border-t border-[#E5DED3]">
@@ -151,13 +163,25 @@ const Events = () => {
           </div>
 
           <div className="text-center">
-            <Link to="/contact">
-              <Button className="bg-[#C6A75E] hover:bg-[#A88849] text-white px-8 py-4 text-lg">
-                Plan Corporate Event
-                <ArrowRight className="ml-2" size={20} />
-              </Button>
-            </Link>
-          </div>
+  <Link to="/contact">
+    <Button
+      className="
+        bg-[#C6A75E] hover:bg-[#A88849]
+        text-white
+        px-4 py-2
+        sm:px-8 sm:py-4
+        text-sm sm:text-lg
+        rounded-lg
+        inline-flex items-center justify-center gap-2
+        whitespace-nowrap
+      "
+    >
+      <span>Plan Corporate Event</span>
+      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+    </Button>
+  </Link>
+</div>
+
         </div>
       </section>
 
@@ -191,13 +215,25 @@ const Events = () => {
           </div>
 
           <div className="text-center">
-            <Link to="/contact">
-              <Button className="bg-[#C6A75E] hover:bg-[#A88849] text-white px-8 py-4 text-lg">
-                Plan Social Event
-                <ArrowRight className="ml-2" size={20} />
-              </Button>
-            </Link>
-          </div>
+  <Link to="/contact">
+    <Button
+      className="
+        bg-[#C6A75E] hover:bg-[#A88849]
+        text-white
+        px-4 py-2
+        sm:px-8 sm:py-4
+        text-sm sm:text-lg
+        rounded-lg
+        inline-flex items-center justify-center gap-2
+        whitespace-nowrap
+      "
+    >
+      <span>Plan Social Event</span>
+      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+    </Button>
+  </Link>
+</div>
+
         </div>
       </section>
     </div>
