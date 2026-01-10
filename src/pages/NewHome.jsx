@@ -308,7 +308,7 @@ Our Signature Services
             `}
           >
 
-<<<<<<< HEAD
+
            {(() => {
   const rating = testimonialData[index].rating;
   const fullStars = Math.floor(rating);
@@ -332,7 +332,6 @@ Our Signature Services
   );
 })()}
 
-=======
             {/* Stars */}
             <div className="flex justify-center gap-1 mb-4 sm:mb-6">
               {[...Array(5)].map((_, i) => (
@@ -344,7 +343,7 @@ Our Signature Services
                 </span>
               ))}
             </div>
->>>>>>> 88e4b1649a5e830d915f26141cd48313717f00e1
+
 
             {/* Testimonial Text */}
             <p
