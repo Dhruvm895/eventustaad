@@ -147,21 +147,19 @@ const Services = () => {
                 style={{ transitionDelay: `${index * 120}ms` }}
               >
 
-                {/* IMAGE (CLICKABLE) */}
-                <Link
-                  to={`/services/${service.slug}`}
-                  className={`${reverse ? "md:order-2" : ""} group block`}
-                >
-                  <div className="overflow-hidden rounded-lg shadow-xl cursor-pointer">
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="w-full h-[500px] object-cover
-                        transition-transform duration-[1200ms] ease-out
-                        group-hover:scale-[1.04]"
-                    />
-                  </div>
-                </Link>
+               {/* IMAGE (NON-CLICKABLE) */}
+              <div className={`${reverse ? "md:order-2" : ""} group`}>
+                <div className="overflow-hidden rounded-lg shadow-xl">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-[500px] object-cover
+                      transition-transform duration-[1200ms] ease-out
+                      group-hover:scale-[1.04]"
+                  />
+                </div>
+              </div>
+
 
                 {/* CONTENT */}
                 <div className={`${reverse ? "md:order-1" : ""}`}>

@@ -48,22 +48,25 @@ const WeddingDetail = () => {
       columns-1
       sm:columns-2
       lg:columns-3
-      gap-6
+      gap-4
     ">
       {wedding.images.map((img, index) => (
         <div key={index} className="mb-6 break-inside-avoid">
-          <img
-            src={img}
-            alt={`${wedding.name} ${index + 1}`}
-            loading="lazy"
-            className="
-              w-full
-              rounded-2xl
-              object-cover
-              transition-transform duration-500
-              hover:scale-[1.02]
-            "
-          />
+          <div className="overflow-hidden rounded-2xl">
+      <img
+        src={img}
+        alt={`${wedding.name} ${index + 1}`}
+        loading="lazy"
+        className="
+          w-full
+          block
+          object-cover
+          transition-transform duration-500
+          hover:scale-[1.02]
+        "
+      />
+    </div>
+
               </div>
             ))}
 

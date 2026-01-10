@@ -12,7 +12,6 @@ import OurWork from "./pages/OurWork";
 import Contact from "./pages/Contact";
 import { Toaster } from "./components/ui/sonner";
 import ScrollToTop from './components/ScrollToTop';
-import ServiceGallery from './pages/ServiceGallery';
 import WeddingDetail from "./pages/WeddingDetail";
 
 function App() {
@@ -32,7 +31,7 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/our-work" element={<OurWork />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/services/:serviceSlug" element={<ServiceGallery />} />
+
           <Route path="/our-work/:slug" element={<WeddingDetail />} />
         </Routes>
         <Footer />

@@ -7,6 +7,8 @@ import HeroCarousel from '../components/HeroCarousel';
 import LargeImageSections from '../components/LargeImageSections';
 import RotatingClientLogos from '../components/RotatingClientLogos';
 import EventsCreatedSection from '../components/EventsCreatedSection';
+import { Star, StarHalf } from 'lucide-react';
+
 
 const NewHome = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -15,6 +17,7 @@ const NewHome = () => {
     {
       name: "Dharmendra Ranka",
       place: "Wedding Event",
+      rating: 5,
       summary: "Flawless execution with complete peace of mind",
       detail:
         "The entire wedding was planned meticulously and executed professionally within budget. The team was always available and extremely cooperative.",
@@ -23,6 +26,7 @@ const NewHome = () => {
     {
       name: "Biyani Family(Biyani Packaging Pvt Ltd.)",
       place: "Wedding Planning",
+      rating: 5,
       summary: "Stress-free wedding managed perfectly end-to-end",
       detail:
         "From décor to timelines, every function ran smoothly and on time. Event Ustaad truly added value and delivered beyond expectations.",
@@ -31,6 +35,7 @@ const NewHome = () => {
     {
       name: "Prachi Mantri",
       place: "Wedding Management",
+      rating: 5,
       summary: "Handled complex challenges with grace and resilience",
       detail:
         "Managing a 30+ member team across borders in days was impressive. Their patience, kindness, and attention to detail stood out.",
@@ -39,6 +44,7 @@ const NewHome = () => {
     {
       name: "Abhijit Kabra",
       place: "Wedding Event",
+      rating: 5,
       summary: "Every detail executed like a family celebration",
       detail:
         "From décor to guest experience, everything was seamless. The team treated the event like their own and delivered a classy experience.",
@@ -47,6 +53,7 @@ const NewHome = () => {
     {
       name: "Krishank Malik",
       place: "Eco-Friendly Wedding",
+      rating: 5,
       summary: "Bold ideas executed with technical perfection",
       detail:
         "From CRM to guest coordination, everything was tech-driven and smooth. A rare team that executes ambitious ideas flawlessly.",
@@ -55,6 +62,7 @@ const NewHome = () => {
     {
       name: "Sandeep Agarwal(Asian Paints)",
       place: "Corporate Event (400+ Guests)",
+      rating: 5,
       summary: "Creative, reliable, and highly professional team",
       detail:
         "They managed planning to execution seamlessly. Lighting, branding, engagement activities — everything was top notch.",
@@ -63,11 +71,24 @@ const NewHome = () => {
     {
       name: "Vachan Shetty(Godrej Tyson)",
       place: "Corporate Conference",
+       rating: 5,
       summary: "Go-to team for seamless corporate events",
       detail:
         "They played a key anchoring role and ensured a smooth conference experience from start to finish.",
      
     },
+    {
+      name: "Nikita & Gaurav",
+      place: "Wedding Event",
+      rating: 4.5,
+      detail: "Creative ideas combined with professional execution made our wedding truly special.\nThe team handled décor, coordination, and last-minute details with ease, ensuring a smooth and memorable celebration.",
+    },
+    {
+      name: "Sakshi & Manish",
+      place: "Wedding Event",
+      rating: 5,
+      detail: "Their thoughtful ideas and calm execution made our wedding truly special.\nEverything was well-planned, beautifully organised, and handled with great care.",
+    }
     
   ];
 
@@ -198,12 +219,12 @@ Our Signature Services
 
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       {[
-        { title: 'Exquisite Destination & Venue Curation', slug: 'venue-search', img: '/venue.webp' },
-        { title: 'Luxury Décor & Design', slug: 'event-design', img: '/decor.webp' },
-        { title: 'Seamless Logistics & Guest Experience', slug: 'hospitality', img: '/hosp.webp' },
+        { title: 'Exquisite Destination & Venue Curation', slug: 'venue-search', img: '/venue.jpeg' },
+        { title: 'Luxury Décor & Design', slug: 'event-design', img: '/decor.jpeg' },
+        { title: 'Seamless Logistics & Guest Experience', slug: 'hospitality', img: '/hosp.jpeg' },
         { title: 'Bespoke Vendor & Entertainment Management', slug: 'artist-management', img: '/artist.webp' },
-        { title: 'Ceremony & Ritual Expertise', slug: 'ceremony-planning', img: '/decor.webp' },
-        { title: 'Curated Culinary & Beverage Experiences', slug: 'food-and-beverages', img: '/f&b.png' }
+        { title: 'Ceremony & Ritual Expertise', slug: 'ceremony-planning', img: '/ritual.jpeg' },
+        { title: 'Curated Culinary & Beverage Experiences', slug: 'food-and-beverages', img: '/f&b.jpeg' }
       ].map((item, i) => (
         <Link key={i} to={`/services/${item.slug}`}>
             <Card className="overflow-hidden hover:shadow-xl transition cursor-pointer">
@@ -283,12 +304,29 @@ Our Signature Services
             `}
           >
 
-            {/* Stars */}
-            <div className="flex justify-center gap-1 mb-6">
-              {[...Array(5)].map((_, i) => (
-                <span key={i} className="text-[#C6A75E] text-sm">★</span>
-              ))}
-            </div>
+           {(() => {
+  const rating = testimonialData[index].rating;
+  const fullStars = Math.floor(rating);
+  const hasHalfStar = rating % 1 >= 0.5;
+  const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+
+  return (
+    <div className="flex justify-center gap-1 mb-6">
+      {[...Array(fullStars)].map((_, i) => (
+        <Star key={`full-${i}`} size={14} fill="#C6A75E" stroke="none" />
+      ))}
+
+      {hasHalfStar && (
+        <StarHalf size={14} fill="#C6A75E" stroke="none" />
+      )}
+
+      {[...Array(emptyStars)].map((_, i) => (
+        <Star key={`empty-${i}`} size={14} className="text-[#E5DED3]" />
+      ))}
+    </div>
+  );
+})()}
+
 
             {/* ELABORATION ONLY */}
             <p className="text-[#6A6A6A] italic text-sm sm:text-base leading-relaxed mb-8">

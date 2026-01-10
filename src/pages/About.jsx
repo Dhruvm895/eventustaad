@@ -23,9 +23,10 @@ const About = () => {
         <div className="absolute inset-0 bg-black/40" />
 
         <div className="relative z-10 text-center px-4 sm:px-6">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-light text-white mb-2 sm:mb-4">
+          <h1 className="text-6xl md:text-7xl font-light text-white mb-6" style={{ fontFamily: 'Cormorant, serif' }}>
             Our Story
           </h1>
+          <div className="w-24 h-[1px] bg-[#C6A75E] mx-auto mb-6" />
           <p className="text-sm sm:text-base md:text-xl text-white/90 max-w-3xl mx-auto">
             From hostel roommates to business partners, creating magic since 2018
           </p>

@@ -113,7 +113,7 @@ const OurWork = () => {
       />
 
       {/* ▶ PLAY ICON (FIXED) */}
-      <div className="absolute inset-0 bg-black/40 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+      <div className="absolute inset-0 bg-black/40 opacity-100 md:opacity-0 md:group-hover:opacity-100 tranition-opacity duration-500 flex items-center justify-center">
         <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"

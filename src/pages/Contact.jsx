@@ -18,10 +18,14 @@ const Contact = () => {
   const [showThankYou, setShowThankYou] = useState(false);
 
   return (
-    <div className="min-h-screen pt-20 bg-[#FAF7F2]">
+    
+   <div className="min-h-[100svh] pt-20 pb-[max(8rem,env(safe-area-inset-bottom))] bg-[#FAF7F2] overflow-x-hidden">
+
+
 
       {/* HERO */}
-      <section className="relative h-[32vh] md:h-[45vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[26vh] md:h-[45vh] flex items-center justify-center overflow-hidden">
+
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
