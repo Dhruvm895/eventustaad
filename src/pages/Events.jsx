@@ -58,12 +58,12 @@ const Events = () => {
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {[
-              '/wedding1.webp',
-              '/wedding2.webp',
-              '/wedding3.webp',
-              '/wedding4.webp',
-              '/wedding5.webp',
-              '/wedding6.webp'
+              '/wedding1.jpeg',
+              '/wedding2.jpeg',
+              '/wedding3.jpeg',
+              '/wedding4.jpeg',
+              '/wedding5.jpeg',
+              '/wedding6.jpeg'
             ].map((img, index) => (
               <div key={index} className="image-zoom-container rounded-lg overflow-hidden shadow-lg">
                 <img 
@@ -147,10 +147,10 @@ const Events = () => {
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {[
-              '/corporate1.webp',
-              '/corporate2.webp',
-              '/corporate3.webp',
-              'https://images.pexels.com/photos/3719037/pexels-photo-3719037.jpeg'
+              '/corporate1.jpeg',
+              '/cor2.jpeg',
+              '/corporate2.jpeg',
+              '/corporate2.webp'
             ].map((img, index) => (
               <div key={index} className="image-zoom-container rounded-lg overflow-hidden shadow-lg">
                 <img 
@@ -200,9 +200,9 @@ const Events = () => {
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {[
-              '/social1.webp',
-              '/social2.webp',
-              '/social3.webp'
+              '/social1.jpeg',
+              '/social2.jpeg',
+              '/social3.jpeg'
             ].map((img, index) => (
               <div key={index} className="image-zoom-container rounded-lg overflow-hidden shadow-lg">
                 <img 

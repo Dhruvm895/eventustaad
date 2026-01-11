@@ -181,9 +181,20 @@ const NewHome = () => {
                         />
                       <div className={`absolute inset-0 bg-gradient-to-t ${event.gradient} opacity-60`} />
                       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-8">
-                        <div className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mb-6">
-                          <Icon size={36} className="text-white" />
-                        </div>
+                       <div
+  className="
+    hidden sm:flex
+    w-20 h-20
+    bg-white/20 backdrop-blur-md
+    rounded-full
+    items-center justify-center
+    mb-6
+  "
+>
+  <Icon size={36} className="text-white" />
+</div>
+
+
                         <h3 className="text-4xl font-light text-white mb-2">{event.title}</h3>
                         <p className="text-white/90 text-lg">{event.description}</p>
                         <div className="mt-6 flex items-center gap-2 text-white">
@@ -273,104 +284,131 @@ Our Signature Services
               (prev - 1 + testimonialData.length) % testimonialData.length
           )
         }
-        className="absolute left-[-56px] sm:left-[-72px] top-1/2 -translate-y-1/2 z-20
-                   w-12 h-12 sm:w-14 sm:h-14 rounded-full
-                   bg-white/40 backdrop-blur-md
-                   flex items-center justify-center
-                   hover:bg-white/60 transition"
+        className="
+  absolute
+  left-2 sm:left-[-72px]
+  top-1/2 -translate-y-1/2
+  z-20
+  w-12 h-12 sm:w-14 sm:h-14
+  rounded-full
+  bg-white/60 backdrop-blur-md
+  flex items-center justify-center
+  hover:bg-white/80 transition
+"
+
       >
         <span className="text-[#C6A75E] text-xl sm:text-2xl">‹</span>
       </button>
 
-      {/* CARDS */}
-      {[ -1, 0, 1 ].map((offset) => {
-        const index =
-          (activeTestimonial + offset + testimonialData.length) %
-          testimonialData.length;
+      {/* MOBILE — SINGLE CARD */}
+<div className="block sm:hidden w-full max-w-[280px] mx-auto">
+  {(() => {
+    const item = testimonialData[activeTestimonial];
+    const rating = item.rating;
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 >= 0.5;
+    const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
 
-        const isCenter = offset === 0;
+    return (
+      <div className="
+        bg-white
+        border border-[#E5DED3]
+        rounded-2xl
+        px-5 py-6
+        text-center
+        shadow-xl
+        flex flex-col
+      ">
+        {/* Stars */}
+        <div className="flex justify-center gap-1 mb-6">
+          {[...Array(fullStars)].map((_, i) => (
+            <Star key={i} size={14} fill="#C6A75E" stroke="none" />
+          ))}
+          {hasHalfStar && (
+            <StarHalf size={14} fill="#C6A75E" stroke="none" />
+          )}
+          {[...Array(emptyStars)].map((_, i) => (
+            <Star key={i} size={14} className="text-[#E5DED3]" />
+          ))}
+        </div>
 
-        return (
-          <div
-            key={index}
-            className={`
-              w-full max-w-[280px] sm:max-w-sm
-              bg-white
-              border border-[#E5DED3] rounded-2xl
-              px-5 sm:px-8
-              py-6 sm:py-10
-              text-center
-              transition-all duration-500
-              flex flex-col
-              ${isCenter
-                ? 'shadow-2xl scale-100 opacity-100'
-                : 'shadow-md scale-95 opacity-70'}
-            `}
-          >
+        <p className="text-[#6A6A6A] italic text-xs leading-relaxed mb-6">
+          “{item.detail}”
+        </p>
 
-
-           {(() => {
-  const rating = testimonialData[index].rating;
-  const fullStars = Math.floor(rating);
-  const hasHalfStar = rating % 1 >= 0.5;
-  const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
-
-  return (
-    <div className="flex justify-center gap-1 mb-6">
-      {[...Array(fullStars)].map((_, i) => (
-        <Star key={`full-${i}`} size={14} fill="#C6A75E" stroke="none" />
-      ))}
-
-      {hasHalfStar && (
-        <StarHalf size={14} fill="#C6A75E" stroke="none" />
-      )}
-
-      {[...Array(emptyStars)].map((_, i) => (
-        <Star key={`empty-${i}`} size={14} className="text-[#E5DED3]" />
-      ))}
-    </div>
-  );
-})()}
-
-            {/* Stars */}
-            <div className="flex justify-center gap-1 mb-4 sm:mb-6">
-              {[...Array(5)].map((_, i) => (
-                <span
-                  key={i}
-                  className="text-[#C6A75E] text-xs sm:text-sm"
-                >
-                  ★
-                </span>
-              ))}
-            </div>
-
-
-            {/* Testimonial Text */}
-            <p
-              className="
-                text-[#6A6A6A] italic
-                text-xs sm:text-base
-                leading-relaxed
-                mb-6
-                line-clamp-6 sm:line-clamp-none
-              "
-            >
-              “{testimonialData[index].detail}”
-            </p>
-
-            {/* Name */}
-            <div className="mt-auto">
-              <div className="font-medium text-sm sm:text-base text-[#1F1F1F]">
-                {testimonialData[index].name}
-              </div>
-              <div className="text-[#C6A75E] text-xs sm:text-sm">
-                {testimonialData[index].place}
-              </div>
-            </div>
-
+        <div className="mt-auto">
+          <div className="font-medium text-sm text-[#1F1F1F]">
+            {item.name}
           </div>
-        );
-      })}
+          <div className="text-[#C6A75E] text-xs">
+            {item.place}
+          </div>
+        </div>
+      </div>
+    );
+  })()}
+</div>
+
+{/* DESKTOP / TABLET — THREE CARDS */}
+<div className="hidden sm:flex justify-center items-stretch gap-6">
+  {[ -1, 0, 1 ].map((offset) => {
+    const index =
+      (activeTestimonial + offset + testimonialData.length) %
+      testimonialData.length;
+
+    const isCenter = offset === 0;
+    const rating = testimonialData[index].rating;
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 >= 0.5;
+    const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+
+    return (
+      <div
+        key={index}
+        className={`
+          w-full max-w-sm
+          bg-white
+          border border-[#E5DED3]
+          rounded-2xl
+          px-8 py-10
+          text-center
+          transition-all duration-500
+          flex flex-col
+          ${isCenter
+            ? 'shadow-2xl scale-100 opacity-100'
+            : 'shadow-md scale-95 opacity-70'}
+        `}
+      >
+        {/* Stars */}
+        <div className="flex justify-center gap-1 mb-6">
+          {[...Array(fullStars)].map((_, i) => (
+            <Star key={i} size={14} fill="#C6A75E" stroke="none" />
+          ))}
+          {hasHalfStar && (
+            <StarHalf size={14} fill="#C6A75E" stroke="none" />
+          )}
+          {[...Array(emptyStars)].map((_, i) => (
+            <Star key={i} size={14} className="text-[#E5DED3]" />
+          ))}
+        </div>
+
+        <p className="text-[#6A6A6A] italic leading-relaxed mb-6">
+          “{testimonialData[index].detail}”
+        </p>
+
+        <div className="mt-auto">
+          <div className="font-medium text-[#1F1F1F]">
+            {testimonialData[index].name}
+          </div>
+          <div className="text-[#C6A75E] text-sm">
+            {testimonialData[index].place}
+          </div>
+        </div>
+      </div>
+    );
+  })}
+</div>
+
 
       {/* NEXT */}
       <button
@@ -379,11 +417,18 @@ Our Signature Services
             (prev) => (prev + 1) % testimonialData.length
           )
         }
-        className="absolute right-[-56px] sm:right-[-72px] top-1/2 -translate-y-1/2 z-20
-                   w-12 h-12 sm:w-14 sm:h-14 rounded-full
-                   bg-white/40 backdrop-blur-md
-                   flex items-center justify-center
-                   hover:bg-white/60 transition"
+        className="
+  absolute
+  right-2 sm:right-[-72px]
+  top-1/2 -translate-y-1/2
+  z-20
+  w-12 h-12 sm:w-14 sm:h-14
+  rounded-full
+  bg-white/60 backdrop-blur-md
+  flex items-center justify-center
+  hover:bg-white/80 transition
+"
+
       >
         <span className="text-[#C6A75E] text-xl sm:text-2xl">›</span>
       </button>

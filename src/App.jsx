@@ -28,11 +28,12 @@ function App() {
           <Route path="/" element={<NewHome />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/:slug" element={<Services />} />
           <Route path="/events" element={<Events />} />
           <Route path="/our-work" element={<OurWork />} />
-          <Route path="/contact" element={<Contact />} />
-
           <Route path="/our-work/:slug" element={<WeddingDetail />} />
+      
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
         <WhatsAppButton />

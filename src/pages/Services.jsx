@@ -1,20 +1,27 @@
 import React, { useEffect } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+
 import { MapPin, Lightbulb, Hotel, Music, Gift } from 'lucide-react';
 import useReveal from "../hooks/useReveal";
 
 const Services = () => {
-  const location = useLocation();
+ 
   const [heroRef, heroVisible] = useReveal();
+const { slug } = useParams();
 
-  useEffect(() => {
-    if (location.hash) {
-      const element = document.getElementById(location.hash.substring(1));
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-  }, [location]);
+useEffect(() => {
+  if (!slug) return;
+
+  const el = document.getElementById(slug);
+  if (el) {
+    el.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }
+}, [slug]);
+
+
 
   const services = [
     {
@@ -27,7 +34,7 @@ const Services = () => {
 'Assistance with site visits, availability checks, and negotiations.',
 'Creating a setting that perfectly reflects your vision and event style.' 
   ],
-  image: '/venue.webp'
+  image: '/venuein.jpeg'
 },
 {
   id: 'design',
@@ -39,7 +46,7 @@ const Services = () => {
     'Selection and arrangement of floral designs, lighting, furniture, and décor elements.',
     'Transforming spaces into visually stunning, immersive experiences.'
   ],
-  image: '/decor.webp'
+  image: '/decorin.jpeg'
 },
 {
   id: 'artists',
@@ -51,7 +58,7 @@ const Services = () => {
     'Coordination and scheduling of artists, performers, and entertainment segments.',
     'Ensuring every service runs seamlessly, leaving you stress-free.'
   ],
-  image: '/artist.webp'
+  image: '/artistin.jpeg'
 },
 {
   id: 'ceremony',
@@ -63,7 +70,7 @@ const Services = () => {
     'Step-by-step planning to ensure ceremonies flow smoothly and elegantly.',
     'Handling officiants, timing, and ceremonial essentials for a flawless experience.'
   ],
-  image: '/decor.webp'
+  image: '/ritualin.jpeg'
 },
 {
   id: 'hospitality',
@@ -75,7 +82,7 @@ const Services = () => {
     'On-site coordination to ensure every aspect runs perfectly.',
     'Personalized care to make each guest feel valued and comfortable.'
   ],
-  image: '/hosp.webp'
+  image: '/hospin.jpeg'
 },
 {
   id: 'f&b',
@@ -87,7 +94,7 @@ const Services = () => {
     'Management of catering details including portion sizes, plate counts, and dietary requirements.',
     'Coordination of beverages, including alcohol selection, inventory, and service, for a seamless dining experience.'
   ],
-  image: '/f&b.png'
+  image: '/f&b.jpeg'
 }
 
 
@@ -112,7 +119,7 @@ const Services = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.pexels.com/photos/33726144/pexels-photo-33726144.jpeg)',
+              'url(signature.jpeg)',
             filter: 'brightness(0.6)'
           }}
         />
@@ -122,7 +129,10 @@ const Services = () => {
           <h1 className="text-6xl md:text-7xl font-light text-white mb-6" style={{ fontFamily: 'Cormorant, serif' }}>
          Our Signature Services
           </h1>
-          <div className="w-24 h-[1px] bg-[#C6A75E] mx-auto" />
+          <div className="w-24 h-[1px] bg-[#C6A75E] mx-auto  mb-6" />
+           <p className="text-sm sm:text-base md:text-xl text-white/90 max-w-3xl mx-auto">
+          End-to-End Planning. Seamless Execution. Exceptional Experiences.
+          </p>
         </div>
       </section>
 
@@ -136,9 +146,11 @@ const Services = () => {
             const reverse = index % 2 !== 0;
 
             return (
-              <div
-                key={service.id}
-                id={service.id}
+             <div
+  key={service.slug}
+  id={service.slug}
+
+
                 ref={ref}
                 className={`grid md:grid-cols-2 gap-12 items-center
                   transition-all duration-1000 ease-out

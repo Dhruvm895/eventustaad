@@ -18,16 +18,6 @@ const Contact = () => {
   const [showThankYou, setShowThankYou] = useState(false);
 
   return (
-
-    
-   <div className="min-h-[100svh] pt-20 pb-[max(8rem,env(safe-area-inset-bottom))] bg-[#FAF7F2] overflow-x-hidden">
-
-
-
-      {/* HERO */}
-      <section className="relative h-[26vh] md:h-[45vh] flex items-center justify-center overflow-hidden">
-
-
     <div className="min-h-screen pt-16 sm:pt-20 bg-[#FAF7F2]">
 
       {/* HERO */}
@@ -37,17 +27,18 @@ const Contact = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.pexels.com/photos/2788494/pexels-photo-2788494.jpeg)',
+              'url(contact.jpeg)',
             filter: 'brightness(0.6)'
           }}
         />
         <div className="absolute inset-0 bg-black/40" />
 
-        <div className="relative z-10 text-center px-4">
-          <h1 className="text-2xl sm:text-3xl md:text-6xl font-light text-white mb-2">
+        <div className="relative z-8 text-center px-4">
+       <h1 className="text-4xl md:text-5xl font-light text-white mb-6" style={{ fontFamily: 'Cormorant, serif' }}>
             Let’s Begin Your Celebration
           </h1>
-          <p className="text-xs sm:text-sm md:text-xl text-white/90">
+           <div className="w-24 h-[1px] bg-[#C6A75E] mx-auto mb-6" />
+           <p className="text-sm sm:text-base md:text-xl text-white/90 max-w-3xl mx-auto">
             Tell us your story, and we’ll take it from there.
           </p>
         </div>

@@ -15,7 +15,7 @@ const HeroCarousel = () => {
   },
   {
     type: 'image',
-    image: '/home2.jpg',
+    image: '/home2.jpeg',
     title: 'This is where events stop being stressful',
     subtitle: 'From the first call to the final moment, we are with you throughout.'
   },

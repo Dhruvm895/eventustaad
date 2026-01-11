@@ -12,7 +12,7 @@ const LargeImageSections = () => {
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
           style={{
-            backgroundImage: 'url(/our.webp)',
+            backgroundImage: 'url(/our.jpeg)',
           }}
         />
         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-500" />
@@ -42,7 +42,7 @@ const LargeImageSections = () => {
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
           style={{
-            backgroundImage: 'url(/service.webp)',
+            backgroundImage: 'url(/service.jpeg)',
           }}
         />
         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-500" />

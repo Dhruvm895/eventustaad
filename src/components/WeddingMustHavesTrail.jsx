@@ -117,26 +117,26 @@ const WeddingMustHavesTrail = () => {
 
                     {/* CONNECTOR (NO SPACE TAKEN) */}
                     {i < step && (
-                      <svg
-                        viewBox="0 0 200 120"
-                        className={`absolute top-full pointer-events-none
-                          ${isLeft ? 'left-[320px]' : 'right-[320px]'}
-                        `}
-                        width="200"
-                        height="120"
-                      >
-                        <path
-                          d={
-                            isLeft
-                              ? 'M0 0 C 120 40, 120 80, 200 120'
-                              : 'M200 0 C 80 40, 80 80, 0 120'
-                          }
-                          stroke="#c22"
-                          strokeWidth="2"
-                          fill="none"
-                          strokeLinecap="round"
-                        />
-                      </svg>
+                      <div
+  className={`journey-svg absolute top-full pointer-events-none
+    ${isLeft ? 'left-full' : 'right-full'}
+  `}
+>
+  <svg viewBox="0 0 200 120">
+    <path
+      d={
+        isLeft
+          ? 'M0 0 C 120 40, 120 80, 200 120'
+          : 'M200 0 C 80 40, 80 80, 0 120'
+      }
+      stroke="#c22"
+      strokeWidth="2"
+      fill="none"
+      strokeLinecap="round"
+    />
+  </svg>
+</div>
+
                     )}
                   </div>
                 )

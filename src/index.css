@@ -470,6 +470,20 @@ img {
     left: -18px;
   }
 }
+/* 📱 MODAL POSTCARD — balanced mobile size */
+@media (max-width: 640px) {
+  .postcard-modal .polaroid {
+    width: 75vw;
+    max-width: 320px;
+    padding: 14px 14px 32px;
+  }
+
+  .postcard-modal .polaroid img {
+    height: auto;
+    max-height: 55vh;
+  }
+}
+
 
 /* ---------- SECTION SPACING ADJUSTMENT ---------- */
 @media (max-width: 768px) {
@@ -480,23 +494,24 @@ img {
 }
 
 /* ---------- TRAIL / JOURNEY RESPONSIVE ---------- */
-@media (max-width: 1024px) {
-  svg {
-    width: 480px !important;
-  }
+/* ONLY target decorative journey svgs */
+.journey-svg svg {
+  width: 100%;
+  max-width: 480px;
 }
 
 @media (max-width: 768px) {
-  svg {
-    width: 360px !important;
+  .journey-svg svg {
+    max-width: 360px;
   }
 }
 
 @media (max-width: 640px) {
-  svg {
-    width: 280px !important;
+  .journey-svg svg {
+    max-width: 280px;
   }
 }
+
 
 /* ---------- JOURNEY CARD ALIGNMENT SAFETY ---------- */
 @media (max-width: 768px) {
@@ -584,5 +599,11 @@ body.modal-open a[aria-label="Chat on WhatsApp"] {
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+@media (max-width: 640px) {
+  .site-container > * {
+    max-width: 100%;
+    overflow-x: hidden;
   }
 }

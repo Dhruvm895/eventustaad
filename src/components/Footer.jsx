@@ -11,29 +11,38 @@ const Footer = () => {
 
         {/* Main Grid */}
         <div className="
-          grid grid-cols-1
-          sm:grid-cols-2
-          lg:grid-cols-[1.2fr_0.8fr_1.2fr_0.8fr]
-          gap-12
-        ">
+  grid grid-cols-1
+  sm:grid-cols-2
+  lg:grid-cols-[1.2fr_0.8fr_1.2fr_0.8fr]
+  gap-12
+  text-left
+">
+
 
           {/* Brand */}
-          <div className="flex flex-col gap-4 items-center lg:items-start text-center lg:text-left">
-            <LazyLoadImage
-              src="https://customer-assets.emergentagent.com/job_eventelegance-3/artifacts/ltcg4g2q_loggogo.svg"
-              alt="Event Ustaad"
-              effect="blur"
-              className="h-14 sm:h-20 md:h-28 w-auto"
-            />
+          <div className="flex flex-col gap-4 items-start text-left">
 
-            <p className="text-[#4A4A4A] text-sm leading-relaxed max-w-sm">
+         <LazyLoadImage
+  src="https://customer-assets.emergentagent.com/job_eventelegance-3/artifacts/ltcg4g2q_loggogo.svg"
+  alt="Event Ustaad"
+  effect="blur"
+  className="w-40 sm:w-48 md:w-56 h-auto"
+/>
+
+            <p className="
+  text-[#4A4A4A] text-sm leading-relaxed max-w-sm
+  line-clamp-4 sm:line-clamp-none
+">
+
               Event Ustaad is a luxury wedding and event planning studio, crafting grand celebrations,
               immersive experiences, and flawlessly executed events across India. With over 10 years
               of expertise, we have successfully curated 175+ extraordinary events, traveling across
               the country to bring each celebration to life with unmatched elegance, precision, and creativity.
             </p>
 
-            <div className="flex gap-4 mt-2">
+           <div className="flex gap-4 mt-2 justify-start">
+
+
               <a href="https://www.instagram.com/eventustaad/" target="_blank" rel="noopener noreferrer" className="text-[#6A6A6A] hover:text-[#C6A75E]">
                 <Instagram size={20} />
               </a>
@@ -47,7 +56,8 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="text-center lg:text-left">
+         <div className="text-left">
+
             <h3 className="text-[#1F1F1F] font-semibold mb-4">
               Quick Links
             </h3>
@@ -68,7 +78,8 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div className="text-center lg:text-left">
+         <div className="text-left">
+
             <h3 className="text-[#1F1F1F] font-semibold mb-4">
               Services
             </h3>
@@ -84,31 +95,33 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div className="text-center lg:text-left">
+          <div className="text-left">
+
+
             <h3 className="text-[#1F1F1F] font-semibold mb-4">
               Get In Touch
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="mailto:eventustaad@gmail.com" className="flex justify-center lg:justify-start items-center gap-2 text-[#6A6A6A] hover:text-[#C6A75E]">
+                <a href="mailto:eventustaad@gmail.com" className="flex justify-start items-center gap-2 text-[#6A6A6A] hover:text-[#C6A75E]">
                   <Mail size={14} />
                       eventustaad@gmail.com
                 </a>
               </li>
               <li>
-                <a href="mailto:contact@eventustaad.com" className="flex justify-center lg:justify-start items-center gap-2 text-[#6A6A6A] hover:text-[#C6A75E]">
+                <a href="mailto:contact@eventustaad.com" className="flex justify-start items-center gap-2 text-[#6A6A6A] hover:text-[#C6A75E]">
                   <Mail size={14} />
                       contact@eventustaad.com
                 </a>
               </li>
               <li>
-                <a href="tel:+919833310150" className="flex justify-center lg:justify-start items-center gap-2 text-[#6A6A6A] hover:text-[#C6A75E]">
+                <a href="tel:+919833310150" className="flex justify-start items-center gap-2 text-[#6A6A6A] hover:text-[#C6A75E]">
                   <Phone size={16} />
                   +91 9833310150
                 </a>
               </li>
               <li>
-                <a href="tel:+919920581507" className="flex justify-center lg:justify-start items-center gap-2 text-[#6A6A6A] hover:text-[#C6A75E]">
+                <a href="tel:+919920581507" className="flex justify-start items-center gap-2 text-[#6A6A6A] hover:text-[#C6A75E]">
                   <Phone size={16} />
                   +91 9920581507
                 </a>
@@ -119,7 +132,13 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-6 border-t border-[#E5DED3] flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+        <div className="mt-10 pt-6 border-t border-[#E5DED3]
+  flex flex-col sm:flex-row
+  justify-between items-center
+  gap-3 sm:gap-4
+  text-center sm:text-left
+">
+
           <p className="text-sm text-[#6A6A6A]">
             © 2018 Event Ustaad. All rights reserved.
           </p>
