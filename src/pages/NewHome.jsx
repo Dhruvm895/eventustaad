@@ -217,44 +217,51 @@ const NewHome = () => {
     <div className="text-center mb-12">
       <h2
         className="text-3xl sm:text-4xl md:text-5xl font-light text-[#1F1F1F]"
-        style={{ fontFamily: 'Cormorant, serif' }}
+        style={{ fontFamily: 'TheSeasons, serif' }}
       >
         
 Our Signature Services
 
       </h2>
-      <p className="text-base sm:text-lg text-[#1F1F1F]/70 mt-4">
-            End-to-End Planning. Seamless Execution. Exceptional Experiences.
-      </p>
-    </div>
+<p
+  className="text-base sm:text-lg text-[#1F1F1F]/70 mt-4"
+  style={{ fontFamily: 'TheSeasons, serif' }}
+>
+  End-to-End Planning. Seamless Execution. Exceptional Experiences.
+</p>
+</div>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      {[
-        { title: 'Exquisite Destination & Venue Curation', slug: 'venue-search', img: '/venue.jpeg' },
-        { title: 'Luxury Décor & Design', slug: 'event-design', img: '/decor.jpeg' },
-        { title: 'Seamless Logistics & Guest Experience', slug: 'hospitality', img: '/hosp.jpeg' },
-        { title: 'Bespoke Vendor & Entertainment Management', slug: 'artist-management', img: '/artist.webp' },
-        { title: 'Ceremony & Ritual Expertise', slug: 'ceremony-planning', img: '/ritual.jpeg' },
-        { title: 'Curated Culinary & Beverage Experiences', slug: 'food-and-beverages', img: '/f&b.jpeg' }
-      ].map((item, i) => (
-        <Link key={i} to={`/services/${item.slug}`}>
-            <Card className="overflow-hidden hover:shadow-xl transition cursor-pointer">
-            <div className="relative h-48 sm:h-56 md:h-64">
-              <img
-                src={item.img}
-                alt={item.title}
-                loading="lazy"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1F1F1F]/80 to-transparent" />
-              <h3 className="absolute bottom-6 left-6 text-2xl text-white font-light">
-                {item.title}
-              </h3>
-            </div>
-          </Card>
-        </Link>
-      ))}
-    </div>
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+  {[
+    { title: 'Exquisite Destination & Venue Curation', slug: 'venue-search', img: '/venue.jpeg' },
+    { title: 'Luxury Décor & Design', slug: 'event-design', img: '/decor.jpeg' },
+    { title: 'Seamless Logistics & Guest Experience', slug: 'hospitality', img: '/hosp.jpeg' },
+    { title: 'Bespoke Vendor & Entertainment Management', slug: 'artist-management', img: '/arti.png' },
+    { title: 'Ceremony & Ritual Expertise', slug: 'ceremony-planning', img: '/ritual.jpeg' },
+    { title: 'Curated Culinary & Beverage Experiences', slug: 'food-and-beverages', img: '/khana.jpg' }
+  ].map((item, i) => (
+    <Link key={i} to={`/services/${item.slug}`}>
+      <Card className="overflow-hidden hover:shadow-xl transition cursor-pointer">
+        <div className="relative h-48 sm:h-56 md:h-64">
+          <img
+            src={item.img}
+            alt={item.title}
+            loading="lazy"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1F1F1F]/80 to-transparent" />
+          <h3
+            className="absolute bottom-6 left-6 text-2xl text-white font-light"
+            style={{ fontFamily: 'TheSeasons, serif' }}
+          >
+            {item.title}
+          </h3>
+        </div>
+      </Card>
+    </Link>
+  ))}
+</div>
+
   </div>
 </section>
 

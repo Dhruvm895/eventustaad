@@ -95,7 +95,7 @@ useEffect(() => {
     'Management of catering details including portion sizes, plate counts, and dietary requirements.',
     'Coordination of beverages, including alcohol selection, inventory, and service, for a seamless dining experience.'
   ],
-  image: '/f&b.jpeg'
+  image: '/khana.jpg'
 }
  
 

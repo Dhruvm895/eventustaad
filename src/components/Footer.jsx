@@ -36,7 +36,7 @@ const Footer = () => {
 
               Event Ustaad is a luxury wedding and event planning studio, crafting grand celebrations,
               immersive experiences, and flawlessly executed events across India. With over 10 years
-              of expertise, we have successfully curated 175+ extraordinary events, traveling across
+              of expertise, we have successfully curated 175+ extraordinary events, travelling across
               the country to bring each celebration to life with unmatched elegance, precision, and creativity.
             </p>
 

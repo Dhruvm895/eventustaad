@@ -29,7 +29,7 @@ const Events = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url(/event.webp)",
+            backgroundImage: "url(/event.jpeg)",
             filter: 'brightness(0.6)'
           }}
         />
@@ -58,12 +58,12 @@ const Events = () => {
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {[
-              '/wedding1.jpeg',
+              '/chas.webp',
               '/wedding2.jpeg',
               '/wedding3.jpeg',
-              '/wedding4.jpeg',
+              '/wedevent.jpeg',
               '/wedding5.jpeg',
-              '/wedding6.jpeg'
+              '/wed6.jpeg'
             ].map((img, index) => (
               <div key={index} className="image-zoom-container rounded-lg overflow-hidden shadow-lg">
                 <img 
@@ -200,8 +200,10 @@ const Events = () => {
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {[
-              '/social1.jpeg',
+
               '/social2.jpeg',
+              '/social1.jpeg',
+              
               '/social3.jpeg'
             ].map((img, index) => (
               <div key={index} className="image-zoom-container rounded-lg overflow-hidden shadow-lg">

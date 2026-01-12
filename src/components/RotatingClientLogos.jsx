@@ -10,7 +10,6 @@ const RotatingClientLogos = () => {
     { name: 'Future Generali', logo: '/futuregenerali.svg' },
     { name: 'Lodha', logo: '/lodhalogo.svg' },
     { name: 'Godrej', logo: '/godrejlogo.svg' },
-    { name: 'Tyson Foods', logo: '/tysonlogo.svg' },
     { name: 'Cipla', logo: '/cipla.svg' },
     { name: 'Schbang', logo: '/schbang.svg' },
     { name: 'SISL', logo: '/sisl.svg' }
