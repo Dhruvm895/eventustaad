@@ -195,8 +195,10 @@ const NewHome = () => {
 </div>
 
 
-                        <h3 className="text-4xl font-light text-white mb-2">{event.title}</h3>
-                        <p className="text-white/90 text-lg">{event.description}</p>
+                        <h3 className="text-4xl font-light text-white mb-2"
+                            style={{ fontFamily: 'TheQuiverleaf, serif' }}>{event.title}</h3>
+                        <p className="text-white/90 text-lg" style={{ fontFamily: 'TheQuiverleaf, serif' }}>
+                          {event.description}</p>
                         <div className="mt-6 flex items-center gap-2 text-white">
                           <span>Explore</span>
                           <ArrowRight size={20} />
@@ -251,11 +253,12 @@ Our Signature Services
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1F1F1F]/80 to-transparent" />
           <h3
-            className="absolute bottom-6 left-6 text-2xl text-white font-light"
-            style={{ fontFamily: 'TheSeasons, serif' }}
-          >
-            {item.title}
-          </h3>
+  className="absolute bottom-6 left-6 text-2xl text-white"
+  style={{ fontFamily: 'TheSeasons, serif', fontWeight: 200 }}
+>
+  {item.title}
+</h3>
+
         </div>
       </Card>
     </Link>

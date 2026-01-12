@@ -53,7 +53,7 @@ const EventsCreatedSection = () => {
             className="text-3xl md:text-4xl font-light text-white"
             style={{ fontFamily: 'Cormorant, serif' }}
           >
-            A Decade of Excellence 
+            A  Decade of Excellence 
           </h2>
           <div className="w-20 h-[1px] bg-white/40 mx-auto mt-4" />
         </div>

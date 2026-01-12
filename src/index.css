@@ -262,6 +262,12 @@ html {
   font-style: normal;
 }
 
+
+.font-seasons-regular {
+  font-family: 'TheSeasons', serif;
+  font-weight: 200; /* normal */
+}
+
 /* ===============================
    CLIENT LOGO SCROLL (FINAL)
 ================================ */

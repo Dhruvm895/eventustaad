@@ -37,7 +37,7 @@ const HeroCarousel = () => {
   // ✅ TEXT COLOR CONTROL
  const titleColor =
   currentSlide === 2
-    ? 'text-[#8f5900]'   // gold
+    ? 'text-[#C6A75E]'   // gold
     : currentSlide === 3
     ? 'text-black'      // last slide black
     : 'text-white';     // first & second white
@@ -102,7 +102,7 @@ const subtitleColor =
             <h1
               className={`text-5xl sm:text-4xl md:text-5xl lg:text-6xl
                 font-light mb-2 animate-slide-up ${titleColor}`}
-              style={{ fontFamily: 'TheSeasons, serif' }}
+              style={{ fontFamily: 'TheQuiverleaf, serif' }}
             >
               {slide.title}
             </h1>
