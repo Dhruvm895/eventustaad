@@ -241,8 +241,40 @@ export const portfolioItems = [
     image: "25ann.png",
     videoUrl: "https://youtu.be/KM8o4Xw78H0?si=kFK14cdBSmazIsYn",
     featured: false
-  }
+  },
    
+  {
+    id: 13,
+    title: "Shamits Birthday",
+    category: "social",
+    image: "sham.webp",
+    videoUrl: "https://youtu.be/XT2iKym4xXk?si=iPWbHMBlK6jJYhUJ",
+    featured: false
+  },
+
+   {
+    id: 14,
+    title: "Fintoo Corporate Event",
+    category: "corporate",
+    image: "intoo.png",
+    videoUrl: "https://youtu.be/r7YkMpg2hMs?si=6cexR0t1Gp2plOpt",
+    featured: false
+  },
+
+  {
+    id: 15,
+    title: "Our Clients Reviews",
+    category: "social",
+    description: "Our Clients Reviews",
+    image: "client.jpeg",
+    videoUrl: "https://youtu.be/d4KS78jqAQg?si=uPtZ60ZQMGHhaP53",
+    featured: false
+  },
+
+
+
+
+
 ];
 
 export const testimonials = [
