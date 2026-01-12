@@ -132,15 +132,39 @@ const Contact = () => {
                 Send Us a Message
               </h3>
 
-              <form
-                action="https://formsubmit.co/mistrydhruv04@gmail.com"
-                method="POST"
-                className="space-y-4 sm:space-y-5"
-                onSubmit={() => {
-                  setShowThankYou(true);
-                  setTimeout(() => setShowThankYou(false), 2500);
-                }}
-              >
+           <form
+  action="https://formsubmit.co/mistrydhruv04@gmail.com"
+  method="POST"
+  className="space-y-4 sm:space-y-5"
+  onSubmit={async (e) => {
+    e.preventDefault(); // stop redirect
+
+    const form = e.target;
+
+    // 🔒 lock scroll
+    document.body.style.overflow = "hidden";
+
+    setShowThankYou(true);
+
+    // ✅ send form data
+    await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+    });
+
+    // ✅ clear form
+    form.reset();
+    setEventType("");
+
+    // ⏳ hide thank-you + unlock scroll
+    setTimeout(() => {
+      setShowThankYou(false);
+      document.body.style.overflow = "auto";
+    }, 1600); // elegant duration
+  }}
+>
+
+
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_subject" value="New Event Enquiry - Event Ustaad" />
                 <input type="hidden" name="eventType" value={eventType} />
@@ -198,6 +222,33 @@ const Contact = () => {
 
         </div>
       </section>
+     {showThankYou && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center animate-fade-in">
+
+
+    {/* Soft luxury backdrop */}
+    <div className="absolute inset-0 bg-[#C6A75E]/30 backdrop-blur-md" />
+
+    {/* Message card */}
+    <div className="relative bg-white/80 border border-[#C6A75E]/40 rounded-2xl px-10 py-8 text-center shadow-2xl max-w-sm mx-4">
+      
+      <h2
+        className="text-2xl sm:text-3xl font-light text-[#1F1F1F] mb-2"
+        style={{ fontFamily: "Cormorant, serif" }}
+      >
+        Thank You ✨
+      </h2>
+
+      <div className="w-12 h-[1px] bg-[#C6A75E] mx-auto mb-4" />
+
+      <p className="text-sm sm:text-base text-[#1F1F1F]/70">
+        We’ve received your message and will get back to you shortly.
+      </p>
+    </div>
+  </div>
+)}
+
+
     </div>
   );
 };

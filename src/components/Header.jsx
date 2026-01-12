@@ -20,7 +20,7 @@ const Header = () => {
   ];
 
   const isActive = (path) => location.pathname === path;
-    /* CLOSE MOBILE MENU ON SCROLL */
+   { /* CLOSE MOBILE MENU ON SCROLL */}
    useEffect(() => {
   if (!isMenuOpen) return;
 

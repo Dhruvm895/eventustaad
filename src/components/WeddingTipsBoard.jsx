@@ -25,7 +25,7 @@ const WeddingTipsBoard = () => {
   const prev = () =>
     setIndex(i => (i - 1 + postcards.length) % postcards.length)
 
-  /* AUTO SCROLL WHEN MODAL IS OPEN */
+  {/* AUTO SCROLL WHEN MODAL IS OPEN */}
   useEffect(() => {
     if (!open) return
 

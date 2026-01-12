@@ -16,14 +16,14 @@ const WeddingMustHavesTrail = () => {
   const [step, setStep] = useState(0)
   const refs = useRef([])
 
-  /* RESET refs when modal opens */
+{  /* RESET refs when modal opens */}
   useEffect(() => {
     if (open) {
       refs.current = []
     }
   }, [open])
 
-  /* AUTO PROGRESSION */
+  {/* AUTO PROGRESSION */}
   useEffect(() => {
     if (!open) return
     if (step >= mustHaves.length - 1) return
@@ -35,7 +35,7 @@ const WeddingMustHavesTrail = () => {
     return () => clearTimeout(t)
   }, [step, open])
 
-  /* AUTO SCROLL — SAFE */
+  {/* AUTO SCROLL — SAFE */}
   useEffect(() => {
     if (!open) return
 
@@ -52,7 +52,7 @@ const WeddingMustHavesTrail = () => {
     return () => clearTimeout(t)
   }, [step, open])
 
-  /* LOCK BACKGROUND SCROLL */
+  {/* LOCK BACKGROUND SCROLL */}
   useEffect(() => {
     if (open) {
       document.body.style.overflow = 'hidden'

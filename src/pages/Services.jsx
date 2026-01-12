@@ -23,6 +23,7 @@ useEffect(() => {
 
 
 
+
   const services = [
     {
   id: 'venue',
@@ -96,14 +97,10 @@ useEffect(() => {
   ],
   image: '/f&b.jpeg'
 }
-
-
-    
-
-    
+ 
 
   ];
-
+const revealItems = services.map(() => useReveal(0.25));
   return (
     <div className="min-h-screen pt-20">
 
@@ -140,66 +137,60 @@ useEffect(() => {
       <section className="py-24 bg-[#FAF7F2]">
         <div className="container mx-auto max-w-7xl space-y-32 px-6">
 
-          {services.map((service, index) => {
-            const Icon = service.icon;
-            const [ref, visible] = useReveal(0.25);
-            const reverse = index % 2 !== 0;
+         {services.map((service, index) => {
+  const Icon = service.icon;
+  const [ref, visible] = revealItems[index];
+  const reverse = index % 2 !== 0;
 
-            return (
-             <div
-  key={service.slug}
-  id={service.slug}
+  return (
+    <div
+      key={service.slug}
+      id={service.slug}
+      ref={ref}
+      className={`grid md:grid-cols-2 gap-12 items-center
+        transition-all duration-1000 ease-out
+        ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
+      `}
+      style={{ transitionDelay: `${index * 120}ms` }}
+    >
+      {/* IMAGE */}
+      <div className={`${reverse ? "md:order-2" : ""} group`}>
+        <div className="overflow-hidden rounded-lg shadow-xl">
+          <img
+            src={service.image}
+            alt={service.title}
+            className="w-full h-[500px] object-cover
+              transition-transform duration-[1200ms] ease-out
+              group-hover:scale-[1.04]"
+          />
+        </div>
+      </div>
 
+      {/* CONTENT */}
+      <div className={`${reverse ? "md:order-1" : ""}`}>
+        <div className="w-20 h-20 border border-[#C6A75E] rounded-full flex items-center justify-center mb-8">
+          <Icon size={36} className="text-[#C6A75E]" strokeWidth={1.5} />
+        </div>
 
-                ref={ref}
-                className={`grid md:grid-cols-2 gap-12 items-center
-                  transition-all duration-1000 ease-out
-                  ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
-                `}
-                style={{ transitionDelay: `${index * 120}ms` }}
-              >
+        <h3
+          className="text-4xl md:text-5xl font-light text-[#1F1F1F] mb-6"
+          style={{ fontFamily: "Cormorant, serif" }}
+        >
+          {service.title}
+        </h3>
 
-               {/* IMAGE (NON-CLICKABLE) */}
-              <div className={`${reverse ? "md:order-2" : ""} group`}>
-                <div className="overflow-hidden rounded-lg shadow-xl">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-[500px] object-cover
-                      transition-transform duration-[1200ms] ease-out
-                      group-hover:scale-[1.04]"
-                  />
-                </div>
-              </div>
-
-
-                {/* CONTENT */}
-                <div className={`${reverse ? "md:order-1" : ""}`}>
-                  <div className="w-20 h-20 border border-[#C6A75E] rounded-full flex items-center justify-center mb-8">
-                    <Icon size={36} className="text-[#C6A75E]" strokeWidth={1.5} />
-                  </div>
-
-                  <h3 className="text-4xl md:text-5xl font-light text-[#1F1F1F] mb-6" style={{ fontFamily: 'Cormorant, serif' }}>
-                    {service.title}
-                  </h3>
-
-                  <p className="text-xl text-[#1F1F1F]/70 mb-8 leading-relaxed">
-                    {service.description}
-                  </p>
-
-                  <div className="space-y-3">
-                    {service.features.map((feature, i) => (
-                      <div key={i} className="flex items-center gap-3">
-                        <span className="w-2 h-2 bg-[#C6A75E] rounded-full" />
-                        <span className="text-lg text-[#1F1F1F]/80">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-              </div>
-            );
-          })}
+        <div className="space-y-3">
+          {service.features.map((feature, i) => (
+            <div key={i} className="flex items-center gap-3">
+              <span className="w-2 h-2 bg-[#C6A75E] rounded-full" />
+              <span className="text-lg text-[#1F1F1F]/80">{feature}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+})}
 
         </div>
       </section>

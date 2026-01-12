@@ -1,4 +1,5 @@
 /* Tailwind CSS Directives */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,6 +19,27 @@ code {
   font-family:
     source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+/* ================================
+   FONT UTILITIES (CONTROLLED USE)
+================================ */
+
+/* Luxury serif headings */
+.font-seasons {
+  font-family: 'TheSeasons', serif;
+  letter-spacing: -0.03em;
+}
+
+/* Accent / artistic text */
+.font-quiverleaf {
+  font-family: 'Quiverleaf', serif;
+  letter-spacing: -0.01em;
+}
+
+/* Safe body text */
+.font-body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 
 /* -------------------------------
    THE SEASONS — HEADINGS ONLY
@@ -66,9 +88,8 @@ h6 {
 /* -------------------------------
    Global base styles (SAFE)
 -------------------------------- */
-
 @layer base {
-  html *:not(::-webkit-scrollbar):not(::-webkit-scrollbar-thumb):not(::-webkit-scrollbar-track) {
+  html * {
     @apply border-border;
   }
 
@@ -76,6 +97,20 @@ h6 {
     @apply bg-background text-foreground;
   }
 }
+
+/* Explicit scrollbar styling (separate & safe) */
+::-webkit-scrollbar {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border: none;
+}
+
+::-webkit-scrollbar-track {
+  border: none;
+}
+
 
 /* -------------------------------
    Debug wrapper support
@@ -214,7 +249,7 @@ html {
 -------------------------------- */
 
 @font-face {
-  font-family: 'TheSeasons';
+  font-family: 'TheQuiverleaf';
   src: url('./assets/fonts/fonnts.com-253513/fonts/fonnts.com-Quiverleaf_CF_Demi_Bold.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
