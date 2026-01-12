@@ -3,7 +3,7 @@
 export const portfolioItems = [
   {
     id: 1,
-    name: "Aayushi & Amey",
+    name: "Aayushi & Ameya",
     category: "wedding",
     description: "An intimate wedding celebration",
     image: "/weddings/ayushi-amey/ayushiamey.jpeg",
@@ -69,7 +69,7 @@ export const portfolioItems = [
   },
  {
     id: 4,
-    name: "Anahita & Sahil",
+    name: "Anahita & Saahil",
     category: "wedding",
     description: "A timeless wedding celebrating elegance and love",
     image: "/weddings/anahita-sahil/as4.jpeg",
@@ -92,10 +92,10 @@ export const portfolioItems = [
 
   {
     id: 5,
-    name: "Astha & Amit",
+    name: "Aastha & Amit",
     category: "wedding",
     description: "Showered in petals, sealed in joy, and destined forever.",
-    image: "/weddings/amit-astha/ama6.jpeg",
+    image: "/weddings/amit-astha/thumb.jpeg",
      images: [
       "/weddings/amit-astha/ama1.jpeg",
       "/weddings/amit-astha/ama2.jpeg",
@@ -114,7 +114,7 @@ export const portfolioItems = [
   },
  {
     id: 6,
-    name: " Nishika & Sohil",
+    name: " Nishka & Sohil",
     category: "wedding",
     description: "Hand in hand, they stepped into a lifetime lit by love",
     image: "/weddings/nishika-sohil/ns5.jpeg",
@@ -226,7 +226,7 @@ export const portfolioItems = [
     title: "Product Launch Event",
     category: "corporate",
     image: "asianp.png",
-    videoUrl: "https://youtu.be/JoP830gkO3o",
+    videoUrl: "https://youtu.be/r2UjuUqFKCA?si=w_tjig0OWzWPf7s-",
     featured: false
   },
 

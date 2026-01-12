@@ -29,7 +29,7 @@ const Contact = () => {
             backgroundImage:
               'url(contact.jpeg)',
             filter: 'brightness(0.6)'
-          }}
+          }}    
         />
         <div className="absolute inset-0 bg-black/40" />
 
