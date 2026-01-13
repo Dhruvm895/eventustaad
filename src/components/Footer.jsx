@@ -20,14 +20,23 @@ const Footer = () => {
 
 
           {/* Brand */}
-          <div className="flex flex-col gap-4 items-start text-left">
+         <div className="
+  flex flex-col gap-4 items-start text-left
+  sm:self-start
+">
 
-         <LazyLoadImage
+
+
+       <LazyLoadImage
   src="https://customer-assets.emergentagent.com/job_eventelegance-3/artifacts/ltcg4g2q_loggogo.svg"
   alt="Event Ustaad"
   effect="blur"
-  className="w-40 sm:w-48 md:w-56 h-auto"
+  className="
+    w-40 sm:w-48 md:w-56 h-auto
+    sm:mt-0
+  "
 />
+
 
             <p className="
   text-[#4A4A4A] text-sm leading-relaxed max-w-sm

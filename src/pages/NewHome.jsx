@@ -15,8 +15,8 @@ const NewHome = () => {
 
   const testimonialData = [
     {
-      name: "Dharmendra Ranka",
-      place: "Wedding Event",
+      name: "Ira & Karan",
+      place: "Lonavala",
       rating: 5,
       summary: "Flawless execution with complete peace of mind",
       detail:
@@ -24,8 +24,8 @@ const NewHome = () => {
       
     },
     {
-      name: "Biyani Family(Biyani Packaging Pvt Ltd.)",
-      place: "Wedding Planning",
+      name: "Kinjal & Ronak",
+      place: "Mahabaleshwar",
       rating: 5,
       summary: "Stress-free wedding managed perfectly end-to-end",
       detail:
@@ -33,8 +33,8 @@ const NewHome = () => {
     
     },
     {
-      name: "Prachi Mantri",
-      place: "Wedding Management",
+      name: "Prachi & Varun",
+      place: "Udaipur",
       rating: 5,
       summary: "Handled complex challenges with grace and resilience",
       detail:
@@ -51,8 +51,8 @@ const NewHome = () => {
   
     },
     {
-      name: "Krishank Malik",
-      place: "Eco-Friendly Wedding",
+      name: "Bhumika & Krishank",
+      place: "Puri",
       rating: 5,
       summary: "Bold ideas executed with technical perfection",
       detail:
@@ -60,8 +60,8 @@ const NewHome = () => {
    
     },
     {
-      name: "Sandeep Agarwal(Asian Paints)",
-      place: "Corporate Event (400+ Guests)",
+      name: "Sandeep Agarwa, Asian Paints",
+      place: "Corporate Event ",
       rating: 5,
       summary: "Creative, reliable, and highly professional team",
       detail:
@@ -69,7 +69,7 @@ const NewHome = () => {
      
     },
     {
-      name: "Vachan Shetty(Godrej Tyson)",
+      name: "Vachan Shetty, Godrej Tyson",
       place: "Corporate Conference",
        rating: 5,
       summary: "Go-to team for seamless corporate events",
@@ -79,13 +79,13 @@ const NewHome = () => {
     },
     {
       name: "Nikita & Gaurav",
-      place: "Wedding Event",
+      place: "Jaipur",
       rating: 4.5,
       detail: "Creative ideas combined with professional execution made our wedding truly special.\nThe team handled décor, coordination, and last-minute details with ease, ensuring a smooth and memorable celebration.",
     },
     {
       name: "Sakshi & Manish",
-      place: "Wedding Event",
+      place: "Goa",
       rating: 5,
       detail: "Their thoughtful ideas and calm execution made our wedding truly special.\nEverything was well-planned, beautifully organised, and handled with great care.",
     }
