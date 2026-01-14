@@ -229,13 +229,28 @@ export const portfolioItems = [
     videoUrl: "https://youtu.be/r2UjuUqFKCA?si=w_tjig0OWzWPf7s-",
     featured: false
   },
+   {
+    id: 12,
+    title: "Fintoo Corporate Event",
+    category: "corporate",
+    image: "intoo.png",
+    videoUrl: "https://youtu.be/r7YkMpg2hMs?si=6cexR0t1Gp2plOpt",
+    featured: false
+  },
+  {
+  id: 13,
+  category: 'corporate',
+  type: 'image', // 👈 NEW
+  title: 'Conference Branding',
+  image: '/corporate2.webp'
+},
 
   /* ===================== */
   /* ===== SOCIAL ======= */
   /* ===================== */
 
   {
-    id: 12,
+    id: 14,
     title: "25th Anniversary",
     category: "social",
     image: "25ann.png",
@@ -244,7 +259,7 @@ export const portfolioItems = [
   },
    
   {
-    id: 13,
+    id: 15,
     title: "Shamits Birthday",
     category: "social",
     image: "sham.webp",
@@ -252,17 +267,10 @@ export const portfolioItems = [
     featured: false
   },
 
-   {
-    id: 14,
-    title: "Fintoo Corporate Event",
-    category: "corporate",
-    image: "intoo.png",
-    videoUrl: "https://youtu.be/r7YkMpg2hMs?si=6cexR0t1Gp2plOpt",
-    featured: false
-  },
+
 
   {
-    id: 15,
+    id: 16,
     title: "Our Clients Reviews",
     category: "social",
     description: "Our Clients Reviews",

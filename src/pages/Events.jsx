@@ -150,7 +150,7 @@ const Events = () => {
               '/corporate1.jpeg',
               '/cor2.jpeg',
               '/corporate2.jpeg',
-              '/corporate2.webp'
+              '/corporate3.webp'
             ].map((img, index) => (
               <div key={index} className="image-zoom-container rounded-lg overflow-hidden shadow-lg">
                 <img 
