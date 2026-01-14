@@ -8,6 +8,7 @@ import LargeImageSections from '../components/LargeImageSections';
 import RotatingClientLogos from '../components/RotatingClientLogos';
 import EventsCreatedSection from '../components/EventsCreatedSection';
 import { Star, StarHalf } from 'lucide-react';
+import InstagramFeed from '../components/InstagramFeed';
 
 
 const NewHome = () => {
@@ -60,7 +61,7 @@ const NewHome = () => {
    
     },
     {
-      name: "Sandeep Agarwa, Asian Paints",
+      name: "Sandeep Agarwal, Asian Paints",
       place: "Corporate Event ",
       rating: 5,
       summary: "Creative, reliable, and highly professional team",
@@ -446,6 +447,12 @@ Our Signature Services
     </div>
   </div>
 </section>
+
+
+
+
+        <InstagramFeed />
+
 
 
      {/* CTA */}

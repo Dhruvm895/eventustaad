@@ -272,7 +272,7 @@ export const portfolioItems = [
   {
     id: 16,
     title: "Our Clients Reviews",
-    category: "social",
+    category: "wedding",
     description: "Our Clients Reviews",
     image: "client.jpeg",
     videoUrl: "https://youtu.be/d4KS78jqAQg?si=uPtZ60ZQMGHhaP53",

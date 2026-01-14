@@ -47,7 +47,7 @@ useEffect(() => {
     'Selection and arrangement of floral designs, lighting, furniture, and décor elements.',
     'Transforming spaces into visually stunning, immersive experiences.'
   ],
-  image: '/decorin.jpeg'
+  image: '/luxdec.jpeg'
 },
 {
   id: 'artists',

@@ -74,19 +74,15 @@ const About = () => {
             </h2>
 
             <p className="text-[#6A6A6A] leading-relaxed">
-              We’re Anmol & Shrishti— two friends, two dreamers, and now business partners.
-              From late-night hostel room conversations to building a company together, our journey has always been about
-              passion, trust, and creating magic out of ordinary moments.
+              We’re Anmol & Shrishti — two friends, two dreamers, and now business partners. From late-night hostel room conversations to building a company together, our journey has always been about passion, trust, and creating magic out of ordinary moments. With a background in finance and engineering, we combine practicality and creativity, making sure nothing is left to chance while keeping every celebration full of soul.
             </p>
 
             <p className="text-[#6A6A6A] leading-relaxed mt-6">
-              Event Ustaad isn’t just a company for us — it’s a space where we bring our energy, our heart, and our curiosity to
-              every wedding and event we touch.
+             Event Ustaad isn’t just a company for us — it’s a space where we bring our energy, our heart, and our curiosity to every wedding and event we touch. Our team is our extended family, and together, we love getting into the details, thinking ahead, and making sure your day feels effortless, personal, and unforgettable.
             </p>
 
             <p className="text-[#6A6A6A] leading-relaxed mt-6">
-              We’ve had the privilege of planning
-              176+ weddings and corporate events across 70+ destinations in India.
+              We’ve had the privilege of planning 176+ weddings and corporate events across 70+ destinations in India, but numbers don’t tell the story — what matters most to us is the connection, the smiles, and the feeling that every event is as unique as the people we celebrate.
             </p>
 
             <p className="text-[#6A6A6A] leading-relaxed mt-6">
