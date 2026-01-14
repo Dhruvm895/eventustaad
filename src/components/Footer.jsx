@@ -19,53 +19,21 @@ const Footer = () => {
         >
           {/* BRAND */}
           <div className="space-y-5">
-           
-
-
-
-          {/* Brand */}
-         <div className="
-  flex flex-col gap-4 items-start text-left
-  sm:self-start
-">
-
-
-
-       <LazyLoadImage
-  src="https://customer-assets.emergentagent.com/job_eventelegance-3/artifacts/ltcg4g2q_loggogo.svg"
-  alt="Event Ustaad"
-  effect="blur"
-  className="
-    w-40 sm:w-48 md:w-56 h-auto
-    sm:mt-0
-  "
-/>
-
-
-            <p className="
-  text-[#4A4A4A] text-sm leading-relaxed max-w-sm
-  line-clamp-4 sm:line-clamp-none
-">
-
-              Event Ustaad is a luxury wedding and event planning studio, crafting grand celebrations,
-              immersive experiences, and flawlessly executed events across India. With over 10 years
-              of expertise, we have successfully curated 175+ extraordinary events, travelling across
-              the country to bring each celebration to life with unmatched elegance, precision, and creativity.
+            
 
             <p className="text-sm text-[#4A4A4A] leading-relaxed max-w-xs">
               Event Ustaad is a luxury wedding & event planning studio crafting
-              elegant, large-scale celebrations across India.
-
+              elegant, large-scale celebrations across India with precision,
+              creativity, and soul.
             </p>
 
 
-             <img
+
+            <img
               src="https://customer-assets.emergentagent.com/job_eventelegance-3/artifacts/ltcg4g2q_loggogo.svg"
               alt="Event Ustaad"
               className="w-28"
             />
-
-
 
             <div className="flex gap-4 pt-2">
               <a href="https://www.instagram.com/eventustaad/" target="_blank" rel="noreferrer"

@@ -64,7 +64,7 @@ const Contact = () => {
               {
                 icon: Mail,
                 title: 'Email Us',
-                lines: ['eventustaad@gmail.com', 'contact@eventustaad.com']
+                lines: ['eventustaad@gmail.com']
               },
               {
                 icon: Phone,
