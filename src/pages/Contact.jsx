@@ -22,23 +22,24 @@ const Contact = () => {
 
       {/* HERO */}
       <section className="relative h-[26vh] sm:h-[32vh] md:h-[45vh] flex items-center justify-center overflow-hidden">
-
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              'url(contact.jpeg)',
+            backgroundImage: 'url(contact.jpeg)',
             filter: 'brightness(0.6)'
-          }}    
+          }}
         />
         <div className="absolute inset-0 bg-black/40" />
 
         <div className="relative z-8 text-center px-4">
-       <h1 className="text-4xl md:text-5xl font-light text-white mb-6" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h1
+            className="text-4xl md:text-5xl font-light text-white mb-6"
+            style={{ fontFamily: 'Cormorant, serif' }}
+          >
             Let’s Begin Your Celebration
           </h1>
-           <div className="w-24 h-[1px] bg-[#C6A75E] mx-auto mb-6" />
-           <p className="text-sm sm:text-base md:text-xl text-white/90 max-w-3xl mx-auto">
+          <div className="w-24 h-[1px] bg-[#C6A75E] mx-auto mb-6" />
+          <p className="text-sm sm:text-base md:text-xl text-white/90 max-w-3xl mx-auto">
             Tell us your story, and we’ll take it from there.
           </p>
         </div>
@@ -61,21 +62,9 @@ const Contact = () => {
             </div>
 
             {[
-              {
-                icon: Mail,
-                title: 'Email Us',
-                lines: ['eventustaad@gmail.com']
-              },
-              {
-                icon: Phone,
-                title: 'Call Us',
-                lines: ['+91 98333 10150', '+91 99205 81507']
-              },
-              {
-                icon: MapPin,
-                title: 'Connect Socially',
-                lines: ['@eventustaad on all platforms']
-              }
+              { icon: Mail, title: 'Email Us', lines: ['eventustaad@gmail.com'] },
+              { icon: Phone, title: 'Call Us', lines: ['+91 98333 10150', '+91 99205 81507'] },
+              { icon: MapPin, title: 'Connect Socially', lines: ['@eventustaad on all platforms'] }
             ].map((item, i) => (
               <Card key={i} className="border border-[#E5DED3]">
                 <CardContent className="p-4 sm:p-6 flex gap-3 sm:gap-4">
@@ -91,11 +80,7 @@ const Contact = () => {
                     {item.lines.map((line, idx) => {
                       if (item.title === 'Email Us') {
                         return (
-                          <a
-                            key={idx}
-                            href={`mailto:${line}`}
-                            className="block text-xs sm:text-sm text-[#6A6A6A]"
-                          >
+                          <a key={idx} href={`mailto:${line}`} className="block text-xs sm:text-sm text-[#6A6A6A]">
                             {line}
                           </a>
                         );
@@ -132,43 +117,35 @@ const Contact = () => {
                 Send Us a Message
               </h3>
 
-           <form
-  action="https://formsubmit.co/mistrydhruv04@gmail.com"
-  method="POST"
-  className="space-y-4 sm:space-y-5"
-  onSubmit={async (e) => {
-    e.preventDefault(); // stop redirect
+              <form
+                className="space-y-4 sm:space-y-5"
+                onSubmit={async (e) => {
+                  e.preventDefault();
 
-    const form = e.target;
+                  const form = e.target;
 
-    // 🔒 lock scroll
-    document.body.style.overflow = "hidden";
+                  document.body.style.overflow = 'hidden';
+                  setShowThankYou(true);
 
-    setShowThankYou(true);
+                  const formData = new FormData(form);
+                  formData.append('access_key', '29fc71bc-c70c-441c-8a5a-e6d1f53e96e8');
+                  formData.append('subject', 'New Event Enquiry - Event Ustaad');
+                  formData.append('eventType', eventType);
 
-    // ✅ send form data
-    await fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-    });
+                  await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                  });
 
-    // ✅ clear form
-    form.reset();
-    setEventType("");
+                  form.reset();
+                  setEventType('');
 
-    // ⏳ hide thank-you + unlock scroll
-    setTimeout(() => {
-      setShowThankYou(false);
-      document.body.style.overflow = "auto";
-    }, 1600); // elegant duration
-  }}
->
-
-
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_subject" value="New Event Enquiry - Event Ustaad" />
-                <input type="hidden" name="eventType" value={eventType} />
-
+                  setTimeout(() => {
+                    setShowThankYou(false);
+                    document.body.style.overflow = 'auto';
+                  }, 1600);
+                }}
+              >
                 <div>
                   <Label className="text-xs sm:text-sm">Name</Label>
                   <Input className="h-9 sm:h-11" name="name" required />
@@ -219,36 +196,29 @@ const Contact = () => {
               </form>
             </CardContent>
           </Card>
-
         </div>
       </section>
-     {showThankYou && (
-  <div className="fixed inset-0 z-50 flex items-center justify-center animate-fade-in">
 
+      {showThankYou && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center animate-fade-in">
+          <div className="absolute inset-0 bg-[#C6A75E]/30 backdrop-blur-md" />
 
-    {/* Soft luxury backdrop */}
-    <div className="absolute inset-0 bg-[#C6A75E]/30 backdrop-blur-md" />
+          <div className="relative bg-white/80 border border-[#C6A75E]/40 rounded-2xl px-10 py-8 text-center shadow-2xl max-w-sm mx-4">
+            <h2
+              className="text-2xl sm:text-3xl font-light text-[#1F1F1F] mb-2"
+              style={{ fontFamily: 'Cormorant, serif' }}
+            >
+              Thank You ✨
+            </h2>
 
-    {/* Message card */}
-    <div className="relative bg-white/80 border border-[#C6A75E]/40 rounded-2xl px-10 py-8 text-center shadow-2xl max-w-sm mx-4">
-      
-      <h2
-        className="text-2xl sm:text-3xl font-light text-[#1F1F1F] mb-2"
-        style={{ fontFamily: "Cormorant, serif" }}
-      >
-        Thank You ✨
-      </h2>
+            <div className="w-12 h-[1px] bg-[#C6A75E] mx-auto mb-4" />
 
-      <div className="w-12 h-[1px] bg-[#C6A75E] mx-auto mb-4" />
-
-      <p className="text-sm sm:text-base text-[#1F1F1F]/70">
-        We’ve received your message and will get back to you shortly.
-      </p>
-    </div>
-  </div>
-)}
-
-
+            <p className="text-sm sm:text-base text-[#1F1F1F]/70">
+              We’ve received your message and will get back to you shortly.
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

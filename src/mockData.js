@@ -122,7 +122,7 @@ export const portfolioItems = [
       "/weddings/nishika-sohil/ns1.jpeg",
       "/weddings/nishika-sohil/ns2.jpeg",
       "/weddings/nishika-sohil/ns3.jpeg",
-      "/weddings/nishika-sohil/ns4.jpeg",
+      "/weddings/nishika-sohil/n4.jpeg",
       "/weddings/nishika-sohil/ns5.jpeg",
       "/weddings/nishika-sohil/ns6.jpeg",
       "/weddings/nishika-sohil/ns7.jpeg",
@@ -130,7 +130,7 @@ export const portfolioItems = [
       "/weddings/nishika-sohil/ns9.jpeg",
       "/weddings/nishika-sohil/ns10.jpeg",
       "/weddings/nishika-sohil/ns11.jpeg",
-      "/weddings/nishika-sohil/ns12.jpeg"
+      
       
     ],
     featured: true
@@ -264,7 +264,7 @@ export const portfolioItems = [
   {
     id: 15,
     title: "Our Clients Reviews",
-    category: "wedding",
+    category: "social",
     description: "Our Clients Reviews",
     image: "client.jpeg",
     videoUrl: "https://youtu.be/d4KS78jqAQg?si=uPtZ60ZQMGHhaP53",
