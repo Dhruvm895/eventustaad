@@ -43,8 +43,8 @@ const NewHome = () => {
       
     },
     {
-      name: "Abhijit Kabra",
-      place: "Wedding Event",
+      name: "Nikita & Rohan",
+      place: "Lonavala",
       rating: 5,
       summary: "Every detail executed like a family celebration",
       detail:
