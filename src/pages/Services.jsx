@@ -100,7 +100,22 @@ useEffect(() => {
  
 
   ];
-const revealItems = services.map(() => useReveal(0.25));
+const reveal0 = useReveal(0.25);
+const reveal1 = useReveal(0.25);
+const reveal2 = useReveal(0.25);
+const reveal3 = useReveal(0.25);
+const reveal4 = useReveal(0.25);
+const reveal5 = useReveal(0.25);
+
+const revealItems = [
+  reveal0,
+  reveal1,
+  reveal2,
+  reveal3,
+  reveal4,
+  reveal5,
+];
+
   return (
     <div className="min-h-screen pt-20">
 

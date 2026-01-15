@@ -449,12 +449,6 @@ Our Signature Services
 </section>
 
 
-
-
-        <InstagramFeed />
-
-
-
      {/* CTA */}
 <section className="py-16 sm:py-24 bg-[#C6A75E] text-center px-4">
   <h2

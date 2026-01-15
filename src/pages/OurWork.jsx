@@ -21,10 +21,22 @@ const OurWork = () => {
     return 'social';
   };
 
-  const filteredItems =
-    activeCategory === 'all'
-      ? portfolioItems
-      : portfolioItems.filter(item => getCategoryType(item) === activeCategory);
+const filteredItems = portfolioItems.filter(item => {
+  if (activeCategory === 'all') {
+    // In ALL → allow:
+    // - all videos
+    // - wedding photos only
+    if (!item.videoUrl && item.category !== 'wedding') {
+      return false;
+    }
+    return true;
+  }
+
+  // In specific category → show only that category
+  return getCategoryType(item) === activeCategory;
+});
+
+
 
 
   const generateSlug = (name) =>
@@ -101,7 +113,7 @@ const OurWork = () => {
       <img
         src={item.image}
         alt={item.title}
-        loading="lazy"
+      
         className="
           w-full
           h-auto
