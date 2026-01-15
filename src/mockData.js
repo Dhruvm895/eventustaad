@@ -237,20 +237,58 @@ export const portfolioItems = [
     videoUrl: "https://youtu.be/r7YkMpg2hMs?si=6cexR0t1Gp2plOpt",
     featured: false
   },
-  {
+ {
   id: 13,
   category: 'corporate',
   type: 'image', // 👈 NEW
-  title: 'Conference Branding',
-  image: '/corporate2.webp'
+  
+  image: '/corporate2.jpeg'
 },
+{
+  id: 14,
+  category: 'corporate',
+  type: 'image', // 👈 NEW
+ 
+  image: '/cor2.jpeg'
+},
+
+ {
+  id: 15,
+  category: 'corporate',
+  type: 'image', // 👈 NEW
+
+  image: '/corporate3.webp'
+},
+{
+  id: 16,
+  category: 'corporate',
+  type: 'image', // 👈 NEW
+
+  image: '/corporate1.jpeg'
+},
+{
+  id: 17,
+  category: 'corporate',
+  type: 'image', // 👈 NEW
+
+  image: '/corporate4.webp'
+},
+
+{
+  id: 18,
+  category: 'corporate',
+  type: 'image', // 👈 NEW
+
+  image: '/corporate5.webp'
+},
+
 
   /* ===================== */
   /* ===== SOCIAL ======= */
   /* ===================== */
 
   {
-    id: 14,
+    id: 19,
     title: "25th Anniversary",
     category: "social",
     image: "25ann.png",
@@ -259,7 +297,7 @@ export const portfolioItems = [
   },
    
   {
-    id: 15,
+    id: 20,
     title: "Shamits Birthday",
     category: "social",
     image: "sham.webp",
@@ -270,7 +308,7 @@ export const portfolioItems = [
 
 
   {
-    id: 16,
+    id: 21,
     title: "Our Clients Reviews",
     category: "wedding",
     description: "Our Clients Reviews",
@@ -278,6 +316,79 @@ export const portfolioItems = [
     videoUrl: "https://youtu.be/d4KS78jqAQg?si=uPtZ60ZQMGHhaP53",
     featured: false
   },
+{
+    id: 22,
+  category: 'social',
+  type: 'image', 
+    image: "soc1.webp",
+    featured: false
+  },
+
+{
+    id: 23,
+  category: 'social',
+  type: 'image', 
+    image: "soc92.webp",
+    featured: false
+  },
+
+{
+    id: 24,
+  category: 'social',
+  type: 'image', 
+    image: "soc3.webp",
+    featured: false
+  },
+
+{
+    id: 25,
+  category: 'social',
+  type: 'image', 
+    image: "soc4.webp",
+    featured: false
+  },
+
+{
+    id: 26,
+  category: 'social',
+  type: 'image', 
+    image: "soc5.webp",
+    featured: false
+  },
+
+{
+    id: 27,
+  category: 'social',
+  type: 'image', 
+    image: "soc6.webp",
+    featured: false
+  },
+
+{
+    id: 28,
+  category: 'social',
+  type: 'image', 
+    image: "soc7.webp",
+    featured: false
+  },
+
+{
+    id: 29,
+  category: 'social',
+  type: 'image', 
+    image: "soc8.webp",
+    featured: false
+  },
+
+{
+    id: 30,
+  category: 'social',
+  type: 'image', 
+    image: "soc9.webp",
+    featured: false
+  },
+
+
 
 
 
