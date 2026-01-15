@@ -328,7 +328,7 @@ export const portfolioItems = [
     id: 23,
   category: 'social',
   type: 'image', 
-    image: "soc92.webp",
+    image: "soc2.webp",
     featured: false
   },
 
