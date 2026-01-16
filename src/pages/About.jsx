@@ -32,7 +32,7 @@ const useCountUp = (end, duration = 2000) => {
 const About = () => {
 
   const years = useCountUp(10);
-  const couples = useCountUp(65);
+  
   const destinations = useCountUp(63);
   const events = useCountUp(175);
 
@@ -82,7 +82,7 @@ const About = () => {
             </p>
 
             <p className="text-[#6A6A6A] leading-relaxed mt-6">
-              We’ve had the privilege of planning 176+ weddings and corporate events across 70+ destinations in India, but numbers don’t tell the story — what matters most to us is the connection, the smiles, and the feeling that every event is as unique as the people we celebrate.
+              We’ve had the privilege of planning 175+ weddings and corporate events across 63+ destinations in India, but numbers don’t tell the story — what matters most to us is the connection, the smiles, and the feeling that every event is as unique as the people we celebrate.
             </p>
 
             <p className="text-[#6A6A6A] leading-relaxed mt-6">
@@ -110,21 +110,14 @@ const About = () => {
 
       {/* Stats */}
       <section className="py-24 bg-white">
-        <div className="container mx-auto px-6 grid md:grid-cols-4 gap-8">
+        <div className="container mx-auto px-6 grid md:grid-cols-3 gap-8 max-w-6xl">
+
 
           <Card className="border border-[#E5DED3] hover:shadow-lg transition">
             <CardContent className="p-8 text-center">
               <Award className="mx-auto text-[#C6A75E] mb-4" size={30} />
               <div className="text-4xl font-light text-[#C6A75E] mb-2">{years}+</div>
               <div className="text-[#6A6A6A] text-sm">Years Experience</div>
-            </CardContent>
-          </Card>
-
-          <Card className="border border-[#E5DED3] hover:shadow-lg transition">
-            <CardContent className="p-8 text-center">
-              <Heart className="mx-auto text-[#C6A75E] mb-4" size={30} />
-              <div className="text-4xl font-light text-[#C6A75E] mb-2">{couples}+</div>
-              <div className="text-[#6A6A6A] text-sm">Wedding Couples</div>
             </CardContent>
           </Card>
 
