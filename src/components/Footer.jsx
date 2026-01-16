@@ -22,7 +22,7 @@ const Footer = () => {
             
 
             <p className="text-sm text-[#4A4A4A] leading-relaxed max-w-xs">
-              Event Ustaad is a luxury wedding & event planning studio crafting
+            <strong> Event Ustaad</strong>  is a luxury wedding & event planning studio crafting
               elegant, large-scale celebrations across India with precision,
               creativity, and soul.
             </p>
@@ -75,7 +75,9 @@ const Footer = () => {
               <li>Vendor Coordination</li>
               <li>Logistics & Guest Experience</li>
               <li>Luxury Décor & Design</li>
+              <li>Luxury Gifting & Personalization</li>
               <li>Food & Beverage Experiences</li>
+
             </ul>
           </div>
 
@@ -88,9 +90,7 @@ const Footer = () => {
               <li className="flex items-center gap-2">
                 <Mail size={14} /> eventustaad@gmail.com
               </li>
-              <li className="flex items-center gap-2">
-                <Mail size={14} /> contact@eventustaad.com
-              </li>
+            
               <li className="flex items-center gap-2">
                 <Phone size={14} /> +91 98333 10150
               </li>

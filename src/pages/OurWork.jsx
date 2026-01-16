@@ -21,32 +21,30 @@ const OurWork = () => {
     return 'social';
   };
 
-const filteredItems = portfolioItems.filter(item => {
-  if (activeCategory === 'all') {
-    // In ALL → allow:
-    // - all videos
-    // - wedding photos only
-    if (!item.videoUrl && item.category !== 'wedding') {
-      return false;
+  const filteredItems = portfolioItems.filter(item => {
+    if (activeCategory === 'all') {
+      // In ALL → allow:
+      // - all videos
+      // - wedding photos only
+      if (!item.videoUrl && item.category !== 'wedding') {
+        return false;
+      }
+      return true;
     }
-    return true;
-  }
 
-  // In specific category → show only that category
-  return getCategoryType(item) === activeCategory;
-});
-
-
-
+    // In specific category → show only that category
+    return getCategoryType(item) === activeCategory;
+  });
 
   const generateSlug = (name) =>
     name?.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
   const masonryBreakpoints = {
-  default: 3,
-  1024: 3,
-  768: 2,
-  640: 1
-};
+    default: 3,
+    1024: 3,
+    768: 2,
+    640: 1
+  };
 
 
 
@@ -91,101 +89,127 @@ const filteredItems = portfolioItems.filter(item => {
       {/* MASONRY GRID */}
       <section className="bg-[#f7f6f2] min-h-[60vh] flex items-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-         <Masonry
-  breakpointCols={masonryBreakpoints}
-  className="flex gap-8"
-  columnClassName="flex flex-col gap-8"
->
-  {filteredItems.map((item, index) => {
-    const slug = generateSlug(item.name || item.title);
-
-    return (
-      <div key={`${item.id}-${index}`} className="break-inside-avoid">
-
-       {(item.category === 'corporate' || item.category === 'social') && item.videoUrl ? (
-  <a
-    href={item.videoUrl}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="block"
-  >
-    <div className="relative overflow-hidden rounded-2xl shadow-lg group bg-white">
-      <img
-        src={item.image}
-        alt={item.title}
-      
-        className="
-          w-full
-          h-auto
-          max-h-[520px]
-          object-cover
-          transition-transform duration-700
-          group-hover:scale-[1.04]
-        "
-      />
-
-      {/* ▶ PLAY ICON (FIXED) */}
-      <div className="absolute inset-0 bg-black/40 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-        <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16 16"
-            fill="currentColor"
-            className="w-7 h-7 text-black ml-1"
+          <Masonry
+            breakpointCols={masonryBreakpoints}
+            className="flex gap-8"
+            columnClassName="flex flex-col gap-8"
           >
-            <path d="M6 4.5v7l6-3.5-6-3.5z" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  </a>
-) : (
+            {filteredItems.map((item, index) => {
+              const slug = generateSlug(item.name || item.title);
 
-          <Link to={`/our-work/${slug}`}>
-            <div className="relative overflow-hidden rounded-2xl shadow-lg group bg-white">
-              <img
-                src={item.image}
-                alt={item.title}
-                loading="lazy"
-                className="
-                  w-full
-                  h-auto
-                  max-h-[520px]
-                  object-cover
-                  transition-transform duration-700
-                  group-hover:scale-[1.04]
-                "
-              />
+              return (
+                <div key={`${item.id}-${index}`} className="break-inside-avoid">
+                  {(item.category === 'corporate' || item.category === 'social') && item.videoUrl ? (
+                    <a
+                      href={item.videoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      <div className="relative overflow-hidden rounded-2xl shadow-lg group bg-white">
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          loading="lazy"
+                          className="
+                            w-full
+                            h-auto
+                            max-h-[520px]
+                            object-cover
+                            transition-transform duration-700
+                            group-hover:scale-[1.04]
+                          "
+                        />
 
-              <div className="absolute inset-0 bg-black/40 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                        {/* ▶ PLAY ICON (FIXED) */}
+                        <div className="absolute inset-0 bg-black/40 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                          <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 16 16"
+                              fill="currentColor"
+                              className="w-7 h-7 text-black ml-1"
+                            >
+                              <path d="M6 4.5v7l6-3.5-6-3.5z" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  ) : item.category === 'wedding' ? (
+                    <Link to={`/our-work/${slug}`}>
+                      <div className="relative overflow-hidden rounded-2xl shadow-lg group bg-white">
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          loading="lazy"
+                          className="
+                            w-full
+                            h-auto
+                            max-h-[520px]
+                            object-cover
+                            transition-transform duration-700
+                            group-hover:scale-[1.04]
+                          "
+                        />
 
-                <div className="p-6 text-white">
-                  <h3
-                    className="text-2xl font-light"
-                    style={{ fontFamily: 'Cormorant, serif' }}
-                  >
-                    {item.name || item.title}
-                  </h3>
+                        <div className="absolute inset-0 bg-black/40 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                          <div className="p-6 text-white">
+                            <h3
+                              className="text-2xl font-light"
+                              style={{ fontFamily: 'Cormorant, serif' }}
+                            >
+                              {item.name || item.title}
+                            </h3>
 
-                  {item.description && (
-                    <p className="text-sm text-white/80 mt-1">
-                      {item.description}
-                    </p>
+                            {item.description && (
+                              <p className="text-sm text-white/80 mt-1">
+                                {item.description}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  ) : (
+                    <div className="relative overflow-hidden rounded-2xl shadow-lg group bg-white cursor-default">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        loading="lazy"
+                        className="
+                          w-full
+                          h-auto
+                          max-h-[520px]
+                          object-cover
+                          transition-transform duration-700
+                          group-hover:scale-[1.04]
+                        "
+                      />
+
+                      <div className="absolute inset-0 bg-black/40 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                        <div className="p-6 text-white">
+                          <h3
+                            className="text-2xl font-light"
+                            style={{ fontFamily: 'Cormorant, serif' }}
+                          >
+                            {item.name || item.title}
+                          </h3>
+
+                          {item.description && (
+                            <p className="text-sm text-white/80 mt-1">
+                              {item.description}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    </div>
                   )}
                 </div>
-              </div>
-            </div>
-          </Link>
-        )}
-
-      </div>
-    );
-  })}
-</Masonry>
-
-
-          </div>
-        
+              );
+            })}
+          </Masonry>
+        </div>
       </section>
     </div>
   );
