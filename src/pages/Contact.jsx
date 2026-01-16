@@ -175,7 +175,7 @@ const Contact = () => {
                     <SelectContent>
                       <SelectItem value="Wedding">Wedding</SelectItem>
                       <SelectItem value="Corporate">Corporate Event</SelectItem>
-                      <SelectItem value="Destination">Destination Event</SelectItem>
+                      <SelectItem value="Destination">Social Event</SelectItem>
                       <SelectItem value="Other">Other</SelectItem>
                     </SelectContent>
                   </Select>

@@ -43,8 +43,8 @@ const NewHome = () => {
       
     },
     {
-      name: "Abhijit Kabra",
-      place: "Wedding Event",
+      name: "Nikita & Rohan",
+      place: "Lonavala",
       rating: 5,
       summary: "Every detail executed like a family celebration",
       detail:
@@ -61,8 +61,8 @@ const NewHome = () => {
    
     },
     {
-      name: "Sandeep Agarwal, Asian Paints",
-      place: "Corporate Event ",
+      name: "Sandeep Agarwal",
+      place: " Asian Paints",
       rating: 5,
       summary: "Creative, reliable, and highly professional team",
       detail:
@@ -70,8 +70,8 @@ const NewHome = () => {
      
     },
     {
-      name: "Vachan Shetty, Godrej Tyson",
-      place: "Corporate Conference",
+      name: "Vachan Shetty ",
+      place: "Godrej Tyson",
        rating: 5,
       summary: "Go-to team for seamless corporate events",
       detail:
@@ -81,15 +81,15 @@ const NewHome = () => {
     {
       name: "Nikita & Gaurav",
       place: "Jaipur",
-      rating: 4.5,
+      rating: 5,
       detail: "Creative ideas combined with professional execution made our wedding truly special.\nThe team handled décor, coordination, and last-minute details with ease, ensuring a smooth and memorable celebration.",
     },
     {
-      name: "Sakshi & Manish",
-      place: "Goa",
+      name: "Manish Hingar",
+      place: "Fintoo",
       rating: 5,
-      detail: "Their thoughtful ideas and calm execution made our wedding truly special.\nEverything was well-planned, beautifully organised, and handled with great care.",
-    }
+      detail: "Event Ustaad stands out for their attention to detail, proactive planning, and seamless execution. Highly recommended for corporate events.",
+    },
     
   ];
 

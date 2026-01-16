@@ -29,11 +29,15 @@ const Footer = () => {
 
 
 
-            <img
-              src="https://customer-assets.emergentagent.com/job_eventelegance-3/artifacts/ltcg4g2q_loggogo.svg"
-              alt="Event Ustaad"
-              className="w-28"
-            />
+           <img
+            src="https://customer-assets.emergentagent.com/job_eventelegance-3/artifacts/ltcg4g2q_loggogo.svg"
+            alt="Event Ustaad"
+            width="112"
+            height="40"
+            className="w-28 h-auto"
+            style={{ imageRendering: "crisp-edges" }}
+          />
+
 
             <div className="flex gap-4 pt-2">
               <a href="https://www.instagram.com/eventustaad/" target="_blank" rel="noreferrer"

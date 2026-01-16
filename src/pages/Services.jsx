@@ -1,29 +1,53 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { MapPin, Lightbulb, Hotel, Music, Gift } from "lucide-react";
+import React, { useEffect ,useLayoutEffect} from "react";
+import { useParams, useLocation } from "react-router-dom";
+import { MapPin, Palette, Flame,Utensils , Hotel, Music } from "lucide-react";
 import useReveal from "../hooks/useReveal";
 
 const Services = () => {
   const [heroRef, heroVisible] = useReveal();
   const { slug } = useParams();
 
-  const [scrollY, setScrollY] = useState(0);
+const location = useLocation();
 
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+useLayoutEffect(() => {
+  if (!slug) return;
+
+  let attempts = 0;
+
+  const scrollToSection = () => {
+    const el = document.getElementById(slug);
+
+    if (el) {
+      const y =
+        el.getBoundingClientRect().top +
+        window.pageYOffset -
+        120; // navbar offset
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+    } else if (attempts < 10) {
+      attempts += 1;
+      requestAnimationFrame(scrollToSection);
+    }
+  };
+
+  scrollToSection();
+}, [slug, location.key]);
 
   const heroHeight = Math.max(50, 100 - scrollY / 6);
 
   useEffect(() => {
-    if (!slug) return;
+  if (!slug) return;
+
+  const timeout = setTimeout(() => {
     const el = document.getElementById(slug);
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  }, [slug]);
+  }, 300); // allow render + reveal animation
+
+  return () => clearTimeout(timeout);
+}, [slug]);
+
 
   const services = [
     {
@@ -39,7 +63,7 @@ const Services = () => {
     },
     {
       slug: "event-design",
-      icon: Lightbulb,
+      icon: Palette,
       title: "Luxury Décor & Design",
       features: [
         "Bespoke theme and décor concepts tailored to your taste and event style.",
@@ -61,7 +85,7 @@ const Services = () => {
     },
     {
       slug: "ceremony-planning",
-      icon: Lightbulb,
+      icon: Flame,
       title: "Ceremony & Ritual Expertise",
       features: [
         "Guidance for all traditional, cultural, or custom rituals.",
@@ -83,7 +107,7 @@ const Services = () => {
     },
     {
       slug: "food-and-beverages",
-      icon: Gift,
+      icon: Utensils,
       title: "Curated Culinary & Beverage Experiences",
       features: [
         "Personalized menu planning and tastings.",
@@ -123,7 +147,7 @@ const Services = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url(signature.jpeg)",
+            backgroundImage: "url(/signature.jpeg)",
             filter: `brightness(${Math.max(0.6, 1 - scrollY / 600)})`,
             transform: `scale(${1 + scrollY / 2000})`,
           }}
