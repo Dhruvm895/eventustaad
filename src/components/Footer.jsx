@@ -35,7 +35,7 @@ const Footer = () => {
             width="112"
             height="40"
             className="w-28 h-auto"
-            style={{ imageRendering: "crisp-edges" }}
+            
           />
 
 
