@@ -170,6 +170,16 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
+.logo-fix {
+  transform: none !important;
+  filter: none !important;
+  backface-visibility: hidden;
+  image-rendering: -webkit-optimize-contrast;
+  will-change: auto;
+}
+
+
+
 .soft-shadow {
   box-shadow:
     0 10px 25px rgba(0, 0, 0, 0.04),
